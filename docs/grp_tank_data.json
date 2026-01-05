@@ -1,0 +1,5412 @@
+{
+  "prices": [
+    {
+      "no": 1,
+      "part_no": "WST-0120RO",
+      "name_kr": "실링테이프",
+      "price_usd": 8.0,
+      "spec": "PVC Sealing Tape 120mm(W) ",
+      "name_en": "Sealing Tape"
+    },
+    {
+      "no": 2,
+      "part_no": "WST-0050RO",
+      "name_kr": "실링테이프",
+      "price_usd": 4.0,
+      "spec": "PVC Sealing Tape 50mm(W) x 30m (Roll)",
+      "name_en": "Sealing Tape"
+    },
+    {
+      "no": 3,
+      "part_no": "WSF-150A",
+      "name_kr": "Slant Flange 150A",
+      "price_usd": 32.7,
+      "spec": "Slant Flange 150A",
+      "name_en": "Slant Flange 150A"
+    },
+    {
+      "no": 4,
+      "part_no": "WSF-125A",
+      "name_kr": "Slant Flange 125A",
+      "price_usd": 32.6,
+      "spec": "Slant Flange 125A",
+      "name_en": "Slant Flange 125A"
+    },
+    {
+      "no": 5,
+      "part_no": "WSF-100A",
+      "name_kr": "Slant Flange 100A",
+      "price_usd": 32.5,
+      "spec": "Slant Flange 100A",
+      "name_en": "Slant Flange 100A"
+    },
+    {
+      "no": 6,
+      "part_no": "WSF-080A",
+      "name_kr": "Slant Flange 80A",
+      "price_usd": 32.4,
+      "spec": "Slant Flange 80A",
+      "name_en": "Slant Flange 80A"
+    },
+    {
+      "no": 7,
+      "part_no": "WSF-065A",
+      "name_kr": "Slant Flange 65A",
+      "price_usd": 32.3,
+      "spec": "Slant Flange 65A",
+      "name_en": "Slant Flange 65A"
+    },
+    {
+      "no": 8,
+      "part_no": "WSD-050A",
+      "name_kr": "Socket (Brass) 50A",
+      "price_usd": 31.6,
+      "spec": "Socket (Brass) 50A",
+      "name_en": "Socket (Brass) 50A"
+    },
+    {
+      "no": 9,
+      "part_no": "WSD-040A",
+      "name_kr": "Socket (Brass) 40A",
+      "price_usd": 31.5,
+      "spec": "Socket (Brass) 40A",
+      "name_en": "Socket (Brass) 40A"
+    },
+    {
+      "no": 10,
+      "part_no": "WSD-032A",
+      "name_kr": "Socket (Brass) 32A",
+      "price_usd": 31.4,
+      "spec": "Socket (Brass) 32A",
+      "name_en": "Socket (Brass) 32A"
+    },
+    {
+      "no": 11,
+      "part_no": "WSD-025A",
+      "name_kr": "Socket (Brass) 25A",
+      "price_usd": 31.3,
+      "spec": "Socket (Brass) 25A",
+      "name_en": "Socket (Brass) 25A"
+    },
+    {
+      "no": 12,
+      "part_no": "WSD-020A",
+      "name_kr": "Socket (Brass) 20A",
+      "price_usd": 31.2,
+      "spec": "Socket (Brass) 20A",
+      "name_en": "Socket (Brass) 20A"
+    },
+    {
+      "no": 13,
+      "part_no": "WSD-015A",
+      "name_kr": "Socket (Brass) 15A",
+      "price_usd": 31.1,
+      "spec": "Socket (Brass) 15A",
+      "name_en": "Socket (Brass) 15A"
+    },
+    {
+      "no": 14,
+      "part_no": "WRS-5000F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 110.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(5.0mH)"
+    },
+    {
+      "no": 15,
+      "part_no": "WRS-4500F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 99.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(4.5mH)"
+    },
+    {
+      "no": 16,
+      "part_no": "WRS-4000F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 88.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(4.0mH)"
+    },
+    {
+      "no": 17,
+      "part_no": "WRS-3500F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 77.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(3.5mH)"
+    },
+    {
+      "no": 18,
+      "part_no": "WRS-3000F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 66.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(3.0mH)"
+    },
+    {
+      "no": 19,
+      "part_no": "WRS-2500F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 55.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(2.5mH)"
+    },
+    {
+      "no": 20,
+      "part_no": "WRS-2000F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 44.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(2.0mH)"
+    },
+    {
+      "no": 21,
+      "part_no": "WRS-1500F",
+      "name_kr": "내부지주(FRP인발)",
+      "price_usd": 33.0,
+      "spec": "GRP 50X50X5T",
+      "name_en": "Roof Supporter(1.5mH)"
+    },
+    {
+      "no": 22,
+      "part_no": "WLV-5000SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.9,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 23,
+      "part_no": "WLV-5000SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 750.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 24,
+      "part_no": "WLV-4500SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.8,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 25,
+      "part_no": "WLV-4500SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 675.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 26,
+      "part_no": "WLV-4000SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.7,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 27,
+      "part_no": "WLV-4000SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 600.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 28,
+      "part_no": "WLV-3500SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.6,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 29,
+      "part_no": "WLV-3500SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 525.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 30,
+      "part_no": "WLV-3000SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.5,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 31,
+      "part_no": "WLV-3000SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 450.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 32,
+      "part_no": "WLV-2500SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.4,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 33,
+      "part_no": "WLV-2500SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 375.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 34,
+      "part_no": "WLV-2000SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.3,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 35,
+      "part_no": "WLV-2000SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 300.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 36,
+      "part_no": "WLV-1500SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.2,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 37,
+      "part_no": "WLV-1500SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 225.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 38,
+      "part_no": "WLV-1000SET(S)",
+      "name_kr": "수위계",
+      "price_usd": 29.1,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 39,
+      "part_no": "WLV-1000SET(G)",
+      "name_kr": "수위계",
+      "price_usd": 150.0,
+      "spec": "Level Indicator SET",
+      "name_en": "Level Indicator"
+    },
+    {
+      "no": 40,
+      "part_no": "WLD-5000ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 455.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(5mH)"
+    },
+    {
+      "no": 41,
+      "part_no": "WLD-5000FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 450.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(5.0mH)"
+    },
+    {
+      "no": 42,
+      "part_no": "WLD-4500ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 410.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(4.5mH)"
+    },
+    {
+      "no": 43,
+      "part_no": "WLD-4500FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 415.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(4.5mH)"
+    },
+    {
+      "no": 44,
+      "part_no": "WLD-4000ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 365.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(4mH)"
+    },
+    {
+      "no": 45,
+      "part_no": "WLD-4000FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 346.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(4.0mH)"
+    },
+    {
+      "no": 46,
+      "part_no": "WLD-3500ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 320.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(3.5mH)"
+    },
+    {
+      "no": 47,
+      "part_no": "WLD-3500FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 324.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(3.5mH)"
+    },
+    {
+      "no": 48,
+      "part_no": "WLD-3000ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 275.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(3mH)"
+    },
+    {
+      "no": 49,
+      "part_no": "WLD-3000FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 264.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(3.0mH)"
+    },
+    {
+      "no": 50,
+      "part_no": "WLD-2500ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 230.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(2.5mH)"
+    },
+    {
+      "no": 51,
+      "part_no": "WLD-2500FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 234.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(2.5mH)"
+    },
+    {
+      "no": 52,
+      "part_no": "WLD-2000ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 185.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(2mH)"
+    },
+    {
+      "no": 53,
+      "part_no": "WLD-2000FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 200.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(2.0mH)"
+    },
+    {
+      "no": 54,
+      "part_no": "WLD-1500ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 140.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(1.5mH)"
+    },
+    {
+      "no": 55,
+      "part_no": "WLD-1500FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 174.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(1.5mH)"
+    },
+    {
+      "no": 56,
+      "part_no": "WLD-1000ZO",
+      "name_kr": "외부사다리",
+      "price_usd": 125.0,
+      "spec": "HDG",
+      "name_en": "EX-Ladder(1mH)"
+    },
+    {
+      "no": 57,
+      "part_no": "WLD-1000FI",
+      "name_kr": "내부사다리(FRP인발)",
+      "price_usd": 174.0,
+      "spec": "GRP",
+      "name_en": "Internal Ladder(1.0mH)"
+    },
+    {
+      "no": 58,
+      "part_no": "WFL-300A",
+      "name_kr": "Flat Flange 300A",
+      "price_usd": 32.9,
+      "spec": "Flat Flange 300A",
+      "name_en": "Flat Flange 300A"
+    },
+    {
+      "no": 59,
+      "part_no": "WFL-250A",
+      "name_kr": "Flat Flange 250A",
+      "price_usd": 32.8,
+      "spec": "Flat Flange 250A",
+      "name_en": "Flat Flange 250A"
+    },
+    {
+      "no": 60,
+      "part_no": "WFL-200A",
+      "name_kr": "Flat Flange 200A",
+      "price_usd": 32.2,
+      "spec": "Flat Flange 200A",
+      "name_en": "Flat Flange 200A"
+    },
+    {
+      "no": 61,
+      "part_no": "WFL-150A",
+      "name_kr": "Flat Flange 150A",
+      "price_usd": 32.1,
+      "spec": "Flat Flange 150A",
+      "name_en": "Flat Flange 150A"
+    },
+    {
+      "no": 62,
+      "part_no": "WFL-125A",
+      "name_kr": "Flat Flange 125A",
+      "price_usd": 32.0,
+      "spec": "Flat Flange 125A",
+      "name_en": "Flat Flange 125A"
+    },
+    {
+      "no": 63,
+      "part_no": "WFL-100A",
+      "name_kr": "Flat Flange 100A",
+      "price_usd": 31.9,
+      "spec": "Flat Flange 100A",
+      "name_en": "Flat Flange 100A"
+    },
+    {
+      "no": 64,
+      "part_no": "WFL-080A",
+      "name_kr": "Flat Flange 80A",
+      "price_usd": 31.8,
+      "spec": "Flat Flange 80A",
+      "name_en": "Flat Flange 80A"
+    },
+    {
+      "no": 65,
+      "part_no": "WFL-065A",
+      "name_kr": "Flat Flange 65A",
+      "price_usd": 31.7,
+      "spec": "Flat Flange 65A",
+      "name_en": "Flat Flange 65A"
+    },
+    {
+      "no": 66,
+      "part_no": "WFF-0990HCLZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 125.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX990mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 67,
+      "part_no": "WFF-2640HCSZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 330.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX2640mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 68,
+      "part_no": "WFF-2640ASZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 200.0,
+      "spec": "ANGLE 75mmX75mmX6mmX2640mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 69,
+      "part_no": "WFF-2620CSZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 330.0,
+      "spec": "CHANNEL 125mmX65mmX6mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 70,
+      "part_no": "WFF-2570HCSZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 320.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX2565mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 71,
+      "part_no": "WFF-2570ASZR",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 200.0,
+      "spec": "ANGLE 75mmX75mmX6mmX2565mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 72,
+      "part_no": "WFF-2570ASZL",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 200.0,
+      "spec": "ANGLE 75mmX75mmX6mmX2565mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 73,
+      "part_no": "WFF-2560CSZR",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 320.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX2055",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 74,
+      "part_no": "WFF-2560CSZL",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 320.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX2055",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 75,
+      "part_no": "WFF-2140HCSZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 270.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX2140mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 76,
+      "part_no": "WFF-2140ASZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 160.0,
+      "spec": "ANGLE 75mmX75mmX6mmX2140mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 77,
+      "part_no": "WFF-2120CSZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 265.0,
+      "spec": "CHANNEL 125mmX65mmX6mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 78,
+      "part_no": "WFF-2070HCSZR",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 260.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX2065mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 79,
+      "part_no": "WFF-2070HCSZL",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 260.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX2065mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 80,
+      "part_no": "WFF-2070ASZR",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 152.0,
+      "spec": "ANGLE 75mmX75mmX6mmX2065mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 81,
+      "part_no": "WFF-2070ASZL",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 152.0,
+      "spec": "ANGLE 75mmX75mmX6mmX2065mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 82,
+      "part_no": "WFF-2060CSZR",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 258.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX2055",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 83,
+      "part_no": "WFF-2060CSZL",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 258.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX2055",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 84,
+      "part_no": "WFF-2000HCSZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 250.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1990mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 85,
+      "part_no": "WFF-2000CSZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 250.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1990mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 86,
+      "part_no": "WFF-2000ASZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 152.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1990mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 87,
+      "part_no": "WFF-1990HCLZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 217.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1990mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 88,
+      "part_no": "WFF-1990CLZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 217.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1990mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 89,
+      "part_no": "WFF-1990ALZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 151.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1990mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 90,
+      "part_no": "WFF-1640HCSZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 200.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1620mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 91,
+      "part_no": "WFF-1640ASZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 140.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1640mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 92,
+      "part_no": "WFF-1620CSZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 200.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1620mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 93,
+      "part_no": "WFF-1570HCSZR",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 200.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1565mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 94,
+      "part_no": "WFF-1570HCSZL",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 200.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1565mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 95,
+      "part_no": "WFF-1570ASZR",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 135.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1565mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 96,
+      "part_no": "WFF-1570ASZL",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 135.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1565mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 97,
+      "part_no": "WFF-1560CSZR",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 200.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1555mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 98,
+      "part_no": "WFF-1560CSZL",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 200.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1555mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 99,
+      "part_no": "WFF-1500HCSZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 190.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1500mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 100,
+      "part_no": "WFF-1500CSZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 190.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1500mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 101,
+      "part_no": "WFF-1500ASZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 130.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1500mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 102,
+      "part_no": "WFF-1490HCLZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 190.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1490mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 103,
+      "part_no": "WFF-1490CLZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 190.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1490mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 104,
+      "part_no": "WFF-1490ALZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 130.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1490mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 105,
+      "part_no": "WFF-1140ASZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 100.0,
+      "spec": "ANGLE 75mmX75mmX6mmX1140mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 106,
+      "part_no": "WFF-1120HCSZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 125.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX1120mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 107,
+      "part_no": "WFF-1120CSZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 125.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX1120mm",
+      "name_en": "Steel Skid(Main-W)"
+    },
+    {
+      "no": 108,
+      "part_no": "WFF-1063CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 110.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX1063mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 109,
+      "part_no": "WFF-1063AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX1063mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 110,
+      "part_no": "WFF-1053CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 110.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX1053mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 111,
+      "part_no": "WFF-1053AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX1053mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 112,
+      "part_no": "WFF-1026CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 110.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX1026mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 113,
+      "part_no": "WFF-1026AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX1026mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 114,
+      "part_no": "WFF-1021CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 110.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX1021mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 115,
+      "part_no": "WFF-1021AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX1021mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 116,
+      "part_no": "WFF-0994CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 110.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX994mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 117,
+      "part_no": "WFF-0994AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX994mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 118,
+      "part_no": "WFF-0990CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 110.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX990mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 119,
+      "part_no": "WFF-0990CLZ",
+      "name_kr": "기초주재(125쟌넬)",
+      "price_usd": 115.0,
+      "spec": "CHANNEL 125mmX65mmX6mmX0990mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 87,
+      "part_no": "WFF-0990HCLZ",
+      "name_kr": "기초주재(150쟌넬)",
+      "price_usd": 115.0,
+      "spec": "CHANNEL 150mmX75mmX6.5mmX0990mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 120,
+      "part_no": "WFF-0990AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX990mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 121,
+      "part_no": "WFF-0990ALZ",
+      "name_kr": "기초주재(75앵글)",
+      "price_usd": 110.0,
+      "spec": "ANGLE 75mmX75mmX6mmX0990mm",
+      "name_en": "Steel Skid(Main-L)"
+    },
+    {
+      "no": 122,
+      "part_no": "WFF-0962AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX962mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 123,
+      "part_no": "WFF-0957CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 110.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX957mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 124,
+      "part_no": "WFF-0957AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX957mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 125,
+      "part_no": "WFF-0563CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX563mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 126,
+      "part_no": "WFF-0563AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 65.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX563mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 127,
+      "part_no": "WFF-0553CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX553mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 128,
+      "part_no": "WFF-0553AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 65.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX553mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 129,
+      "part_no": "WFF-0526CMZ",
+      "name_kr": "기초부재",
+      "price_usd": 82.0,
+      "spec": "CHANNEL 100mmX50mmX5mmX526mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 130,
+      "part_no": "WFF-0526AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 65.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX526mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 131,
+      "part_no": "WFF-0521AMZ",
+      "name_kr": "기초부재",
+      "price_usd": 65.0,
+      "spec": "CHANNEL 75mmX40mmX5mmX521mm",
+      "name_en": "Steel Skid(Sub)"
+    },
+    {
+      "no": 132,
+      "part_no": "WFB-1450ZL",
+      "name_kr": "플랜지바(ZL)",
+      "price_usd": 45.0,
+      "spec": "ANGLE 25mmX59mmX3mmX1450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 133,
+      "part_no": "WFB-1450Z",
+      "name_kr": "플랜지바(Z)",
+      "price_usd": 45.0,
+      "spec": "ANGLE 30mmX64mmX3mmX1450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 134,
+      "part_no": "WFB-1200ZL",
+      "name_kr": "플랜지바(ZL)",
+      "price_usd": 37.0,
+      "spec": "ANGLE 25mmX59mmX3mmX1250mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 135,
+      "part_no": "WFB-1200Z",
+      "name_kr": "플랜지바(Z)",
+      "price_usd": 35.0,
+      "spec": "ANGLE 30mmX64mmX3mmX1250mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 136,
+      "part_no": "WFB-1200SA4",
+      "name_kr": "STS316 플랜지바(Z)",
+      "price_usd": 78.0,
+      "spec": "ANGLE  SS316 - 32mmX64mmX3mmX1200mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 137,
+      "part_no": "WFB-1200SA2",
+      "name_kr": "STS304 플랜지바(Z)",
+      "price_usd": 78.0,
+      "spec": "ANGLE  SS304 - 32mmX64mmX3mmX1200mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 138,
+      "part_no": "WFB-1200LSA4",
+      "name_kr": "STS316 플랜지바(ZL)",
+      "price_usd": 78.0,
+      "spec": "ANGLE  SS316 - 25mmX59mmX3mmX1200mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 139,
+      "part_no": "WFB-1200LSA2",
+      "name_kr": "STS304 플랜지바(ZL)",
+      "price_usd": 78.0,
+      "spec": "ANGLE  SS304 - 25mmX59mmX3mmX1200mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 140,
+      "part_no": "WFB-0950ZP",
+      "name_kr": "평철(ZP)",
+      "price_usd": 16.0,
+      "spec": "PLATE 37mmX3mmX950mm",
+      "name_en": "F/L Reinforcing plate"
+    },
+    {
+      "no": 141,
+      "part_no": "WFB-0950ZL",
+      "name_kr": "플랜지바(ZL)",
+      "price_usd": 31.0,
+      "spec": "ANGLE 25mmX59mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 142,
+      "part_no": "WFB-0950Z",
+      "name_kr": "플랜지바(Z)",
+      "price_usd": 30.0,
+      "spec": "ANGLE 30mmX64mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 143,
+      "part_no": "WFB-0950SA4",
+      "name_kr": "STS316 플랜지바(Z)",
+      "price_usd": 70.0,
+      "spec": "ANGLE  SS316 - 32mmX64mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 144,
+      "part_no": "WFB-0950SA2",
+      "name_kr": "STS304 플랜지바(Z)",
+      "price_usd": 70.0,
+      "spec": "ANGLE  SS304 - 32mmX64mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 145,
+      "part_no": "WFB-0950PSA4",
+      "name_kr": "STS316 내부평철",
+      "price_usd": 70.0,
+      "spec": "ANGLE  SS316 - 37mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Plate"
+    },
+    {
+      "no": 146,
+      "part_no": "WFB-0950LSA4",
+      "name_kr": "STS316 플랜지바(ZL)",
+      "price_usd": 70.0,
+      "spec": "ANGLE  SS316 - 25mmX59mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 147,
+      "part_no": "WFB-0950LSA2",
+      "name_kr": "STS304 플랜지바(ZL)",
+      "price_usd": 70.0,
+      "spec": "ANGLE  SS304 - 25mmX59mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 148,
+      "part_no": "WFB-0880ZP",
+      "name_kr": "평철(ZP)",
+      "price_usd": 16.0,
+      "spec": "PLATE 37mmX3mmX950mm",
+      "name_en": "F/L Reinforcing plate"
+    },
+    {
+      "no": 149,
+      "part_no": "WFB-0880SA4",
+      "name_kr": "STS316 플랜지바(Z)",
+      "price_usd": 36.0,
+      "spec": "ANGLE  SS316 - 32mmX64mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 150,
+      "part_no": "WFB-0880SA2",
+      "name_kr": "STS304 플랜지바(Z)",
+      "price_usd": 36.0,
+      "spec": "ANGLE  SS304 - 32mmX64mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 151,
+      "part_no": "WFB-0880PSA4",
+      "name_kr": "STS316 내부평철(ZP)",
+      "price_usd": 36.0,
+      "spec": "ANGLE  SS316 - 37mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Plate"
+    },
+    {
+      "no": 152,
+      "part_no": "WFB-0880PSA2",
+      "name_kr": "STS304 내부평철(ZP)",
+      "price_usd": 36.0,
+      "spec": "ANGLE  SS304 - 37mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Plate"
+    },
+    {
+      "no": 153,
+      "part_no": "WFB-0880LSA4",
+      "name_kr": "STS316 플랜지바(ZL)",
+      "price_usd": 55.0,
+      "spec": "ANGLE  SS316 - 32mmX64mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 154,
+      "part_no": "WFB-0880LSA2",
+      "name_kr": "STS304 플랜지바(ZL)",
+      "price_usd": 55.0,
+      "spec": "ANGLE  SS304 - 32mmX64mmX3mmX950mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 155,
+      "part_no": "WFB-0450ZP",
+      "name_kr": "평철(ZP)",
+      "price_usd": 10.0,
+      "spec": "PLATE 37mmX3mmX450mm",
+      "name_en": "F/L Reinforcing plate"
+    },
+    {
+      "no": 156,
+      "part_no": "WFB-0450ZL",
+      "name_kr": "플랜지바(ZL)",
+      "price_usd": 18.0,
+      "spec": "ANGLE 25mmX59mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 157,
+      "part_no": "WFB-0450Z",
+      "name_kr": "플랜지바(Z)",
+      "price_usd": 17.0,
+      "spec": "ANGLE 30mmX64mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 158,
+      "part_no": "WFB-0450SA4",
+      "name_kr": "STS316 플랜지바(Z)",
+      "price_usd": 34.0,
+      "spec": "ANGLE  SS316 - 32mmX64mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 159,
+      "part_no": "WFB-0450SA2",
+      "name_kr": "STS304 플랜지바(Z)",
+      "price_usd": 34.0,
+      "spec": "ANGLE  SS304 - 32mmX64mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 160,
+      "part_no": "WFB-0450PSA4",
+      "name_kr": "STS316 내부평철",
+      "price_usd": 21.0,
+      "spec": "ANGLE  SS316 - 37mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Plate"
+    },
+    {
+      "no": 161,
+      "part_no": "WFB-0450PSA2",
+      "name_kr": "STS304 내부평철",
+      "price_usd": 21.0,
+      "spec": "ANGLE  SS304 - 37mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Plate"
+    },
+    {
+      "no": 162,
+      "part_no": "WFB-0450LSA4",
+      "name_kr": "STS316 플랜지바(ZL)",
+      "price_usd": 34.0,
+      "spec": "ANGLE  SS316 - 25mmX59mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 163,
+      "part_no": "WFB-0450LSA2",
+      "name_kr": "STS304 플랜지바(ZL)",
+      "price_usd": 34.0,
+      "spec": "ANGLE  SS304 - 25mmX59mmX3mmX450mm",
+      "name_en": "F/L Reinforcing Angle"
+    },
+    {
+      "no": 164,
+      "part_no": "WCP-1860Z",
+      "name_kr": "외부2구브라켓",
+      "price_usd": 12.0,
+      "spec": "ANGLE 60mmX180mmX6mm",
+      "name_en": "Cross Plate BKT(2 Hole)"
+    },
+    {
+      "no": 165,
+      "part_no": "WCP-1780Z",
+      "name_kr": "외부2구브라켓",
+      "price_usd": 12.0,
+      "spec": "ANGLE 75mmX160mmX6mm",
+      "name_en": "Cross Plate BKT(2 Hole)"
+    },
+    {
+      "no": 166,
+      "part_no": "WCP-1780SA4",
+      "name_kr": "STS316 내부2구 평브라켓",
+      "price_usd": 21.0,
+      "spec": "ANGLE SS316 - 75mmX160mmX5mm",
+      "name_en": "C/S Plate BRKT(2 Hole)"
+    },
+    {
+      "no": 167,
+      "part_no": "WCP-1780SA2",
+      "name_kr": "STS304 내부2구 평브라켓",
+      "price_usd": 21.0,
+      "spec": "ANGLE SS304 - 75mmX160mmX5mm",
+      "name_en": "C/S Plate BRKT(2 Hole)"
+    },
+    {
+      "no": 168,
+      "part_no": "WCP-1760SA4",
+      "name_kr": "STS316 내부 환봉1구고정브라켓",
+      "price_usd": 37.0,
+      "spec": "ANGLE SS316 - 60mmX320mmX5mm",
+      "name_en": "IN-BRKT(1 tierod)_SS316"
+    },
+    {
+      "no": 169,
+      "part_no": "WCP-1760SA2",
+      "name_kr": "STS304 내부 환봉1구고정브라켓",
+      "price_usd": 37.0,
+      "spec": "ANGLE SS304 - 60mmX320mmX5mm",
+      "name_en": "IN-BRKT(1 tierod)_SS304"
+    },
+    {
+      "no": 170,
+      "part_no": "WCP-17160SA4",
+      "name_kr": "STS316 내부 환봉2구고정브라켓",
+      "price_usd": 75.0,
+      "spec": "ANGLE SS316 - 160mmX320mmX5mm",
+      "name_en": "IN-BRKT(2 tierod)_SS316"
+    },
+    {
+      "no": 171,
+      "part_no": "WCP-17160SA2",
+      "name_kr": "STS304 내부 환봉2구고정브라켓",
+      "price_usd": 75.0,
+      "spec": "ANGLE SS304 - 160mmX320mmX5mm",
+      "name_en": "IN-BRKT(2 tierod)_SS304"
+    },
+    {
+      "no": 172,
+      "part_no": "WCP-17120Z",
+      "name_kr": "외부4구앵글브라켓",
+      "price_usd": 20.0,
+      "spec": "ANGLE 158mmX160mmX6mm",
+      "name_en": "Cross Angle BKT(2/2Holes) "
+    },
+    {
+      "no": 173,
+      "part_no": "WCP-17120SA4",
+      "name_kr": "Cross Angle Bracket(4 Hole) SS304",
+      "price_usd": 75.0,
+      "spec": "ANGLE SS316 - 100mmX160mmX5mm",
+      "name_en": "C/R Angle BKT(4 Hole) SS16"
+    },
+    {
+      "no": 174,
+      "part_no": "WCP-17120SA2",
+      "name_kr": "Cross Angle Bracket(4 Hole) SS304",
+      "price_usd": 75.0,
+      "spec": "ANGLE SS304 - 100mmX160mmX5mm",
+      "name_en": "C/R Angle BKT(4 Hole) SS304"
+    },
+    {
+      "no": 175,
+      "part_no": "WCP-1690Z",
+      "name_kr": "HDG 내부2구 평브라켓",
+      "price_usd": 12.0,
+      "spec": "ANGLE HDG - 90mmX160mmX5mm",
+      "name_en": "C/S Plate BRKT(2 Hole)"
+    },
+    {
+      "no": 176,
+      "part_no": "WCP-1616Z",
+      "name_kr": "외부4구브라켓",
+      "price_usd": 20.0,
+      "spec": "ANGLE 160mmX160mmX6mm",
+      "name_en": "Cross Plate BKT(4 Hole)"
+    },
+    {
+      "no": 177,
+      "part_no": "WCP-1616SA4",
+      "name_kr": "STS316 내부4구 평브라켓",
+      "price_usd": 50.0,
+      "spec": "ANGLE SS316- 160mmX160mmX5mm",
+      "name_en": "C/R Plate BKT(4 Hole) SS316"
+    },
+    {
+      "no": 178,
+      "part_no": "WCP-1616SA2",
+      "name_kr": "STS304 내부4구 평브라켓",
+      "price_usd": 50.0,
+      "spec": "ANGLE SS304 - 160mmX160mmX5mm",
+      "name_en": "C/R Plate BKT(4 Hole) SS304"
+    },
+    {
+      "no": 179,
+      "part_no": "WCF-2000Z",
+      "name_kr": "코너프레임",
+      "price_usd": 76.0,
+      "spec": "ANGLE 70mmX70mmX3mmX2000mm",
+      "name_en": "Corner Frame"
+    },
+    {
+      "no": 180,
+      "part_no": "WCF-1500Z",
+      "name_kr": "코너프레임",
+      "price_usd": 71.0,
+      "spec": "ANGLE 70mmX70mmX3mmX1500mm",
+      "name_en": "Corner Frame"
+    },
+    {
+      "no": 181,
+      "part_no": "WCF-1000Z",
+      "name_kr": "코너프레임",
+      "price_usd": 42.0,
+      "spec": "ANGLE 70mmX70mmX3mmX1000mm",
+      "name_en": "Corner Frame"
+    },
+    {
+      "no": 182,
+      "part_no": "WPF-0950Z",
+      "name_kr": "코너프레임",
+      "price_usd": 42.0,
+      "spec": "ANGLE 55mmX63mmX3mmX950mm",
+      "name_en": "Corner Frame"
+    },
+    {
+      "no": 183,
+      "part_no": "WPF-0450Z",
+      "name_kr": "코너프레임",
+      "price_usd": 21.0,
+      "spec": "ANGLE 55mmX63mmX3mmX450mm",
+      "name_en": "Corner Frame"
+    },
+    {
+      "no": 184,
+      "part_no": "WBT-1480SA4",
+      "name_kr": "SS316 볼트세트",
+      "price_usd": 19.0,
+      "spec": "M14(Dia) x 80mm(Length)",
+      "name_en": "M14x80mm(SS316)"
+    },
+    {
+      "no": 185,
+      "part_no": "WBT-1480RSA4",
+      "name_kr": "STS316 고무머리볼트세트",
+      "price_usd": 28.1,
+      "spec": "M14(Dia) x 80mm(Length)",
+      "name_en": "M14x80mm(Rubber SS316)"
+    },
+    {
+      "no": 186,
+      "part_no": "WBT-1480RD",
+      "name_kr": "HDG 고무머리볼트세트",
+      "price_usd": 28.2,
+      "spec": "M14(Dia) x 80mm(Length)",
+      "name_en": "M14x80mm(Rubber HDG)"
+    },
+    {
+      "no": 187,
+      "part_no": "WBT-1460RSA4",
+      "name_kr": "STS316 고무머리볼트세트",
+      "price_usd": 28.0,
+      "spec": "M14(Dia) x 60mm(Length)",
+      "name_en": "M14x60mm(Rubber SS316)"
+    },
+    {
+      "no": 188,
+      "part_no": "WBT-1460RSA2",
+      "name_kr": "STS304 고무머리볼트세트",
+      "price_usd": 27.9,
+      "spec": "M14(Dia) x 60mm(Length)",
+      "name_en": "M14x60mm(Rubber SS304)"
+    },
+    {
+      "no": 189,
+      "part_no": "WBT-1460RD",
+      "name_kr": "HDG 고무머리볼트세트",
+      "price_usd": 27.8,
+      "spec": "M14(Dia) x 60mm(Length)",
+      "name_en": "M14x60mm(Rubber HDG)"
+    },
+    {
+      "no": 190,
+      "part_no": "WBT-1440Z",
+      "name_kr": "HDG  볼트세트",
+      "price_usd": 1.9,
+      "spec": "M14(Dia) x 40mm(Length)",
+      "name_en": "HDG  Bolt and Nuts Set"
+    },
+    {
+      "no": 191,
+      "part_no": "WBT-14120RSA4",
+      "name_kr": "STS316 고무머리볼트세트",
+      "price_usd": 14.0,
+      "spec": "M14(Dia) x 120mm(Length)",
+      "name_en": "M14x120mm(Rubber 316)"
+    },
+    {
+      "no": 192,
+      "part_no": "WBT-14120RSA2",
+      "name_kr": "STS304 고무머리볼트세트",
+      "price_usd": 14.0,
+      "spec": "M14(Dia) x 120mm(Length)",
+      "name_en": "M14x120mm(Rubber 304)"
+    },
+    {
+      "no": 193,
+      "part_no": "WBT-14120RD",
+      "name_kr": "HDG 고무머리볼트세트",
+      "price_usd": 14.0,
+      "spec": "M14(Dia) x 120mm(Length)",
+      "name_en": "M14x120mm(Rubber HDG)"
+    },
+    {
+      "no": 194,
+      "part_no": "WBT-1265SA4",
+      "name_kr": "SS316 볼트세트",
+      "price_usd": 15.0,
+      "spec": "M12(Dia) x 65mm(Length)",
+      "name_en": "M12x65mm(SS316)"
+    },
+    {
+      "no": 195,
+      "part_no": "WBT-1240Z",
+      "name_kr": "HDG  볼트세트",
+      "price_usd": 1.9,
+      "spec": "M12(Dia) x 40mm(Length)",
+      "name_en": "M12x40mm(HDG)"
+    },
+    {
+      "no": 196,
+      "part_no": "WBT-1058RSA4",
+      "name_kr": "STS316 고무머리볼트세트",
+      "price_usd": 15.0,
+      "spec": "M10(Dia) x 58mm(Length)",
+      "name_en": "M10x58mm(Rubber SS316)"
+    },
+    {
+      "no": 197,
+      "part_no": "WBT-1058RSA2",
+      "name_kr": "STS304 고무머리볼트세트",
+      "price_usd": 15.0,
+      "spec": "M10(Dia) x 58mm(Length)",
+      "name_en": "M10x58mm(Rubber SS304)"
+    },
+    {
+      "no": 198,
+      "part_no": "WBT-1058RD",
+      "name_kr": "HDG 고무머리볼트세트",
+      "price_usd": 5.0,
+      "spec": "M10(Dia) x 58mm(Length)",
+      "name_en": "M10x58mm(Rubber HDG)"
+    },
+    {
+      "no": 199,
+      "part_no": "WBT-1050Z",
+      "name_kr": "HDG  볼트세트",
+      "price_usd": 0.85,
+      "spec": "M10(Dia) x 50mm(Length)",
+      "name_en": "M10x50mm(HDG)"
+    },
+    {
+      "no": 200,
+      "part_no": "WBT-1050SA4",
+      "name_kr": "SS316 볼트세트",
+      "price_usd": 2.65,
+      "spec": "M10(Dia) x 50mm(Length)",
+      "name_en": "M10x50mm(SS316)"
+    },
+    {
+      "no": 201,
+      "part_no": "WBT-1050SA2",
+      "name_kr": "SS304 볼트세트",
+      "price_usd": 2.65,
+      "spec": "M10(Dia) x 50mm(Length)",
+      "name_en": "M10x50mm(SS304)"
+    },
+    {
+      "no": 202,
+      "part_no": "WBT-1240SA4",
+      "name_kr": "SS316 볼트세트",
+      "price_usd": 14.0,
+      "spec": "M12(Dia) x 40mm(Length)",
+      "name_en": "M12x40mm(SS316)"
+    },
+    {
+      "no": 203,
+      "part_no": "WBT-1240SA2",
+      "name_kr": "SS304 볼트세트",
+      "price_usd": 14.0,
+      "spec": "M12(Dia) x 40mm(Length)",
+      "name_en": "M12x40mm(SS304)"
+    },
+    {
+      "no": 204,
+      "part_no": "WBT-1035Z",
+      "name_kr": "HDG  볼트세트",
+      "price_usd": 0.72,
+      "spec": "M10(Dia) x 35mm(Length)",
+      "name_en": "M10x35mm(HDG)"
+    },
+    {
+      "no": 205,
+      "part_no": "WBT-1035SA4",
+      "name_kr": "SS316 볼트세트",
+      "price_usd": 2.2,
+      "spec": "M10(Dia) x 35mm(Length)",
+      "name_en": "M10x35mm(SS316)"
+    },
+    {
+      "no": 206,
+      "part_no": "WBT-1035SA2",
+      "name_kr": "SS304 볼트세트",
+      "price_usd": 2.2,
+      "spec": "M10(Dia) x 35mm(Length)",
+      "name_en": "M10x35mm(SS304)"
+    },
+    {
+      "no": 207,
+      "part_no": "WBT-10120SA4",
+      "name_kr": "SS316 볼트세트(맨홀조립)",
+      "price_usd": 28.7,
+      "spec": "M10(Dia) x 120 mm(Length)",
+      "name_en": "Manhole, Lower Fixture"
+    },
+    {
+      "no": 208,
+      "part_no": "WBR-9090SA4",
+      "name_kr": "STS316 내부코너브라켓",
+      "price_usd": 45.0,
+      "spec": "ANGLE SS316 - 85mmX85mmX5mm",
+      "name_en": "Corner BRKT(SS316)"
+    },
+    {
+      "no": 209,
+      "part_no": "WBR-9090SA2",
+      "name_kr": "STS304 내부코너브라켓",
+      "price_usd": 45.0,
+      "spec": "ANGLE SS304 - 85mmX85mmX5mm",
+      "name_en": "Corner BRKT(SS304)"
+    },
+    {
+      "no": 210,
+      "part_no": "WBR-7575Z",
+      "name_kr": "기초코너브라켓",
+      "price_usd": 15.0,
+      "spec": "ANGLE 75mmX75mmX6mmX70mm",
+      "name_en": "Steel Skid Connetor"
+    },
+    {
+      "no": 211,
+      "part_no": "WBR-5010Z",
+      "name_kr": "앙카셋트",
+      "price_usd": 16.0,
+      "spec": "ANGLE 50mmX120mmX4.5mm",
+      "name_en": "Anchor Bracket with bolt and nut set"
+    },
+    {
+      "no": 212,
+      "part_no": "WBR-22310Z",
+      "name_kr": "기초브라켓",
+      "price_usd": 16.0,
+      "spec": "ANGLE 103mmX223mmX6mm",
+      "name_en": "Steel Skid Connetor"
+    },
+    {
+      "no": 213,
+      "part_no": "WBR-21590Z",
+      "name_kr": "기초브라켓",
+      "price_usd": 16.0,
+      "spec": "ANGLE 103mmX223mmX6mm",
+      "name_en": "Steel Skid Connetor"
+    },
+    {
+      "no": 214,
+      "part_no": "WBR-1010Z",
+      "name_kr": "외부코너보강브라켓",
+      "price_usd": 16.0,
+      "spec": "ANGLE 85mmX85mmX4.5mm",
+      "name_en": "corner Reinforcing BKT"
+    },
+    {
+      "no": 215,
+      "part_no": "WBR-0240Z",
+      "name_kr": "기초브라켓",
+      "price_usd": 16.0,
+      "spec": "ANGLE 65mmX65mmX6mmX240mm",
+      "name_en": "Steel Skid Connetor"
+    },
+    {
+      "no": 216,
+      "part_no": "WBR-0150Z",
+      "name_kr": "기초코너브라켓",
+      "price_usd": 16.0,
+      "spec": "CHANNEL150 75mmX75mmX6mmX140mm",
+      "name_en": "Steel Skid Connetor"
+    },
+    {
+      "no": 217,
+      "part_no": "WBR-0120Z",
+      "name_kr": "기초코너브라켓",
+      "price_usd": 15.0,
+      "spec": "CHANNEL125 75mmX75mmX6mmX120mm",
+      "name_en": "Steel Skid Connetor"
+    },
+    {
+      "no": 218,
+      "part_no": "WAV-0100A",
+      "name_kr": "환기구",
+      "price_usd": 53.0,
+      "spec": "ABS, DIA 100A",
+      "name_en": "Air Vent "
+    },
+    {
+      "no": 219,
+      "part_no": "WAV-0050A",
+      "name_kr": "환기구",
+      "price_usd": 20.0,
+      "spec": "ABS, DIA 50A",
+      "name_en": "Air Vent "
+    },
+    {
+      "no": 220,
+      "part_no": "TR-14M5000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 133.0,
+      "spec": "M12.7(Dia) x 5000mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 221,
+      "part_no": "TR-14M5000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 133.0,
+      "spec": "M12.7(Dia) x 5000mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 222,
+      "part_no": "TR-14M4880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 130.0,
+      "spec": "M12.7(Dia) x 4880mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 223,
+      "part_no": "TR-14M4880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 130.0,
+      "spec": "M12.7(Dia) x 4880mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 224,
+      "part_no": "TR-14M4780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 130.0,
+      "spec": "M12.7(Dia) x 4780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 225,
+      "part_no": "TR-14M4780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 130.0,
+      "spec": "M12.7(Dia) x 4780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 226,
+      "part_no": "TR-14M4380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 120.0,
+      "spec": "M12.7(Dia) x4380mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 227,
+      "part_no": "TR-14M4380SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 120.0,
+      "spec": "M12.7(Dia) x4380mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 228,
+      "part_no": "TR-14M4280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 120.0,
+      "spec": "M12.7(Dia) x4280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 229,
+      "part_no": "TR-14M4280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 120.0,
+      "spec": "M12.7(Dia) x4280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 230,
+      "part_no": "TR-14M4000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 110.0,
+      "spec": "M12.7(Dia) x 4000mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 231,
+      "part_no": "TR-14M4000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 110.0,
+      "spec": "M12.7(Dia) x 4000mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 232,
+      "part_no": "TR-14M3880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 105.0,
+      "spec": "M12.7(Dia) x 3880mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 233,
+      "part_no": "TR-14M3880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 105.0,
+      "spec": "M12.7(Dia) x 3880mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 234,
+      "part_no": "TR-14M3780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 105.0,
+      "spec": "M12.7(Dia) x 3780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 235,
+      "part_no": "TR-14M3780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 105.0,
+      "spec": "M12.7(Dia) x 3780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 236,
+      "part_no": "TR-14M3380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 95.0,
+      "spec": "M12.7(Dia) x 3380mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 237,
+      "part_no": "TR-14M3380SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 95.0,
+      "spec": "M12.7(Dia) x 3380mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 238,
+      "part_no": "TR-14M3280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 95.0,
+      "spec": "M12.7(Dia) x 3280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 239,
+      "part_no": "TR-14M3280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 95.0,
+      "spec": "M12.7(Dia) x 3280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 240,
+      "part_no": "TR-14M3000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 81.0,
+      "spec": "M12.7(Dia) x 3000mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 241,
+      "part_no": "TR-14M3000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 81.0,
+      "spec": "M12.7(Dia) x 3000mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 242,
+      "part_no": "TR-14M2880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 77.0,
+      "spec": "M12.7(Dia) x 2880mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 243,
+      "part_no": "TR-14M2880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 77.0,
+      "spec": "M12.7(Dia) x 2880mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 244,
+      "part_no": "TR-14M2780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 77.0,
+      "spec": "M12.7(Dia) x 2780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 245,
+      "part_no": "TR-14M2780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 77.0,
+      "spec": "M12.7(Dia) x 2780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 246,
+      "part_no": "TR-14M2380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 63.0,
+      "spec": "M12.7(Dia) x 2380mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 247,
+      "part_no": "TR-14M2380SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 63.0,
+      "spec": "M12.7(Dia) x 2380mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 248,
+      "part_no": "TR-14M2280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 63.0,
+      "spec": "M12.7(Dia) x 2280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 249,
+      "part_no": "TR-14M2280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 63.0,
+      "spec": "M12.7(Dia) x 2280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 250,
+      "part_no": "TR-14M2000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 57.0,
+      "spec": "M12.7(Dia) x 2000mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 251,
+      "part_no": "TR-14M2000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 57.0,
+      "spec": "M12.7(Dia) x 2000mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 252,
+      "part_no": "TR-14M1880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 57.0,
+      "spec": "M12.7(Dia) x 1880mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 253,
+      "part_no": "TR-14M1880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 57.0,
+      "spec": "M12.7(Dia) x 1880mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 254,
+      "part_no": "TR-14M1780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 57.0,
+      "spec": "M12.7(Dia) x 1780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 255,
+      "part_no": "TR-14M1780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 57.0,
+      "spec": "M12.7(Dia) x 1780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 256,
+      "part_no": "TR-14M1380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 43.0,
+      "spec": "M12.7(Dia) x 1380mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 257,
+      "part_no": "TR-14M1380SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 43.0,
+      "spec": "M12.7(Dia) x 1380mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 258,
+      "part_no": "TR-14M1280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 43.0,
+      "spec": "M12.7(Dia) x 1280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 259,
+      "part_no": "TR-14M1280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 43.0,
+      "spec": "M12.7(Dia) x 1280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 260,
+      "part_no": "TR-14M1000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 35.0,
+      "spec": "M12.7(Dia) x 1000mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 261,
+      "part_no": "TR-14M1000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 35.0,
+      "spec": "M12.7(Dia) x 1000mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 262,
+      "part_no": "TR-14M0880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 35.0,
+      "spec": "M12.7(Dia) x 880mm(Length)",
+      "name_en": "SS316 Tie-Rod  "
+    },
+    {
+      "no": 263,
+      "part_no": "TR-14M0880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 35.0,
+      "spec": "M12.7(Dia) x 880mm(Length)",
+      "name_en": "SS304 Tie-Rod  "
+    },
+    {
+      "no": 264,
+      "part_no": "TR-14M0780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 35.0,
+      "spec": "M12.7(Dia) x 780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 265,
+      "part_no": "TR-14M0780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 35.0,
+      "spec": "M12.7(Dia) x 780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 266,
+      "part_no": "TR-12M5000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 133.0,
+      "spec": "M10.7(Dia) x 5000mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 267,
+      "part_no": "TR-12M5000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 133.0,
+      "spec": "M10.7(Dia) x 5000mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 268,
+      "part_no": "TR-12M4880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 130.0,
+      "spec": "M10.7(Dia) x 4880mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 269,
+      "part_no": "TR-12M4880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 130.0,
+      "spec": "M10.7(Dia) x 4880mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 270,
+      "part_no": "TR-12M4780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 130.0,
+      "spec": "M10.7(Dia) x 4780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 271,
+      "part_no": "TR-12M4780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 130.0,
+      "spec": "M10.7(Dia) x 4780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 272,
+      "part_no": "TR-12M4380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 120.0,
+      "spec": "M10.7(Dia) x4380mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 273,
+      "part_no": "TR-12M4380SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 120.0,
+      "spec": "M10.7(Dia) x4380mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 274,
+      "part_no": "TR-12M4280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 120.0,
+      "spec": "M10.7(Dia) x4280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 275,
+      "part_no": "TR-12M4280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 120.0,
+      "spec": "M10.7(Dia) x4280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 276,
+      "part_no": "TR-12M4000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 110.0,
+      "spec": "M10.7(Dia) x 4000mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 277,
+      "part_no": "TR-12M4000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 110.0,
+      "spec": "M10.7(Dia) x 4000mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 278,
+      "part_no": "TR-12M3880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 105.0,
+      "spec": "M10.7(Dia) x 3880mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 279,
+      "part_no": "TR-12M3880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 105.0,
+      "spec": "M10.7(Dia) x 3880mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 280,
+      "part_no": "TR-12M3780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 105.0,
+      "spec": "M10.7(Dia) x 3780mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 281,
+      "part_no": "TR-12M3780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 105.0,
+      "spec": "M10.7(Dia) x 3780mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 282,
+      "part_no": "TR-12M3380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 95.0,
+      "spec": "M10.7(Dia) x 3380mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 283,
+      "part_no": "TR-12M3280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 95.0,
+      "spec": "M10.7(Dia) x 3280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 284,
+      "part_no": "TR-12M3280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 95.0,
+      "spec": "M10.7(Dia) x 3280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 285,
+      "part_no": "TR-12M3280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 95.0,
+      "spec": "M10.7(Dia) x 3380mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 286,
+      "part_no": "TR-12M3000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 81.0,
+      "spec": "M10.7(Dia) x 3000mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 287,
+      "part_no": "TR-12M3000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 81.0,
+      "spec": "M10.7(Dia) x 3000mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 288,
+      "part_no": "TR-12M2880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 77.0,
+      "spec": "M10.7(Dia) x 2880mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 289,
+      "part_no": "TR-12M2880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 77.0,
+      "spec": "M10.7(Dia) x 2880mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 290,
+      "part_no": "TR-12M2780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 77.0,
+      "spec": "M10.7(Dia) x 2780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 291,
+      "part_no": "TR-12M2780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 77.0,
+      "spec": "M10.7(Dia) x 2780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 292,
+      "part_no": "TR-12M2380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 63.0,
+      "spec": "M10.7(Dia) x 2380mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 293,
+      "part_no": "TR-12M2380SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 63.0,
+      "spec": "M10.7(Dia) x 2380mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 294,
+      "part_no": "TR-12M2280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 63.0,
+      "spec": "M10.7(Dia) x 2280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 295,
+      "part_no": "TR-12M2280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 63.0,
+      "spec": "M10.7(Dia) x 2280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 296,
+      "part_no": "TR-12M2000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 57.0,
+      "spec": "M10.7(Dia) x 2000mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 297,
+      "part_no": "TR-12M2000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 57.0,
+      "spec": "M10.7(Dia) x 2000mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 298,
+      "part_no": "TR-12M1880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 57.0,
+      "spec": "M10.7(Dia) x 1880mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 299,
+      "part_no": "TR-12M1880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 57.0,
+      "spec": "M10.7(Dia) x 1880mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 300,
+      "part_no": "TR-12M1780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 57.0,
+      "spec": "M10.7(Dia) x 1780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 301,
+      "part_no": "TR-12M1780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 57.0,
+      "spec": "M10.7(Dia) x 1780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 302,
+      "part_no": "TR-12M1380SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 43.0,
+      "spec": "M10.7(Dia) x 1380mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 303,
+      "part_no": "TR-12M1380SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 43.0,
+      "spec": "M10.7(Dia) x 1380mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 304,
+      "part_no": "TR-12M1280SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 43.0,
+      "spec": "M10.7(Dia) x 1280mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 305,
+      "part_no": "TR-12M1280SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 43.0,
+      "spec": "M10.7(Dia) x 1280mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 306,
+      "part_no": "TR-12M1000SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 35.0,
+      "spec": "M10.7(Dia) x 1000mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 307,
+      "part_no": "TR-12M1000SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 35.0,
+      "spec": "M10.7(Dia) x 1000mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 308,
+      "part_no": "TR-12M0880SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 35.0,
+      "spec": "M10.7(Dia) x 880mm(Length)",
+      "name_en": "SS316 Tie-Rod "
+    },
+    {
+      "no": 309,
+      "part_no": "TR-12M0880SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 35.0,
+      "spec": "M10.7(Dia) x 880mm(Length)",
+      "name_en": "SS304 Tie-Rod "
+    },
+    {
+      "no": 310,
+      "part_no": "TR-12M0780SA4",
+      "name_kr": "SS316 환봉",
+      "price_usd": 35.0,
+      "spec": "M10.7(Dia) x 780mm(Length)",
+      "name_en": "SS316 Tie-Rod(Partition)"
+    },
+    {
+      "no": 311,
+      "part_no": "TR-12M0780SA2",
+      "name_kr": "SS304 환봉",
+      "price_usd": 35.0,
+      "spec": "M10.7(Dia) x 780mm(Length)",
+      "name_en": "SS304 Tie-Rod(Partition)"
+    },
+    {
+      "no": 312,
+      "part_no": "TC-14M60SA4",
+      "name_kr": "STS316 M14 환봉슬리브",
+      "price_usd": 17.0,
+      "spec": "M14(Dia) X 60mm(Length)",
+      "name_en": "SS316 Tie-Rod Connector"
+    },
+    {
+      "no": 313,
+      "part_no": "TC-14M60SA2",
+      "name_kr": "STS304 M14 환봉슬리브",
+      "price_usd": 17.0,
+      "spec": "M14(DIA) X 60mm(Length)",
+      "name_en": "SS304 Tie-Rod Connector"
+    },
+    {
+      "no": 314,
+      "part_no": "TC-12M60SA4",
+      "name_kr": "STS316 M12 환봉슬리브",
+      "price_usd": 17.0,
+      "spec": "Tie-rod connector M12*60S",
+      "name_en": "STS316 Tie-Rod Connector"
+    },
+    {
+      "no": 315,
+      "part_no": "TC-12M60SA2",
+      "name_kr": "STS304 M12 환봉슬리브",
+      "price_usd": 17.0,
+      "spec": "M12(DIA) X 60mm(Length)",
+      "name_en": "STS304 Tie-Rod Connector"
+    },
+    {
+      "no": 316,
+      "part_no": "SQ40M",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 160.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 317,
+      "part_no": "SQ35M",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 159.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 318,
+      "part_no": "SQ30M",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 158.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 319,
+      "part_no": "SQ25M",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 157.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 320,
+      "part_no": "SQ20M",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 156.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 321,
+      "part_no": "SQ15M",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 155.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 322,
+      "part_no": "SQ10T",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 100.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 323,
+      "part_no": "SQ10M",
+      "name_kr": "Side(0.5m x 0.5m)",
+      "price_usd": 154.0,
+      "spec": "0.5 x 0.5m",
+      "name_en": "Side Quarter"
+    },
+    {
+      "no": 324,
+      "part_no": "SN40MR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 143.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_P_R"
+    },
+    {
+      "no": 325,
+      "part_no": "SN40ML",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 139.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_P_L"
+    },
+    {
+      "no": 326,
+      "part_no": "SN40M",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 128.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz"
+    },
+    {
+      "no": 327,
+      "part_no": "SN40LR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 151.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_R"
+    },
+    {
+      "no": 328,
+      "part_no": "SN40LL",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 147.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_L"
+    },
+    {
+      "no": 329,
+      "part_no": "SN40L",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 132.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low"
+    },
+    {
+      "no": 330,
+      "part_no": "SN35MR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 142.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid_P_R"
+    },
+    {
+      "no": 331,
+      "part_no": "SN35ML",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 138.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid_P_L"
+    },
+    {
+      "no": 332,
+      "part_no": "SN35M",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 127.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid"
+    },
+    {
+      "no": 333,
+      "part_no": "SN35LR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 150.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_R"
+    },
+    {
+      "no": 334,
+      "part_no": "SN35LL",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 146.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_L"
+    },
+    {
+      "no": 335,
+      "part_no": "SN35L",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 131.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low"
+    },
+    {
+      "no": 336,
+      "part_no": "SN30MR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 141.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid_P_R"
+    },
+    {
+      "no": 337,
+      "part_no": "SN30ML",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 137.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid_P_L"
+    },
+    {
+      "no": 338,
+      "part_no": "SN30M",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 126.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid"
+    },
+    {
+      "no": 339,
+      "part_no": "SN30LR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 149.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_R"
+    },
+    {
+      "no": 340,
+      "part_no": "SN30LL",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 145.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_L"
+    },
+    {
+      "no": 341,
+      "part_no": "SN30L",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 130.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low"
+    },
+    {
+      "no": 342,
+      "part_no": "SN25MR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 140.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid_P_R"
+    },
+    {
+      "no": 343,
+      "part_no": "SN25ML",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 136.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid_P_L"
+    },
+    {
+      "no": 344,
+      "part_no": "SN25M",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 125.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Mid"
+    },
+    {
+      "no": 345,
+      "part_no": "SN25LR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 148.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_R"
+    },
+    {
+      "no": 346,
+      "part_no": "SN25LL",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 144.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low_P_L"
+    },
+    {
+      "no": 347,
+      "part_no": "SN25L",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 129.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Low"
+    },
+    {
+      "no": 348,
+      "part_no": "SN10TR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 153.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Top_P_R"
+    },
+    {
+      "no": 349,
+      "part_no": "SN10TL",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 152.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Top_P_L"
+    },
+    {
+      "no": 350,
+      "part_no": "SN10T",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 133.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Top"
+    },
+    {
+      "no": 351,
+      "part_no": "SN10SR",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 135.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Sin_P_R"
+    },
+    {
+      "no": 352,
+      "part_no": "SN10SL",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 134.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Sin_P_L"
+    },
+    {
+      "no": 353,
+      "part_no": "SN10S",
+      "name_kr": "SIDE_Nozzle(1x1m)",
+      "price_usd": 124.0,
+      "spec": "1x1m",
+      "name_en": "Side_Noz_Sin"
+    },
+    {
+      "no": 354,
+      "part_no": "SL20TR",
+      "name_kr": "Side(1m x 2m)",
+      "price_usd": 150.0,
+      "spec": "1x2m",
+      "name_en": "Side Top(P_R)"
+    },
+    {
+      "no": 355,
+      "part_no": "SL20TL",
+      "name_kr": "Side(1m x 2m)",
+      "price_usd": 150.0,
+      "spec": "1x2m",
+      "name_en": "Side Top(P_L)"
+    },
+    {
+      "no": 356,
+      "part_no": "SL20T",
+      "name_kr": "Side(1m x 2m)",
+      "price_usd": 150.0,
+      "spec": "1x2m",
+      "name_en": "Side Top"
+    },
+    {
+      "no": 357,
+      "part_no": "SL20SR",
+      "name_kr": "Side(1m x 2m)",
+      "price_usd": 84.0,
+      "spec": "1x2m",
+      "name_en": "Side_2mH(P_R)"
+    },
+    {
+      "no": 358,
+      "part_no": "SL20SL",
+      "name_kr": "Side(1m x 2m)",
+      "price_usd": 83.0,
+      "spec": "1x2m",
+      "name_en": "Side_2mH(P_L)"
+    },
+    {
+      "no": 359,
+      "part_no": "SL20S",
+      "name_kr": "Side(1m x 2m)",
+      "price_usd": 150.0,
+      "spec": "1x2m",
+      "name_en": "Side_2mH"
+    },
+    {
+      "no": 360,
+      "part_no": "SL15TR",
+      "name_kr": "Side(1m x 1.5m)",
+      "price_usd": 115.0,
+      "spec": "1x1.5m",
+      "name_en": "Side_1.5mH(P_R)"
+    },
+    {
+      "no": 361,
+      "part_no": "SL15TL",
+      "name_kr": "Side(1m x 1.5m)",
+      "price_usd": 115.0,
+      "spec": "1x1.5m",
+      "name_en": "Side_1.5mH(P_L)"
+    },
+    {
+      "no": 362,
+      "part_no": "SL15T",
+      "name_kr": "Side(1m x 1.5m)",
+      "price_usd": 115.0,
+      "spec": "1x1.5m",
+      "name_en": "Side_1.5mH"
+    },
+    {
+      "no": 363,
+      "part_no": "SL15SR",
+      "name_kr": "Side(1m x 1.5m)",
+      "price_usd": 90.0,
+      "spec": "1x1.5m",
+      "name_en": "Side_Top(P_R)"
+    },
+    {
+      "no": 364,
+      "part_no": "SL15SL",
+      "name_kr": "Side(1m x 1.5m)",
+      "price_usd": 89.0,
+      "spec": "1x1.5m",
+      "name_en": "Side_Top(P_L)"
+    },
+    {
+      "no": 365,
+      "part_no": "SL15S",
+      "name_kr": "Side(1m x 1.5m)",
+      "price_usd": 115.0,
+      "spec": "1x1.5m",
+      "name_en": "Side_Top"
+    },
+    {
+      "no": 366,
+      "part_no": "SH50MR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 113.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_R"
+    },
+    {
+      "no": 367,
+      "part_no": "SH50ML",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 109.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_L"
+    },
+    {
+      "no": 368,
+      "part_no": "SH50M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 98.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 369,
+      "part_no": "SH50LR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 121.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_R"
+    },
+    {
+      "no": 370,
+      "part_no": "SH50LL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 117.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_L"
+    },
+    {
+      "no": 371,
+      "part_no": "SH50L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 102.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 372,
+      "part_no": "SH45MR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 113.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_R"
+    },
+    {
+      "no": 373,
+      "part_no": "SH45ML",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 109.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_L"
+    },
+    {
+      "no": 374,
+      "part_no": "SH45M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 98.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 375,
+      "part_no": "SH45LR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 121.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_R"
+    },
+    {
+      "no": 376,
+      "part_no": "SH45LL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 117.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_L"
+    },
+    {
+      "no": 377,
+      "part_no": "SH45L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 102.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 378,
+      "part_no": "SH40MR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 113.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_R"
+    },
+    {
+      "no": 379,
+      "part_no": "SH40ML",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 109.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_L"
+    },
+    {
+      "no": 380,
+      "part_no": "SH40M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 70.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 381,
+      "part_no": "SH40LR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 121.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_R"
+    },
+    {
+      "no": 382,
+      "part_no": "SH40LL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 117.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_L"
+    },
+    {
+      "no": 383,
+      "part_no": "SH40L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 70.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 384,
+      "part_no": "SH35MR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 112.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_R"
+    },
+    {
+      "no": 385,
+      "part_no": "SH35ML",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 108.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_L"
+    },
+    {
+      "no": 386,
+      "part_no": "SH35M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 65.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 387,
+      "part_no": "SH35LR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 120.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_R"
+    },
+    {
+      "no": 388,
+      "part_no": "SH35LL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 116.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_L"
+    },
+    {
+      "no": 389,
+      "part_no": "SH35L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 65.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 390,
+      "part_no": "SH30MR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 111.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_R"
+    },
+    {
+      "no": 391,
+      "part_no": "SH30ML",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 107.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_L"
+    },
+    {
+      "no": 392,
+      "part_no": "SH30M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 63.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 393,
+      "part_no": "SH30LR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 119.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_R"
+    },
+    {
+      "no": 394,
+      "part_no": "SH30LL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 115.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_L"
+    },
+    {
+      "no": 395,
+      "part_no": "SH30L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 100.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 396,
+      "part_no": "SH25MR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 110.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_R"
+    },
+    {
+      "no": 397,
+      "part_no": "SH25ML",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 106.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_P_L"
+    },
+    {
+      "no": 398,
+      "part_no": "SH25M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 60.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 399,
+      "part_no": "SH25LR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 118.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_R"
+    },
+    {
+      "no": 400,
+      "part_no": "SH25LL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 114.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low_P_L"
+    },
+    {
+      "no": 401,
+      "part_no": "SH25L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 99.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 402,
+      "part_no": "SH20M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 50.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 403,
+      "part_no": "SH20TR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 123.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top_R"
+    },
+    {
+      "no": 404,
+      "part_no": "SH20TL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 122.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top_L"
+    },
+    {
+      "no": 405,
+      "part_no": "SH20T",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 103.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top"
+    },
+    {
+      "no": 406,
+      "part_no": "SH20L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 50.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 407,
+      "part_no": "SH15M",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 43.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side"
+    },
+    {
+      "no": 408,
+      "part_no": "SH15TR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 123.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top_R"
+    },
+    {
+      "no": 409,
+      "part_no": "SH15TL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 122.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top_L"
+    },
+    {
+      "no": 410,
+      "part_no": "SH15T",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 103.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top"
+    },
+    {
+      "no": 411,
+      "part_no": "SH15L",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 50.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 412,
+      "part_no": "SH10TR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 123.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top_R"
+    },
+    {
+      "no": 413,
+      "part_no": "SH10TL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 122.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top_L"
+    },
+    {
+      "no": 414,
+      "part_no": "SH10T",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 40.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Top"
+    },
+    {
+      "no": 415,
+      "part_no": "SH10SR",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 105.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Sin_R"
+    },
+    {
+      "no": 416,
+      "part_no": "SH10SL",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 104.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Sin_L"
+    },
+    {
+      "no": 417,
+      "part_no": "SH10S",
+      "name_kr": "Side(0.5m x 1m)",
+      "price_usd": 94.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Side_Sin"
+    },
+    {
+      "no": 418,
+      "part_no": "SF50L",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 140.0,
+      "spec": "0 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 419,
+      "part_no": "SF50MP",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 71.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P"
+    },
+    {
+      "no": 420,
+      "part_no": "SF50M",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 58.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid"
+    },
+    {
+      "no": 420,
+      "part_no": "SF50L",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 140.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 421,
+      "part_no": "SF50LR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 79.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_R"
+    },
+    {
+      "no": 422,
+      "part_no": "SF50LL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 75.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_L"
+    },
+    {
+      "no": 423,
+      "part_no": "SF45MP",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 71.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P"
+    },
+    {
+      "no": 424,
+      "part_no": "SF45L",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 135.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 425,
+      "part_no": "SF45MP",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 71.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P"
+    },
+    {
+      "no": 426,
+      "part_no": "SF45M",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 58.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid"
+    },
+    {
+      "no": 427,
+      "part_no": "SF45LR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 79.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_R"
+    },
+    {
+      "no": 428,
+      "part_no": "SF45LL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 75.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_L"
+    },
+    {
+      "no": 429,
+      "part_no": "SF40MP",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 71.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P"
+    },
+    {
+      "no": 430,
+      "part_no": "SF40M",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 130.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid"
+    },
+    {
+      "no": 431,
+      "part_no": "SF40MR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 79.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_R"
+    },
+    {
+      "no": 432,
+      "part_no": "SF40ML",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 75.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_MId_L"
+    },
+    {
+      "no": 431,
+      "part_no": "SF40LR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 79.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_R"
+    },
+    {
+      "no": 432,
+      "part_no": "SF40LL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 75.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_L"
+    },
+    {
+      "no": 433,
+      "part_no": "SF40L",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 130.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 434,
+      "part_no": "SF35MP",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 70.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P"
+    },
+    {
+      "no": 435,
+      "part_no": "SF35M",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 125.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid"
+    },
+    {
+      "no": 436,
+      "part_no": "SF35MR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 78.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_R"
+    },
+    {
+      "no": 437,
+      "part_no": "SF35ML",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 74.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_L"
+    },
+    {
+      "no": 438,
+      "part_no": "SF35LR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 125.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_R"
+    },
+    {
+      "no": 439,
+      "part_no": "SF35LL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 125.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_L"
+    },
+    {
+      "no": 440,
+      "part_no": "SF35L",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 125.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 441,
+      "part_no": "SF30MP",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 69.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P"
+    },
+    {
+      "no": 442,
+      "part_no": "SF30M",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 115.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid"
+    },
+    {
+      "no": 443,
+      "part_no": "SF30ML",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 56.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P_L"
+    },
+    {
+      "no": 444,
+      "part_no": "SF30MR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 56.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P_R"
+    },
+    {
+      "no": 445,
+      "part_no": "SF30LR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 77.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_R"
+    },
+    {
+      "no": 446,
+      "part_no": "SF30LL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 73.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_L"
+    },
+    {
+      "no": 447,
+      "part_no": "SF30L",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 115.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 448,
+      "part_no": "SF25MP",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 68.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P"
+    },
+    {
+      "no": 449,
+      "part_no": "SF25M",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 105.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid"
+    },
+    {
+      "no": 450,
+      "part_no": "SF25MR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 105.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P_L"
+    },
+    {
+      "no": 451,
+      "part_no": "SF25ML",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 105.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Mid_P_R"
+    },
+    {
+      "no": 452,
+      "part_no": "SF25LR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 105.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_R"
+    },
+    {
+      "no": 453,
+      "part_no": "SF25LL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 105.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low_L"
+    },
+    {
+      "no": 454,
+      "part_no": "SF25L",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 105.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Low"
+    },
+    {
+      "no": 455,
+      "part_no": "SF10TR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 81.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Top_R"
+    },
+    {
+      "no": 456,
+      "part_no": "SF10TL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 80.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Top_L"
+    },
+    {
+      "no": 457,
+      "part_no": "SF10T",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 65.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Top"
+    },
+    {
+      "no": 458,
+      "part_no": "SF10SR",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 67.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Sin_R"
+    },
+    {
+      "no": 459,
+      "part_no": "SF10SL",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 66.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Sin_L"
+    },
+    {
+      "no": 460,
+      "part_no": "SF10S",
+      "name_kr": "Side(1m x 1m)",
+      "price_usd": 80.0,
+      "spec": "1 x 1M",
+      "name_en": "Side_Sin"
+    },
+    {
+      "no": 461,
+      "part_no": "RQ10M",
+      "name_kr": "Roof(0.5x0.5M)",
+      "price_usd": 100.0,
+      "spec": "0.5 x 0.5M",
+      "name_en": "Roof Quarter"
+    },
+    {
+      "no": 462,
+      "part_no": "RH10M",
+      "name_kr": "Roof(0.5x1M)",
+      "price_usd": 50.0,
+      "spec": "0.5 x 1M",
+      "name_en": "Roof Half"
+    },
+    {
+      "no": 463,
+      "part_no": "RF00M",
+      "name_kr": "Roof(1x1M)",
+      "price_usd": 55.0,
+      "spec": "1 x 1M",
+      "name_en": "Roof "
+    },
+    {
+      "no": 464,
+      "part_no": "PL20TCB",
+      "name_kr": "Partition(1x1.985m)",
+      "price_usd": 150.0,
+      "spec": "1x1.985M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 465,
+      "part_no": "PL20TCA",
+      "name_kr": "Partition(1x1.915m)",
+      "price_usd": 182.0,
+      "spec": "1x1.915M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 466,
+      "part_no": "PL15TCB",
+      "name_kr": "Partition(1x1.485m)",
+      "price_usd": 115.0,
+      "spec": "1x1.485M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 467,
+      "part_no": "PL15TCA",
+      "name_kr": "Partition(1x1.415m)",
+      "price_usd": 180.0,
+      "spec": "1x1.415M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 468,
+      "part_no": "PH50M",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 173.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 469,
+      "part_no": "PH45M",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 172.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 470,
+      "part_no": "PH40M",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 173.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 471,
+      "part_no": "PH35M",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 172.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 472,
+      "part_no": "PH30M",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 171.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 473,
+      "part_no": "PH25M",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 170.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 474,
+      "part_no": "PH10TCB(40)",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 177.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 475,
+      "part_no": "PH10TCB(35)",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 176.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 476,
+      "part_no": "PH10TCB(30)",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 175.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 477,
+      "part_no": "PH10TCB",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 174.0,
+      "spec": "0.93x0.5M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 478,
+      "part_no": "PH10TCA",
+      "name_kr": "Partition(0.93x0.5m)",
+      "price_usd": 174.0,
+      "spec": "0.5X0.86M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 479,
+      "part_no": "PQ05TCB",
+      "name_kr": "Partition(0.5x0.485m)",
+      "price_usd": 169.0,
+      "spec": "0.5x0.485M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 480,
+      "part_no": "PQ05TCA",
+      "name_kr": "Partition(0.5x0.415m)",
+      "price_usd": 168.0,
+      "spec": "0.5x0.415M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 481,
+      "part_no": "PF50M",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 167.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 482,
+      "part_no": "PF45M",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 167.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 483,
+      "part_no": "PF40M",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 167.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 484,
+      "part_no": "PF35M",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 115.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 485,
+      "part_no": "PF30M",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 165.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 486,
+      "part_no": "PF25M",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 105.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 487,
+      "part_no": "PF10TCA",
+      "name_kr": "Partition(1x0.86m)",
+      "price_usd": 178.0,
+      "spec": "1x0.86M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 488,
+      "part_no": "PF10T",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 163.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 489,
+      "part_no": "PF10",
+      "name_kr": "Partition(0.93x1m)",
+      "price_usd": 162.0,
+      "spec": "0.93x1M",
+      "name_en": "Partition"
+    },
+    {
+      "no": 490,
+      "part_no": "MF00M",
+      "name_kr": "Manhole(1m x 1m)",
+      "price_usd": 80.0,
+      "spec": "1x1M",
+      "name_en": "Manhole"
+    },
+    {
+      "no": 491,
+      "part_no": "DN50M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 140.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 492,
+      "part_no": "DN45M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 135.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 493,
+      "part_no": "DN40M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 130.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 494,
+      "part_no": "DN35M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 125.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 495,
+      "part_no": "DN30M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 115.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 496,
+      "part_no": "DN25M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 105.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 497,
+      "part_no": "DN20M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 95.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 498,
+      "part_no": "DN15M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 90.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 499,
+      "part_no": "DN10M",
+      "name_kr": "Nozzle_Drain(1x1m)",
+      "price_usd": 85.0,
+      "spec": "1x1M",
+      "name_en": "Nozzle_Drain"
+    },
+    {
+      "no": 500,
+      "part_no": "BQ50M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 46.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 501,
+      "part_no": "BQ45M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 45.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 502,
+      "part_no": "BQ40M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 100.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 503,
+      "part_no": "BQ35M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 45.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 504,
+      "part_no": "BQ30M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 44.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 505,
+      "part_no": "BQ25M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 43.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 506,
+      "part_no": "BQ20M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 42.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 507,
+      "part_no": "BQ15M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 41.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 508,
+      "part_no": "BQ10M",
+      "name_kr": "Base(0.5x0.5M)",
+      "price_usd": 40.0,
+      "spec": "0.5x0.5M",
+      "name_en": "Base"
+    },
+    {
+      "no": 509,
+      "part_no": "BH50PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 32.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 510,
+      "part_no": "BH50V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 32.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 511,
+      "part_no": "BH50M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 80.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 512,
+      "part_no": "BH50H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 39.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 513,
+      "part_no": "BH50PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 39.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 514,
+      "part_no": "BH45V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 32.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 515,
+      "part_no": "BH45M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 25.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 516,
+      "part_no": "BH45H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 39.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 517,
+      "part_no": "BH40PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 39.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 518,
+      "part_no": "BH40V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 32.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 519,
+      "part_no": "BH40M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 70.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 520,
+      "part_no": "BH40H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 39.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 521,
+      "part_no": "BH35PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 39.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 522,
+      "part_no": "BH35V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 31.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 523,
+      "part_no": "BH35M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 24.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 524,
+      "part_no": "BH35H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 38.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 525,
+      "part_no": "BH35PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 33.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 526,
+      "part_no": "BH30V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 30.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 527,
+      "part_no": "BH30M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 23.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 528,
+      "part_no": "BH30H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 37.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 529,
+      "part_no": "BH30PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 33.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 530,
+      "part_no": "BH25V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 29.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 531,
+      "part_no": "BH25M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 60.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 532,
+      "part_no": "BH25H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 36.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 533,
+      "part_no": "BH25PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 33.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 534,
+      "part_no": "BH20V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 28.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 535,
+      "part_no": "BH20M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 21.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 536,
+      "part_no": "BH20H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 35.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 537,
+      "part_no": "BH20PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 33.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 538,
+      "part_no": "BH15V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 27.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 539,
+      "part_no": "BH15M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 20.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 540,
+      "part_no": "BH15H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 34.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 541,
+      "part_no": "BH15PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 33.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 542,
+      "part_no": "BH10V",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 26.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 543,
+      "part_no": "BH10M",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 19.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 544,
+      "part_no": "BH10H",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 33.0,
+      "spec": "0.5x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 545,
+      "part_no": "BH10PS",
+      "name_kr": "Base(0.5x1M)",
+      "price_usd": 33.0,
+      "spec": "0.5x1M",
+      "name_en": "Base_P_S"
+    },
+    {
+      "no": 546,
+      "part_no": "BF50P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 18.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 547,
+      "part_no": "BF50M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 140.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 548,
+      "part_no": "BF45P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 18.0,
+      "spec": "1x1M",
+      "name_en": "Base_P"
+    },
+    {
+      "no": 549,
+      "part_no": "BF45M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 130.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 550,
+      "part_no": "BF40P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 125.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 551,
+      "part_no": "BF40M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 125.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 552,
+      "part_no": "BF35P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 115.0,
+      "spec": "1x1M",
+      "name_en": "Base_P"
+    },
+    {
+      "no": 553,
+      "part_no": "BF35M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 115.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 554,
+      "part_no": "BF30P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 16.0,
+      "spec": "1x1M",
+      "name_en": "Base_P"
+    },
+    {
+      "no": 555,
+      "part_no": "BF30M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 105.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 556,
+      "part_no": "BF25P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 100.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 557,
+      "part_no": "BF25M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 100.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 558,
+      "part_no": "BF20P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 100.0,
+      "spec": "1x1M",
+      "name_en": "Base_P"
+    },
+    {
+      "no": 559,
+      "part_no": "BF20M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 95.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 560,
+      "part_no": "BF15P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 13.0,
+      "spec": "1x1M",
+      "name_en": "Base_P"
+    },
+    {
+      "no": 561,
+      "part_no": "BF15M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 85.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 562,
+      "part_no": "BF10P",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 12.0,
+      "spec": "1x1M",
+      "name_en": "Base_P"
+    },
+    {
+      "no": 563,
+      "part_no": "BF10M",
+      "name_kr": "Base(1x1M)",
+      "price_usd": 75.0,
+      "spec": "1x1M",
+      "name_en": "Base"
+    },
+    {
+      "no": 564,
+      "part_no": "M14-WASHERSA4",
+      "name_kr": "SS316 워셔 ",
+      "price_usd": 0.5,
+      "spec": "M14(Dia) Washer(SS316)",
+      "name_en": "SS316 Washer"
+    },
+    {
+      "no": 565,
+      "part_no": "M12-WASHERSA4",
+      "name_kr": "SS316 워셔 ",
+      "price_usd": 50.0,
+      "spec": "M12(Dia) Washer(SS316)",
+      "name_en": "SS316 Washer"
+    },
+    {
+      "no": 566,
+      "part_no": "M12 NUT(SA4)",
+      "name_kr": "M12 환봉고정너트/워셔(STS304)",
+      "price_usd": 1.1,
+      "spec": "M12(DIA) Nut and Washer",
+      "name_en": "SS316 T/Rod Nut"
+    },
+    {
+      "no": 567,
+      "part_no": "M12 NUT(SA2)",
+      "name_kr": "M12 환봉고정너트/워셔(STS304)",
+      "price_usd": 1.1,
+      "spec": "M12(Dia) Nut ",
+      "name_en": "SS304 T/Rod Nut"
+    },
+    {
+      "no": 568,
+      "part_no": "M12 BW(SA4)",
+      "name_kr": "M12 환봉고정너트/워셔(STS316)",
+      "price_usd": 1.1,
+      "spec": "M12(Dia) Nut and Washer",
+      "name_en": "SS316 T/Rod Washer "
+    },
+    {
+      "no": 569,
+      "part_no": "M12 BW(SA2)",
+      "name_kr": "M12 환봉고정너트/워셔(STS304)",
+      "price_usd": 1.1,
+      "spec": "M12(Dia) Washer",
+      "name_en": "SS304 T/Rod Washer "
+    },
+    {
+      "no": 570,
+      "part_no": "LNR-3.0T",
+      "name_kr": "라이너",
+      "price_usd": 1.2,
+      "spec": "60mm*70mm*3t ",
+      "name_en": "Liner"
+    },
+    {
+      "no": 571,
+      "part_no": "LNR-1.5T",
+      "name_kr": "라이너",
+      "price_usd": 1.2,
+      "spec": "60mm*70mm*1.5t",
+      "name_en": "Liner"
+    },
+    {
+      "no": 572,
+      "part_no": "Silicon",
+      "name_kr": "실리콘",
+      "price_usd": 15.0,
+      "spec": "Silicon",
+      "name_en": "Silicon"
+    }
+  ],
+  "weights": [
+    {
+      "part_no": "WST-0160",
+      "weight_kg": 0.123
+    },
+    {
+      "part_no": "M12(4.5T)",
+      "weight_kg": 0.05
+    },
+    {
+      "part_no": "WABT-1210NE",
+      "weight_kg": 0.4
+    },
+    {
+      "part_no": "WAV-0050P",
+      "weight_kg": 0.04000000000000001
+    },
+    {
+      "part_no": "WAV-0100P",
+      "weight_kg": 0.2
+    },
+    {
+      "part_no": "WBR-0026Z",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WBR-0120Z",
+      "weight_kg": 1.06
+    },
+    {
+      "part_no": "WBR-0140ZH",
+      "weight_kg": 1.2
+    },
+    {
+      "part_no": "WBR-0140ZH",
+      "weight_kg": 1.2
+    },
+    {
+      "part_no": "WBR-0215Z",
+      "weight_kg": 1.33
+    },
+    {
+      "part_no": "WBR-1010Z",
+      "weight_kg": 0.54
+    },
+    {
+      "part_no": "WBR-1016CZ",
+      "weight_kg": 0.83
+    },
+    {
+      "part_no": "WBR-1022CZ",
+      "weight_kg": 1.17
+    },
+    {
+      "part_no": "WBR-1717S",
+      "weight_kg": 4.9
+    },
+    {
+      "part_no": "WBR-5010Z",
+      "weight_kg": 0.35
+    },
+    {
+      "part_no": "WBR-7575Z",
+      "weight_kg": 0.74
+    },
+    {
+      "part_no": "WBR-9016CZ",
+      "weight_kg": 0.83
+    },
+    {
+      "part_no": "WBR-9021CZ",
+      "weight_kg": 0.96
+    },
+    {
+      "part_no": "WBR-9090SA2",
+      "weight_kg": 0.78
+    },
+    {
+      "part_no": "WBR-9090SA4",
+      "weight_kg": 0.78
+    },
+    {
+      "part_no": "WBR-9090Z",
+      "weight_kg": 0.78
+    },
+    {
+      "part_no": "WBT-1230SA2",
+      "weight_kg": 0.05
+    },
+    {
+      "part_no": "WBT-1230SA4",
+      "weight_kg": 0.05
+    },
+    {
+      "part_no": "WBT-1230SA4",
+      "weight_kg": 0.05
+    },
+    {
+      "part_no": "WBT-1230ZI",
+      "weight_kg": 0.05
+    },
+    {
+      "part_no": "WBT-1245RD",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WBT-1245RS(304)",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WBT-1245SA2",
+      "weight_kg": 0.068
+    },
+    {
+      "part_no": "WBT-1245SA4",
+      "weight_kg": 0.068
+    },
+    {
+      "part_no": "WBT-1035Z",
+      "weight_kg": 0.07
+    },
+    {
+      "part_no": "WBT-1035SA2",
+      "weight_kg": 0.0683
+    },
+    {
+      "part_no": "WBT-1035SA4",
+      "weight_kg": 0.0666
+    },
+    {
+      "part_no": "WBT-1250ZI",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WBT-1050Z",
+      "weight_kg": 0.07
+    },
+    {
+      "part_no": "WBT-1050SA2",
+      "weight_kg": 0.0683
+    },
+    {
+      "part_no": "WBT-1050SA4",
+      "weight_kg": 0.0666
+    },
+    {
+      "part_no": "WBT-1412RD",
+      "weight_kg": 0.263
+    },
+    {
+      "part_no": "WBT-1412RS",
+      "weight_kg": 0.263
+    },
+    {
+      "part_no": "WBT-1412RS304",
+      "weight_kg": 0.263
+    },
+    {
+      "part_no": "WBT-1440ZI",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WBT-1445ZI",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WBT-1460RD",
+      "weight_kg": 0.149
+    },
+    {
+      "part_no": "WBT-1630SU",
+      "weight_kg": 0.097
+    },
+    {
+      "part_no": "WBT-M12(4.5T)",
+      "weight_kg": 0.009
+    },
+    {
+      "part_no": "WCF-0500F",
+      "weight_kg": 1.25
+    },
+    {
+      "part_no": "WCF-1000F",
+      "weight_kg": 2.5
+    },
+    {
+      "part_no": "WCF-1000SB",
+      "weight_kg": 2.1
+    },
+    {
+      "part_no": "WCF-1000ZT",
+      "weight_kg": 4.0
+    },
+    {
+      "part_no": "WCP-0050Z",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WCP-0050Z",
+      "weight_kg": 0.1
+    },
+    {
+      "part_no": "WCP-0270Z",
+      "weight_kg": 5.79
+    },
+    {
+      "part_no": "WCP-1410ZU",
+      "weight_kg": 1.5
+    },
+    {
+      "part_no": "WCP-1411AS",
+      "weight_kg": 0.88
+    },
+    {
+      "part_no": "WCP-1429ZL",
+      "weight_kg": 1.8
+    },
+    {
+      "part_no": "WCP-1429ZL",
+      "weight_kg": 1.5
+    },
+    {
+      "part_no": "WCP-1480SL",
+      "weight_kg": 1.33
+    },
+    {
+      "part_no": "WCP-1610ZL",
+      "weight_kg": 1.72
+    },
+    {
+      "part_no": "WCP-1615SA2",
+      "weight_kg": 0.911
+    },
+    {
+      "part_no": "WCP-1616SD",
+      "weight_kg": 2.5
+    },
+    {
+      "part_no": "WCP-1616ZO",
+      "weight_kg": 2.8
+    },
+    {
+      "part_no": "WCP-1650ZU",
+      "weight_kg": 0.4
+    },
+    {
+      "part_no": "WCP-1650ZU",
+      "weight_kg": 0.41
+    },
+    {
+      "part_no": "WCP-1650ZU",
+      "weight_kg": 0.41
+    },
+    {
+      "part_no": "WCP-1710ZU",
+      "weight_kg": 2.33
+    },
+    {
+      "part_no": "WCP-1710ZU",
+      "weight_kg": 2.33
+    },
+    {
+      "part_no": "WCP-1717S",
+      "weight_kg": 0.5
+    },
+    {
+      "part_no": "WCP-1810ZC",
+      "weight_kg": 0.8
+    },
+    {
+      "part_no": "WCP-1810ZC",
+      "weight_kg": 1.77
+    },
+    {
+      "part_no": "WCP-1810ZC",
+      "weight_kg": 1.77
+    },
+    {
+      "part_no": "WCP-1890S",
+      "weight_kg": 1.0
+    },
+    {
+      "part_no": "WCP-2010ZC",
+      "weight_kg": 1.97
+    },
+    {
+      "part_no": "WCP-2010ZU",
+      "weight_kg": 2.35714285714286
+    },
+    {
+      "part_no": "WCP-2210ZC",
+      "weight_kg": 2.16
+    },
+    {
+      "part_no": "WCP-2210ZC",
+      "weight_kg": 2.16
+    },
+    {
+      "part_no": "WCP-2525ZU",
+      "weight_kg": 1.34
+    },
+    {
+      "part_no": "WCP-2525ZU",
+      "weight_kg": 1.34
+    },
+    {
+      "part_no": "WCP-270Z",
+      "weight_kg": 5.79
+    },
+    {
+      "part_no": "WCP-4075Z",
+      "weight_kg": 0.29
+    },
+    {
+      "part_no": "WCP-4075Z",
+      "weight_kg": 0.29
+    },
+    {
+      "part_no": "WCP-6075Z",
+      "weight_kg": 0.43
+    },
+    {
+      "part_no": "WCP-6075Z",
+      "weight_kg": 0.43
+    },
+    {
+      "part_no": "WCP-7070Z",
+      "weight_kg": 5.79
+    },
+    {
+      "part_no": "WCP-7070ZE",
+      "weight_kg": 1.68
+    },
+    {
+      "part_no": "WCP-7070ZE",
+      "weight_kg": 1.68
+    },
+    {
+      "part_no": "WCP-7070ZU",
+      "weight_kg": 1.68
+    },
+    {
+      "part_no": "WFB-0450Z",
+      "weight_kg": 0.9643725
+    },
+    {
+      "part_no": "WFB-0450ZL",
+      "weight_kg": 0.80364375
+    },
+    {
+      "part_no": "WFB-0450ZP",
+      "weight_kg": 0.33753037500000005
+    },
+    {
+      "part_no": "WFB-0450SA2",
+      "weight_kg": 0.9643725
+    },
+    {
+      "part_no": "WFB-0450LSA2",
+      "weight_kg": 0.80364375
+    },
+    {
+      "part_no": "WFB-0450PSA2",
+      "weight_kg": 0.33753037500000005
+    },
+    {
+      "part_no": "WFB-0450SA4",
+      "weight_kg": 0.9643725
+    },
+    {
+      "part_no": "WFB-0450LSA4",
+      "weight_kg": 0.80364375
+    },
+    {
+      "part_no": "WFB-0450PSA4",
+      "weight_kg": 0.33753037500000005
+    },
+    {
+      "part_no": "WFB-0880Z",
+      "weight_kg": 1.8651600000000002
+    },
+    {
+      "part_no": "WFB-0880ZL",
+      "weight_kg": 1.5543
+    },
+    {
+      "part_no": "WFB-0880ZP",
+      "weight_kg": 0.7253400000000001
+    },
+    {
+      "part_no": "WFB-0880SA2",
+      "weight_kg": 1.8651600000000002
+    },
+    {
+      "part_no": "WFB-0880LSA2",
+      "weight_kg": 1.5543
+    },
+    {
+      "part_no": "WFB-0880PSA2",
+      "weight_kg": 0.7253400000000001
+    },
+    {
+      "part_no": "WFB-0880SA4",
+      "weight_kg": 1.8651600000000002
+    },
+    {
+      "part_no": "WFB-0880LSA4",
+      "weight_kg": 1.5543
+    },
+    {
+      "part_no": "WFB-0880PSA4",
+      "weight_kg": 0.7253400000000001
+    },
+    {
+      "part_no": "WFB-0950Z",
+      "weight_kg": 2.0241225000000003
+    },
+    {
+      "part_no": "WFB-0950ZL",
+      "weight_kg": 1.6867687499999997
+    },
+    {
+      "part_no": "WFB-0950ZP",
+      "weight_kg": 0.7871587499999999
+    },
+    {
+      "part_no": "WFB-0950SA2",
+      "weight_kg": 2.0241225000000003
+    },
+    {
+      "part_no": "WFB-0950LSA2",
+      "weight_kg": 1.6867687499999997
+    },
+    {
+      "part_no": "WFB-0950PSA2",
+      "weight_kg": 0.7871587499999999
+    },
+    {
+      "part_no": "WFB-0950SA4",
+      "weight_kg": 2.0241225000000003
+    },
+    {
+      "part_no": "WFB-0950LSA4",
+      "weight_kg": 1.6867687499999997
+    },
+    {
+      "part_no": "WFB-0950PSA4",
+      "weight_kg": 0.7871587499999999
+    },
+    {
+      "part_no": "WFB-1200Z",
+      "weight_kg": 2.5539975
+    },
+    {
+      "part_no": "WFB-1200ZP",
+      "weight_kg": 0.9932212499999999
+    },
+    {
+      "part_no": "WFB-1200ZL",
+      "weight_kg": 2.2166437499999994
+    },
+    {
+      "part_no": "WFB-1200SA2",
+      "weight_kg": 2.5539975
+    },
+    {
+      "part_no": "WFB-1200PSA2",
+      "weight_kg": 0.9932212499999999
+    },
+    {
+      "part_no": "WFB-1200LSA2",
+      "weight_kg": 2.2166437499999994
+    },
+    {
+      "part_no": "WFB-1200SA4",
+      "weight_kg": 2.5539975
+    },
+    {
+      "part_no": "WFB-1200PSA4",
+      "weight_kg": 0.9932212499999999
+    },
+    {
+      "part_no": "WFB-1200LSA4",
+      "weight_kg": 2.2166437499999994
+    },
+    {
+      "part_no": "WFB-1445Z",
+      "weight_kg": 4.93431375
+    },
+    {
+      "part_no": "WFB-1445Z",
+      "weight_kg": 4.440882375
+    },
+    {
+      "part_no": "WFB-1705Z",
+      "weight_kg": 3.6137475000000006
+    },
+    {
+      "part_no": "WFB-1705Z",
+      "weight_kg": 3.6137475000000006
+    },
+    {
+      "part_no": "WFB-1705ZP",
+      "weight_kg": 1.40534625
+    },
+    {
+      "part_no": "WFB-1705ZP",
+      "weight_kg": 1.40534625
+    },
+    {
+      "part_no": "WFB-1745ZL",
+      "weight_kg": 5.958738749999999
+    },
+    {
+      "part_no": "WFB-1745ZL",
+      "weight_kg": 5.362864875
+    },
+    {
+      "part_no": "WFB-1745ZR",
+      "weight_kg": 5.958738749999999
+    },
+    {
+      "part_no": "WFB-1745ZR",
+      "weight_kg": 5.362864875
+    },
+    {
+      "part_no": "WFB-1870ZL",
+      "weight_kg": 6.385582500000002
+    },
+    {
+      "part_no": "WFB-1870ZL",
+      "weight_kg": 5.747024250000002
+    },
+    {
+      "part_no": "WFB-1870ZR",
+      "weight_kg": 6.385582500000002
+    },
+    {
+      "part_no": "WFB-1870ZR",
+      "weight_kg": 5.747024250000002
+    },
+    {
+      "part_no": "WFB-1945Z",
+      "weight_kg": 6.641688750000001
+    },
+    {
+      "part_no": "WFB-1945Z",
+      "weight_kg": 5.9775198750000005
+    },
+    {
+      "part_no": "WFB-2170ZL",
+      "weight_kg": 7.410007499999999
+    },
+    {
+      "part_no": "WFB-2170ZL",
+      "weight_kg": 6.66900675
+    },
+    {
+      "part_no": "WFB-2170ZR",
+      "weight_kg": 7.410007499999999
+    },
+    {
+      "part_no": "WFB-2170ZR",
+      "weight_kg": 6.66900675
+    },
+    {
+      "part_no": "WFB-2245ZL",
+      "weight_kg": 7.666113749999999
+    },
+    {
+      "part_no": "WFB-2245ZL",
+      "weight_kg": 6.899502375000001
+    },
+    {
+      "part_no": "WFB-2245ZR",
+      "weight_kg": 7.666113749999999
+    },
+    {
+      "part_no": "WFB-2245ZR",
+      "weight_kg": 6.899502375000001
+    },
+    {
+      "part_no": "WFB-2370ZL",
+      "weight_kg": 8.0929575
+    },
+    {
+      "part_no": "WFB-2370ZL",
+      "weight_kg": 7.28366175
+    },
+    {
+      "part_no": "WFB-2370ZR",
+      "weight_kg": 8.0929575
+    },
+    {
+      "part_no": "WFB-2370ZR",
+      "weight_kg": 7.28366175
+    },
+    {
+      "part_no": "WFB-2445Z",
+      "weight_kg": 8.34906375
+    },
+    {
+      "part_no": "WFB-2445Z",
+      "weight_kg": 7.514157375
+    },
+    {
+      "part_no": "WFB-2745ZL",
+      "weight_kg": 9.37348875
+    },
+    {
+      "part_no": "WFB-2745ZL",
+      "weight_kg": 8.436139875
+    },
+    {
+      "part_no": "WFB-2745ZR",
+      "weight_kg": 9.37348875
+    },
+    {
+      "part_no": "WFB-2745ZR",
+      "weight_kg": 8.436139875
+    },
+    {
+      "part_no": "WFB-2870ZL",
+      "weight_kg": 9.8003325
+    },
+    {
+      "part_no": "WFB-2870ZL",
+      "weight_kg": 8.820299250000001
+    },
+    {
+      "part_no": "WFB-2870ZR",
+      "weight_kg": 9.8003325
+    },
+    {
+      "part_no": "WFB-2870ZR",
+      "weight_kg": 8.820299250000001
+    },
+    {
+      "part_no": "WFB-2945Z",
+      "weight_kg": 10.05643875
+    },
+    {
+      "part_no": "WFB-2945Z",
+      "weight_kg": 9.050794875000001
+    },
+    {
+      "part_no": "WFB-1200Z",
+      "weight_kg": 11.466389025000002
+    },
+    {
+      "part_no": "WFB-1200ZL",
+      "weight_kg": 13.073370375
+    },
+    {
+      "part_no": "WFB-1200ZL",
+      "weight_kg": 11.766033337500001
+    },
+    {
+      "part_no": "WFB-1320S",
+      "weight_kg": 4.553406
+    },
+    {
+      "part_no": "WFB-1445Z",
+      "weight_kg": 4.93431375
+    },
+    {
+      "part_no": "WFB-1620S(R/L)",
+      "weight_kg": 5.588271
+    },
+    {
+      "part_no": "WFB-1705ZP",
+      "weight_kg": 2.2
+    },
+    {
+      "part_no": "WFB-1745ZL",
+      "weight_kg": 5.958738749999999
+    },
+    {
+      "part_no": "WFB-1745ZR",
+      "weight_kg": 5.958738749999999
+    },
+    {
+      "part_no": "WFB-1795S",
+      "weight_kg": 6.1919422499999985
+    },
+    {
+      "part_no": "WFB-1870SL",
+      "weight_kg": 6.450658500000001
+    },
+    {
+      "part_no": "WFB-1870SR",
+      "weight_kg": 6.450658500000001
+    },
+    {
+      "part_no": "WFB-1945Z",
+      "weight_kg": 6.64
+    },
+    {
+      "part_no": "WFB-2095S(R/L)",
+      "weight_kg": 7.22680725
+    },
+    {
+      "part_no": "WFB-2095SHL",
+      "weight_kg": 18.8727656
+    },
+    {
+      "part_no": "WFB-2095SHR",
+      "weight_kg": 18.8727656
+    },
+    {
+      "part_no": "WFB-2170SL",
+      "weight_kg": 7.485523499999999
+    },
+    {
+      "part_no": "WFB-2170SR",
+      "weight_kg": 7.485523499999999
+    },
+    {
+      "part_no": "WFB-2245ZH",
+      "weight_kg": 22.36390425
+    },
+    {
+      "part_no": "WFB-2245ZL",
+      "weight_kg": 7.666113749999999
+    },
+    {
+      "part_no": "WFB-2245ZR",
+      "weight_kg": 7.666113749999999
+    },
+    {
+      "part_no": "WFB-2295S",
+      "weight_kg": 7.916717249999999
+    },
+    {
+      "part_no": "WFB-2295SH",
+      "weight_kg": 20.6744616
+    },
+    {
+      "part_no": "WFB-2370SL",
+      "weight_kg": 8.1754335
+    },
+    {
+      "part_no": "WFB-2370SR",
+      "weight_kg": 8.1754335
+    },
+    {
+      "part_no": "WFB-2445Z",
+      "weight_kg": 8.34906375
+    },
+    {
+      "part_no": "WFB-2445ZH",
+      "weight_kg": 24.35623425
+    },
+    {
+      "part_no": "WFB-2595S(R/L)",
+      "weight_kg": 8.95158225
+    },
+    {
+      "part_no": "WFB-2595SHL",
+      "weight_kg": 23.377005599999997
+    },
+    {
+      "part_no": "WFB-2595SHR",
+      "weight_kg": 23.377005599999997
+    },
+    {
+      "part_no": "WFB-2670S(R/L)",
+      "weight_kg": 9.210298499999999
+    },
+    {
+      "part_no": "WFB-2745ZH",
+      "weight_kg": 27.34472925
+    },
+    {
+      "part_no": "WFB-2745ZL",
+      "weight_kg": 9.37348875
+    },
+    {
+      "part_no": "WFB-2745ZR",
+      "weight_kg": 9.37348875
+    },
+    {
+      "part_no": "WFB-2795S",
+      "weight_kg": 8.2
+    },
+    {
+      "part_no": "WFB-2795S",
+      "weight_kg": 9.641492249999999
+    },
+    {
+      "part_no": "WFB-2795SH",
+      "weight_kg": 25.178701599999997
+    }
+  ],
+  "metadata": {
+    "total_prices": 576,
+    "total_weights": 198,
+    "currency": "USD",
+    "source": "test.xlsm - Al Muhaideb National Tanks"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "basic_calculations": {
+    "nominal_capacity": "=A11*(B11+C11+D11+E11)*F11",
+    "actual_capacity": "=A11*(B11+C11+D11+E11)*(F11-0.2)",
+    "surface_area": "=W_O*L_O*2+W_O*H_O*2+L_O*H_O*2+W_O*H_O*N_PA",
+    "num_partitions": "=IF(E11>0,3,IF(D11>0,2,IF(C11>0,1,0)))",
+    "width_integer": "=TRUNC(A11)",
+    "width_fraction": "=A11-TRUNC(A11)",
+    "width_original": "=B66+C66",
+    "length_total": "=D69+F69+H69+J69",
+    "height_integer": "=TRUNC(F11)",
+    "height_fraction": "=F11-TRUNC(F11)",
+    "height_original": "=L66+M66",
+    "total_cost": "=B36+C36",
+    "panels_cost": "='PRINTOUT(COST)'!G58",
+    "steel_skid_cost": "='PRINTOUT(COST)'!G59",
+    "bnw_cost": "='PRINTOUT(COST)'!G60",
+    "reinforcing_cost": "='PRINTOUT(COST)'!G61+'PRINTOUT(COST)'!G62+'PRINTOUT(COST)'!G63",
+    "etc_cost": "='PRINTOUT(COST)'!G64+'PRINTOUT(COST)'!G65",
+    "price_per_sar": "=A36/$E$33"
+  },
+  "conversion_codes": {
+    "product_type_code": "=IF(B14=\"MNT\",1,0)+IF(B14=\"Not Included\",0,0)",
+    "insulation_code": "=IF(C14=\"Non-Insulated\",1,IF(C14=\"Insulated\",2,IF(C14=\"Insulated Roof Only\",3,IF(C14=\"Insulated(Roof,Side)\",4,IF(C14=\"Non-Insulated(Roof Only)\",5,0)))))",
+    "use_side_panel_code": "=IF(D14=\"YES\",1,0)",
+    "use_partition_code": "=IF(E14=\"YES\",1,0)",
+    "reinforcing_code": "=IF(B22=\"Internal\",1,IF(B22=\"External\",2,IF(B22=\"Internal Reinforcement\",3,0)))",
+    "steel_skid_code": "=IF(D22=\"Default\",1,IF(D22=\"Angle 75\",2,IF(D22=\"Channel 125\",3,IF(D22=\"Channel 150\",4,5))))",
+    "internal_material_code": "=IF(E22=\"SS316\",1,IF(E22=\"SS304\",2,0))",
+    "bolts_nuts_code": "=IF(F22=\"EXT:HDG+INT:SS304+ROOF:HDG\",1,IF(F22=\"EXT:HDG+INT:SS304\",2,IF(F22=\"EXT:SS304+INT:SS316\",3,IF(F22=\"EXT:HDG+INT:SS316\",4,IF(F22=\"INT/EXT:SS304\",5,IF(F22=\"INT/EXT:SS316\",6,IF(F22=\"Except BNW\",7,IF(F22=\"Except Panel BNW\",8))))))))",
+    "tie_rod_code": "=IF(G22=\"SS316\",1,IF(G22=\"SS304\",2,IF(G22=\"SS304+PET coated\",3,IF(G22=\"SS316+PE Coated\",4,0))))",
+    "level_indicator_code": "=IF(B26=\"General\",1,IF(B26=\"Special\",2,IF(B26=\"No needed\",3,0)))",
+    "int_ladder_material_code": "=IF(E26=\"GRP\",1,IF(E26=\"SS304\",2,IF(E26=\"SS316L\",3,0)))",
+    "ext_ladder_material_code": "=IF(G26=\"HDG\",1,IF(G26=\"SS304\",2,IF(G26=\"SS316\",3,0)))"
+  },
+  "steel_skid_selection": {
+    "main_beam_selection": "=IF(H_O>4.3, G_column, IF(H_O>2.5, F_column, IF(H_O>0, E_column, \"\")))",
+    "skid_type_selection": "=IF(BASIC_TOOL!$D$23=1, Default, IF(BASIC_TOOL!$D$23=2, Angle75, IF(BASIC_TOOL!$D$23=3, Channel125, IF(BASIC_TOOL!$D$23=4, Channel150, Except))))"
+  }
+}

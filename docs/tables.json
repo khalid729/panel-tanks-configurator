@@ -1,0 +1,17 @@
+{
+  "표2_45": {
+    "sheet": "External_Reinforcing",
+    "ref": "K6:Y33",
+    "displayName": "표2_45"
+  },
+  "표2_4": {
+    "sheet": "Internal_Reinforcing",
+    "ref": "L6:Z26",
+    "displayName": "표2_4"
+  },
+  "표2_4523": {
+    "sheet": "Exteral_Reinforcing System",
+    "ref": "K6:Y65",
+    "displayName": "표2_4523"
+  }
+}

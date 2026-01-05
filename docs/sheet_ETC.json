@@ -1,0 +1,562 @@
+[
+  {
+    "cell": "A1",
+    "type": "formula",
+    "content": "=IF(B1=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B1",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B1)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B1))))",
+    "ref": "B1"
+  },
+  {
+    "cell": "C1",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C1)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C1))))",
+    "ref": "C1"
+  },
+  {
+    "cell": "F1",
+    "type": "value",
+    "content": "Air Vent"
+  },
+  {
+    "cell": "G1",
+    "type": "formula",
+    "content": "=IF(BASIC_TOOL!H11<100,\"WAV-0050A\",\"WAV-0100A\")"
+  },
+  {
+    "cell": "H1",
+    "type": "formula",
+    "content": "=CEILING(W_C*L1_C/30,1)+CEILING(W_C*L2_C/30,1)+CEILING(W_C*L3_C/30,1)+CEILING(W_C*L4_C/30,1)"
+  },
+  {
+    "cell": "A2",
+    "type": "formula",
+    "content": "=IF(B2=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B2",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B2)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B2))))",
+    "ref": "B2"
+  },
+  {
+    "cell": "C2",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C2)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C2))))",
+    "ref": "C2"
+  },
+  {
+    "cell": "F2",
+    "type": "value",
+    "content": "Roof Supporter"
+  },
+  {
+    "cell": "G2",
+    "type": "formula",
+    "content": "=\"WRS-\"&H_O*1000&\"F\""
+  },
+  {
+    "cell": "H2",
+    "type": "formula",
+    "content": "=ROUNDUP((W_C+W_F-1)*(L1_C+L1_F-1)/4,0)\n+IF(L2_O>0,ROUNDUP((W_O-1)*(L2_O-1)/4,0),0)\n+IF(L3_O>0,ROUNDDOWN((W_O-2)*(L3_O-2)/4,0),0)\n+IF(L4_O>0,ROUNDDOWN((W_O-2)*(L4_O-2)/4,0),0)"
+  },
+  {
+    "cell": "A3",
+    "type": "formula",
+    "content": "=IF(B3=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B3",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B3)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B3))))",
+    "ref": "B3"
+  },
+  {
+    "cell": "C3",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C3)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C3))))",
+    "ref": "C3"
+  },
+  {
+    "cell": "F3",
+    "type": "value",
+    "content": "Internal Ladder"
+  },
+  {
+    "cell": "G3",
+    "type": "formula",
+    "content": "=\"WLD-\"&H_O*1000&\"FI\""
+  },
+  {
+    "cell": "H3",
+    "type": "formula",
+    "content": "=N_PA+1"
+  },
+  {
+    "cell": "A4",
+    "type": "formula",
+    "content": "=IF(B4=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B4",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B4)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B4))))",
+    "ref": "B4"
+  },
+  {
+    "cell": "C4",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C4)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C4))))",
+    "ref": "C4"
+  },
+  {
+    "cell": "F4",
+    "type": "value",
+    "content": "External Ladder"
+  },
+  {
+    "cell": "G4",
+    "type": "formula",
+    "content": "=\"WLD-\"&H_O*1000&\"ZO\""
+  },
+  {
+    "cell": "H4",
+    "type": "value",
+    "content": 1
+  },
+  {
+    "cell": "A5",
+    "type": "formula",
+    "content": "=IF(B5=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B5",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B5)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B5))))",
+    "ref": "B5"
+  },
+  {
+    "cell": "C5",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C5)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C5))))",
+    "ref": "C5"
+  },
+  {
+    "cell": "F5",
+    "type": "value",
+    "content": "Silicon"
+  },
+  {
+    "cell": "G5",
+    "type": "value",
+    "content": "Silicon"
+  },
+  {
+    "cell": "H5",
+    "type": "formula",
+    "content": "=ROUNDUP(0.1*(W_C+W_F)*(L_O_C+L_O_F),0)"
+  },
+  {
+    "cell": "A6",
+    "type": "formula",
+    "content": "=IF(B6=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B6",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B6)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B6))))",
+    "ref": "B6"
+  },
+  {
+    "cell": "C6",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C6)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C6))))",
+    "ref": "C6"
+  },
+  {
+    "cell": "F6",
+    "type": "value",
+    "content": "Level Indicator"
+  },
+  {
+    "cell": "G6",
+    "type": "formula",
+    "content": "=IF(BASIC_TOOL!B27=1,\"WLV-\"&H_O*1000&\"SET(G)\",IF(BASIC_TOOL!B27=2, \"WLV-0000\"&\"SET(S)\",\"\"))"
+  },
+  {
+    "cell": "H6",
+    "type": "formula",
+    "content": "=N_PA+1"
+  },
+  {
+    "cell": "A7",
+    "type": "formula",
+    "content": "=IF(B7=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B7",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B7)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B7))))",
+    "ref": "B7"
+  },
+  {
+    "cell": "C7",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C7)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C7))))",
+    "ref": "C7"
+  },
+  {
+    "cell": "F7",
+    "type": "value",
+    "content": "Sealing Tape(50mm)"
+  },
+  {
+    "cell": "G7",
+    "type": "value",
+    "content": "WST-0050RO"
+  },
+  {
+    "cell": "H7",
+    "type": "formula",
+    "content": "=Panel2!AB5+Internal_Reinforcing!AB25"
+  },
+  {
+    "cell": "J7",
+    "type": "formula",
+    "content": "=(W_O*(L1_C+L1_F+L2_C+L2_F+L3_C+L3_F+L4_C+L4_F+1)+L_O*(W_C+W_F+1))"
+  },
+  {
+    "cell": "A8",
+    "type": "formula",
+    "content": "=IF(B8=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B8",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B8)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B8))))",
+    "ref": "B8"
+  },
+  {
+    "cell": "C8",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C8)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C8))))",
+    "ref": "C8"
+  },
+  {
+    "cell": "F8",
+    "type": "value",
+    "content": "Sealing Tape(120mm)"
+  },
+  {
+    "cell": "G8",
+    "type": "value",
+    "content": "WST-0120RO"
+  },
+  {
+    "cell": "H8",
+    "type": "formula",
+    "content": "=4*H_O+1"
+  },
+  {
+    "cell": "J8",
+    "type": "formula",
+    "content": "=H_O*(W_C+W_F+1)*(2+N_PA)"
+  },
+  {
+    "cell": "A9",
+    "type": "formula",
+    "content": "=IF(B9=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B9",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B9)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B9))))",
+    "ref": "B9"
+  },
+  {
+    "cell": "C9",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C9)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C9))))",
+    "ref": "C9"
+  },
+  {
+    "cell": "J9",
+    "type": "formula",
+    "content": "=H_O*(L1_C+L2_C+L3_C+L4_C+L1_F+L2_F+L3_F+L4_F+1)*2"
+  },
+  {
+    "cell": "A10",
+    "type": "formula",
+    "content": "=IF(B10=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B10",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B10)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B10))))",
+    "ref": "B10"
+  },
+  {
+    "cell": "C10",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C10)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C10))))",
+    "ref": "C10"
+  },
+  {
+    "cell": "A11",
+    "type": "formula",
+    "content": "=IF(B11=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B11",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B11)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B11))))",
+    "ref": "B11"
+  },
+  {
+    "cell": "C11",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C11)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C11))))",
+    "ref": "C11"
+  },
+  {
+    "cell": "A12",
+    "type": "formula",
+    "content": "=IF(B12=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B12",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B12)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B12))))",
+    "ref": "B12"
+  },
+  {
+    "cell": "C12",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C12)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C12))))",
+    "ref": "C12"
+  },
+  {
+    "cell": "A13",
+    "type": "formula",
+    "content": "=IF(B13=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B13",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B13)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B13))))",
+    "ref": "B13"
+  },
+  {
+    "cell": "C13",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C13)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C13))))",
+    "ref": "C13"
+  },
+  {
+    "cell": "A14",
+    "type": "formula",
+    "content": "=IF(B14=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B14",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B14)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B14))))",
+    "ref": "B14"
+  },
+  {
+    "cell": "C14",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C14)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C14))))",
+    "ref": "C14"
+  },
+  {
+    "cell": "A15",
+    "type": "formula",
+    "content": "=IF(B15=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B15",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B15)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B15))))",
+    "ref": "B15"
+  },
+  {
+    "cell": "C15",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C15)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C15))))",
+    "ref": "C15"
+  },
+  {
+    "cell": "A16",
+    "type": "formula",
+    "content": "=IF(B16=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B16",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B16)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B16))))",
+    "ref": "B16"
+  },
+  {
+    "cell": "C16",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C16)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C16))))",
+    "ref": "C16"
+  },
+  {
+    "cell": "A17",
+    "type": "formula",
+    "content": "=IF(B17=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B17",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B17)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B17))))",
+    "ref": "B17"
+  },
+  {
+    "cell": "C17",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C17)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C17))))",
+    "ref": "C17"
+  },
+  {
+    "cell": "A18",
+    "type": "formula",
+    "content": "=IF(B18=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B18",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B18)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B18))))",
+    "ref": "B18"
+  },
+  {
+    "cell": "C18",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C18)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C18))))",
+    "ref": "C18"
+  },
+  {
+    "cell": "A19",
+    "type": "formula",
+    "content": "=IF(B19=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B19",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B19)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B19))))",
+    "ref": "B19"
+  },
+  {
+    "cell": "C19",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C19)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C19))))",
+    "ref": "C19"
+  },
+  {
+    "cell": "A20",
+    "type": "formula",
+    "content": "=IF(B20=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B20",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B20)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B20))))",
+    "ref": "B20"
+  },
+  {
+    "cell": "C20",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C20)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C20))))",
+    "ref": "C20"
+  },
+  {
+    "cell": "A21",
+    "type": "formula",
+    "content": "=IF(B21=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B21",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B21)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B21))))",
+    "ref": "B21"
+  },
+  {
+    "cell": "C21",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C21)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C21))))",
+    "ref": "C21"
+  },
+  {
+    "cell": "A22",
+    "type": "formula",
+    "content": "=IF(B22=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B22",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B22)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B22))))",
+    "ref": "B22"
+  },
+  {
+    "cell": "C22",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C22)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C22))))",
+    "ref": "C22"
+  },
+  {
+    "cell": "A23",
+    "type": "formula",
+    "content": "=IF(B23=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B23",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B23)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B23))))",
+    "ref": "B23"
+  },
+  {
+    "cell": "C23",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C23)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C23))))",
+    "ref": "C23"
+  },
+  {
+    "cell": "A24",
+    "type": "formula",
+    "content": "=IF(B24=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B24",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B24)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B24))))",
+    "ref": "B24"
+  },
+  {
+    "cell": "C24",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C24)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C24))))",
+    "ref": "C24"
+  },
+  {
+    "cell": "A25",
+    "type": "formula",
+    "content": "=IF(B25=\"\",\"\",(VLOOKUP(B:B,'0.39'!B:F,5,FALSE)))"
+  },
+  {
+    "cell": "B25",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B25)))),\"\",INDEX($G$1:$G$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(B25))))",
+    "ref": "B25"
+  },
+  {
+    "cell": "C25",
+    "type": "array_formula",
+    "content": "=IF( ISERROR(INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C25)))),\"\",INDEX($H$1:$H$16,SMALL(IF($H$1:$H$16<>0,ROW($H$1:$H$16)),ROW(C25))))",
+    "ref": "C25"
+  }
+]

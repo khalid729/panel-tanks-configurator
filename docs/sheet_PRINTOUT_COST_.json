@@ -1,0 +1,4162 @@
+[
+  {
+    "cell": "A2",
+    "type": "value",
+    "content": "GRP_Panel_Tank_Raw_Material_Cost"
+  },
+  {
+    "cell": "A5",
+    "type": "formula",
+    "content": "=\"▣ Order No :\"&BASIC_TOOL!B5&\"                      ▣  Customer : \"&BASIC_TOOL!D6&\"     \"&\"                    ▣ Project Name :\"&BASIC_TOOL!B6"
+  },
+  {
+    "cell": "A6",
+    "type": "formula",
+    "content": "=\"▣ Address :\"&BASIC_TOOL!B6&\"                      \""
+  },
+  {
+    "cell": "G6",
+    "type": "value",
+    "content": "▣ Date :"
+  },
+  {
+    "cell": "H6",
+    "type": "formula",
+    "content": "=BASIC_TOOL!D5"
+  },
+  {
+    "cell": "A7",
+    "type": "formula",
+    "content": "=\"▣ Size : \"&W_O&\" x (\"&L1_O&IF(L2_O>0,\"+\"&L2_O,\"\")&IF(L3_O>0,\"+\"&L3_O,\"\")&IF(L4_O>0,\"+\"&L4_O,\"\")&\")x\"&H_O&\"mH =\"&BASIC_TOOL!H11&\" [TON]/ 1[SET]\""
+  },
+  {
+    "cell": "G7",
+    "type": "formula",
+    "content": "=\"▣ Panel: \"&BASIC_TOOL!C13&\"/ Panel Composition:\"&IF(BASIC_TOOL!D14=1,\"use Side Panel(only 1x1m)\",\"use side panel (1x2m,1x1.5m)\")"
+  },
+  {
+    "cell": "A8",
+    "type": "formula",
+    "content": "=\"▣ Steel Skid:\"&BASIC_TOOL!D21&\"       ▣ External Accessories : HDG  \"&\"           ▣ Internal Accessories : \"&BASIC_TOOL!E22   &\"                ▣ Bolt&Nut : \"&BASIC_TOOL!F22"
+  },
+  {
+    "cell": "A11",
+    "type": "value",
+    "content": "Panels"
+  },
+  {
+    "cell": "F11",
+    "type": "value",
+    "content": "Steel Skid"
+  },
+  {
+    "cell": "K11",
+    "type": "value",
+    "content": "External Reinforcing Items"
+  },
+  {
+    "cell": "P11",
+    "type": "value",
+    "content": "Internal Tie Rod"
+  },
+  {
+    "cell": "A12",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "B12",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "C12",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "D12",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "E12",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "F12",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "G12",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "H12",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "I12",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "J12",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "K12",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "L12",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "M12",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "N12",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "O12",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "P12",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "Q12",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "R12",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "S12",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "T12",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "A13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A15"
+  },
+  {
+    "cell": "B13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B15"
+  },
+  {
+    "cell": "C13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C15"
+  },
+  {
+    "cell": "D13",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E13",
+    "type": "formula",
+    "content": "=IFERROR(C13*D13,\"\")"
+  },
+  {
+    "cell": "F13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E15"
+  },
+  {
+    "cell": "G13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F15"
+  },
+  {
+    "cell": "H13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G15"
+  },
+  {
+    "cell": "I13",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J13",
+    "type": "formula",
+    "content": "=IFERROR(H13*I13,\"\")"
+  },
+  {
+    "cell": "K13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E45"
+  },
+  {
+    "cell": "L13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F45"
+  },
+  {
+    "cell": "M13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G45"
+  },
+  {
+    "cell": "N13",
+    "type": "formula",
+    "content": "=IF(L13=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O13",
+    "type": "formula",
+    "content": "=IFERROR(M13*N13,\"\")"
+  },
+  {
+    "cell": "P13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I15"
+  },
+  {
+    "cell": "Q13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J15"
+  },
+  {
+    "cell": "R13",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K15"
+  },
+  {
+    "cell": "S13",
+    "type": "formula",
+    "content": "=IF(Q13=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T13",
+    "type": "formula",
+    "content": "=IFERROR(R13*S13,\"\")"
+  },
+  {
+    "cell": "A14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A16"
+  },
+  {
+    "cell": "B14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B16"
+  },
+  {
+    "cell": "C14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C16"
+  },
+  {
+    "cell": "D14",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E14",
+    "type": "formula",
+    "content": "=IFERROR(C14*D14,\"\")"
+  },
+  {
+    "cell": "F14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E16"
+  },
+  {
+    "cell": "G14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F16"
+  },
+  {
+    "cell": "H14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G16"
+  },
+  {
+    "cell": "I14",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J14",
+    "type": "formula",
+    "content": "=IFERROR(H14*I14,\"\")"
+  },
+  {
+    "cell": "K14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E46"
+  },
+  {
+    "cell": "L14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F46"
+  },
+  {
+    "cell": "M14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G46"
+  },
+  {
+    "cell": "N14",
+    "type": "formula",
+    "content": "=IF(L14=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O14",
+    "type": "formula",
+    "content": "=IFERROR(M14*N14,\"\")"
+  },
+  {
+    "cell": "P14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I16"
+  },
+  {
+    "cell": "Q14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J16"
+  },
+  {
+    "cell": "R14",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K16"
+  },
+  {
+    "cell": "S14",
+    "type": "formula",
+    "content": "=IF(Q14=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T14",
+    "type": "formula",
+    "content": "=IFERROR(R14*S14,\"\")"
+  },
+  {
+    "cell": "A15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A17"
+  },
+  {
+    "cell": "B15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B17"
+  },
+  {
+    "cell": "C15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C17"
+  },
+  {
+    "cell": "D15",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E15",
+    "type": "formula",
+    "content": "=IFERROR(C15*D15,\"\")"
+  },
+  {
+    "cell": "F15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E17"
+  },
+  {
+    "cell": "G15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F17"
+  },
+  {
+    "cell": "H15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G17"
+  },
+  {
+    "cell": "I15",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J15",
+    "type": "formula",
+    "content": "=IFERROR(H15*I15,\"\")"
+  },
+  {
+    "cell": "K15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E47"
+  },
+  {
+    "cell": "L15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F47"
+  },
+  {
+    "cell": "M15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G47"
+  },
+  {
+    "cell": "N15",
+    "type": "formula",
+    "content": "=IF(L15=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O15",
+    "type": "formula",
+    "content": "=IFERROR(M15*N15,\"\")"
+  },
+  {
+    "cell": "P15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I17"
+  },
+  {
+    "cell": "Q15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J17"
+  },
+  {
+    "cell": "R15",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K17"
+  },
+  {
+    "cell": "S15",
+    "type": "formula",
+    "content": "=IF(Q15=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T15",
+    "type": "formula",
+    "content": "=IFERROR(R15*S15,\"\")"
+  },
+  {
+    "cell": "A16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A18"
+  },
+  {
+    "cell": "B16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B18"
+  },
+  {
+    "cell": "C16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C18"
+  },
+  {
+    "cell": "D16",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E16",
+    "type": "formula",
+    "content": "=IFERROR(C16*D16,\"\")"
+  },
+  {
+    "cell": "F16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E18"
+  },
+  {
+    "cell": "G16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F18"
+  },
+  {
+    "cell": "H16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G18"
+  },
+  {
+    "cell": "I16",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J16",
+    "type": "formula",
+    "content": "=IFERROR(H16*I16,\"\")"
+  },
+  {
+    "cell": "K16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E48"
+  },
+  {
+    "cell": "L16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F48"
+  },
+  {
+    "cell": "M16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G48"
+  },
+  {
+    "cell": "N16",
+    "type": "formula",
+    "content": "=IF(L16=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O16",
+    "type": "formula",
+    "content": "=IFERROR(M16*N16,\"\")"
+  },
+  {
+    "cell": "P16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I18"
+  },
+  {
+    "cell": "Q16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J18"
+  },
+  {
+    "cell": "R16",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K18"
+  },
+  {
+    "cell": "S16",
+    "type": "formula",
+    "content": "=IF(Q16=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T16",
+    "type": "formula",
+    "content": "=IFERROR(R16*S16,\"\")"
+  },
+  {
+    "cell": "A17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A19"
+  },
+  {
+    "cell": "B17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B19"
+  },
+  {
+    "cell": "C17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C19"
+  },
+  {
+    "cell": "D17",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E17",
+    "type": "formula",
+    "content": "=IFERROR(C17*D17,\"\")"
+  },
+  {
+    "cell": "F17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E19"
+  },
+  {
+    "cell": "G17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F19"
+  },
+  {
+    "cell": "H17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G19"
+  },
+  {
+    "cell": "I17",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J17",
+    "type": "formula",
+    "content": "=IFERROR(H17*I17,\"\")"
+  },
+  {
+    "cell": "K17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E49"
+  },
+  {
+    "cell": "L17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F49"
+  },
+  {
+    "cell": "M17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G49"
+  },
+  {
+    "cell": "N17",
+    "type": "formula",
+    "content": "=IF(L17=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O17",
+    "type": "formula",
+    "content": "=IFERROR(M17*N17,\"\")"
+  },
+  {
+    "cell": "P17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I19"
+  },
+  {
+    "cell": "Q17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J19"
+  },
+  {
+    "cell": "R17",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K19"
+  },
+  {
+    "cell": "S17",
+    "type": "formula",
+    "content": "=IF(Q17=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T17",
+    "type": "formula",
+    "content": "=IFERROR(R17*S17,\"\")"
+  },
+  {
+    "cell": "A18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A20"
+  },
+  {
+    "cell": "B18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B20"
+  },
+  {
+    "cell": "C18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C20"
+  },
+  {
+    "cell": "D18",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E18",
+    "type": "formula",
+    "content": "=IFERROR(C18*D18,\"\")"
+  },
+  {
+    "cell": "F18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E20"
+  },
+  {
+    "cell": "G18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F20"
+  },
+  {
+    "cell": "H18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G20"
+  },
+  {
+    "cell": "I18",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J18",
+    "type": "formula",
+    "content": "=IFERROR(H18*I18,\"\")"
+  },
+  {
+    "cell": "K18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E50"
+  },
+  {
+    "cell": "L18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F50"
+  },
+  {
+    "cell": "M18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G50"
+  },
+  {
+    "cell": "N18",
+    "type": "formula",
+    "content": "=IF(L18=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O18",
+    "type": "formula",
+    "content": "=IFERROR(M18*N18,\"\")"
+  },
+  {
+    "cell": "P18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I20"
+  },
+  {
+    "cell": "Q18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J20"
+  },
+  {
+    "cell": "R18",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K20"
+  },
+  {
+    "cell": "S18",
+    "type": "formula",
+    "content": "=IF(Q18=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T18",
+    "type": "formula",
+    "content": "=IFERROR(R18*S18,\"\")"
+  },
+  {
+    "cell": "A19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A21"
+  },
+  {
+    "cell": "B19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B21"
+  },
+  {
+    "cell": "C19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C21"
+  },
+  {
+    "cell": "D19",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E19",
+    "type": "formula",
+    "content": "=IFERROR(C19*D19,\"\")"
+  },
+  {
+    "cell": "F19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E21"
+  },
+  {
+    "cell": "G19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F21"
+  },
+  {
+    "cell": "H19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G21"
+  },
+  {
+    "cell": "I19",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J19",
+    "type": "formula",
+    "content": "=IFERROR(H19*I19,\"\")"
+  },
+  {
+    "cell": "K19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E51"
+  },
+  {
+    "cell": "L19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F51"
+  },
+  {
+    "cell": "M19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G51"
+  },
+  {
+    "cell": "N19",
+    "type": "formula",
+    "content": "=IF(L19=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O19",
+    "type": "formula",
+    "content": "=IFERROR(M19*N19,\"\")"
+  },
+  {
+    "cell": "P19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I21"
+  },
+  {
+    "cell": "Q19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J21"
+  },
+  {
+    "cell": "R19",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K21"
+  },
+  {
+    "cell": "S19",
+    "type": "formula",
+    "content": "=IF(Q19=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T19",
+    "type": "formula",
+    "content": "=IFERROR(R19*S19,\"\")"
+  },
+  {
+    "cell": "A20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A22"
+  },
+  {
+    "cell": "B20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B22"
+  },
+  {
+    "cell": "C20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C22"
+  },
+  {
+    "cell": "D20",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E20",
+    "type": "formula",
+    "content": "=IFERROR(C20*D20,\"\")"
+  },
+  {
+    "cell": "F20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E22"
+  },
+  {
+    "cell": "G20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F22"
+  },
+  {
+    "cell": "H20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G22"
+  },
+  {
+    "cell": "I20",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J20",
+    "type": "formula",
+    "content": "=IFERROR(H20*I20,\"\")"
+  },
+  {
+    "cell": "K20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E52"
+  },
+  {
+    "cell": "L20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F52"
+  },
+  {
+    "cell": "M20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G52"
+  },
+  {
+    "cell": "N20",
+    "type": "formula",
+    "content": "=IF(L20=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O20",
+    "type": "formula",
+    "content": "=IFERROR(M20*N20,\"\")"
+  },
+  {
+    "cell": "P20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I22"
+  },
+  {
+    "cell": "Q20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J22"
+  },
+  {
+    "cell": "R20",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K22"
+  },
+  {
+    "cell": "S20",
+    "type": "formula",
+    "content": "=IF(Q20=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T20",
+    "type": "formula",
+    "content": "=IFERROR(R20*S20,\"\")"
+  },
+  {
+    "cell": "A21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A23"
+  },
+  {
+    "cell": "B21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B23"
+  },
+  {
+    "cell": "C21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C23"
+  },
+  {
+    "cell": "D21",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E21",
+    "type": "formula",
+    "content": "=IFERROR(C21*D21,\"\")"
+  },
+  {
+    "cell": "F21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E23"
+  },
+  {
+    "cell": "G21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F23"
+  },
+  {
+    "cell": "H21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G23"
+  },
+  {
+    "cell": "I21",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J21",
+    "type": "formula",
+    "content": "=IFERROR(H21*I21,\"\")"
+  },
+  {
+    "cell": "K21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E53"
+  },
+  {
+    "cell": "L21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F53"
+  },
+  {
+    "cell": "M21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G53"
+  },
+  {
+    "cell": "N21",
+    "type": "formula",
+    "content": "=IF(L21=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O21",
+    "type": "formula",
+    "content": "=IFERROR(M21*N21,\"\")"
+  },
+  {
+    "cell": "P21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I23"
+  },
+  {
+    "cell": "Q21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J23"
+  },
+  {
+    "cell": "R21",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K23"
+  },
+  {
+    "cell": "S21",
+    "type": "formula",
+    "content": "=IF(Q21=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T21",
+    "type": "formula",
+    "content": "=IFERROR(R21*S21,\"\")"
+  },
+  {
+    "cell": "A22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A24"
+  },
+  {
+    "cell": "B22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B24"
+  },
+  {
+    "cell": "C22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C24"
+  },
+  {
+    "cell": "D22",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E22",
+    "type": "formula",
+    "content": "=IFERROR(C22*D22,\"\")"
+  },
+  {
+    "cell": "F22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E24"
+  },
+  {
+    "cell": "G22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F24"
+  },
+  {
+    "cell": "H22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G24"
+  },
+  {
+    "cell": "I22",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J22",
+    "type": "formula",
+    "content": "=IFERROR(H22*I22,\"\")"
+  },
+  {
+    "cell": "K22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E54"
+  },
+  {
+    "cell": "L22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F54"
+  },
+  {
+    "cell": "M22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G54"
+  },
+  {
+    "cell": "N22",
+    "type": "formula",
+    "content": "=IF(L22=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O22",
+    "type": "formula",
+    "content": "=IFERROR(M22*N22,\"\")"
+  },
+  {
+    "cell": "P22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I24"
+  },
+  {
+    "cell": "Q22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J24"
+  },
+  {
+    "cell": "R22",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K24"
+  },
+  {
+    "cell": "S22",
+    "type": "formula",
+    "content": "=IF(Q22=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T22",
+    "type": "formula",
+    "content": "=IFERROR(R22*S22,\"\")"
+  },
+  {
+    "cell": "A23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A25"
+  },
+  {
+    "cell": "B23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B25"
+  },
+  {
+    "cell": "C23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C25"
+  },
+  {
+    "cell": "D23",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E23",
+    "type": "formula",
+    "content": "=IFERROR(C23*D23,\"\")"
+  },
+  {
+    "cell": "F23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E25"
+  },
+  {
+    "cell": "G23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F25"
+  },
+  {
+    "cell": "H23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G25"
+  },
+  {
+    "cell": "I23",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J23",
+    "type": "formula",
+    "content": "=IFERROR(H23*I23,\"\")"
+  },
+  {
+    "cell": "K23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E55"
+  },
+  {
+    "cell": "L23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F55"
+  },
+  {
+    "cell": "M23",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G55"
+  },
+  {
+    "cell": "N23",
+    "type": "formula",
+    "content": "=IF(L23=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O23",
+    "type": "formula",
+    "content": "=IFERROR(M23*N23,\"\")"
+  },
+  {
+    "cell": "T23",
+    "type": "formula",
+    "content": "=SUM(T13:T22)"
+  },
+  {
+    "cell": "A24",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A26"
+  },
+  {
+    "cell": "B24",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B26"
+  },
+  {
+    "cell": "C24",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C26"
+  },
+  {
+    "cell": "D24",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E24",
+    "type": "formula",
+    "content": "=IFERROR(C24*D24,\"\")"
+  },
+  {
+    "cell": "F24",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E26"
+  },
+  {
+    "cell": "G24",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F26"
+  },
+  {
+    "cell": "H24",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G26"
+  },
+  {
+    "cell": "I24",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J24",
+    "type": "formula",
+    "content": "=IFERROR(H24*I24,\"\")"
+  },
+  {
+    "cell": "L24",
+    "type": "formula",
+    "content": "=External_Reinforcing!B20"
+  },
+  {
+    "cell": "M24",
+    "type": "formula",
+    "content": "=External_Reinforcing!C20"
+  },
+  {
+    "cell": "N24",
+    "type": "formula",
+    "content": "=IF(L24=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O24",
+    "type": "formula",
+    "content": "=IFERROR(M24*N24,\"\")"
+  },
+  {
+    "cell": "P24",
+    "type": "value",
+    "content": "Etc"
+  },
+  {
+    "cell": "A25",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A27"
+  },
+  {
+    "cell": "B25",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B27"
+  },
+  {
+    "cell": "C25",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C27"
+  },
+  {
+    "cell": "D25",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E25",
+    "type": "formula",
+    "content": "=IFERROR(C25*D25,\"\")"
+  },
+  {
+    "cell": "I25",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J25",
+    "type": "formula",
+    "content": "=IFERROR(H25*I25,\"\")"
+  },
+  {
+    "cell": "K25",
+    "type": "formula",
+    "content": "=IF(L25=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "L25",
+    "type": "formula",
+    "content": "=External_Reinforcing!B25"
+  },
+  {
+    "cell": "M25",
+    "type": "formula",
+    "content": "=External_Reinforcing!C25"
+  },
+  {
+    "cell": "N25",
+    "type": "formula",
+    "content": "=IF(L25=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O25",
+    "type": "formula",
+    "content": "=IFERROR(M25*N25,\"\")"
+  },
+  {
+    "cell": "P25",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "Q25",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "R25",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "S25",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "T25",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "A26",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A28"
+  },
+  {
+    "cell": "B26",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$B$28"
+  },
+  {
+    "cell": "C26",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C28"
+  },
+  {
+    "cell": "D26",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E26",
+    "type": "formula",
+    "content": "=IFERROR(C26*D26,\"\")"
+  },
+  {
+    "cell": "A27",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A29"
+  },
+  {
+    "cell": "B27",
+    "type": "formula",
+    "content": "='0.39'!$B$471"
+  },
+  {
+    "cell": "C27",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C29"
+  },
+  {
+    "cell": "D27",
+    "type": "formula",
+    "content": "='0.39'!$D$471"
+  },
+  {
+    "cell": "E27",
+    "type": "formula",
+    "content": "=IFERROR(C27*D27,\"\")"
+  },
+  {
+    "cell": "A28",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A30"
+  },
+  {
+    "cell": "B28",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B30"
+  },
+  {
+    "cell": "C28",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C30"
+  },
+  {
+    "cell": "D28",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E28",
+    "type": "formula",
+    "content": "=IFERROR(C28*D28,\"\")"
+  },
+  {
+    "cell": "I28",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J28",
+    "type": "formula",
+    "content": "=IFERROR(H28*I28,\"\")"
+  },
+  {
+    "cell": "K28",
+    "type": "formula",
+    "content": "=IF(L28=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "L28",
+    "type": "formula",
+    "content": "=External_Reinforcing!B29"
+  },
+  {
+    "cell": "M28",
+    "type": "formula",
+    "content": "=External_Reinforcing!C29"
+  },
+  {
+    "cell": "N28",
+    "type": "formula",
+    "content": "=IF(L28=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O28",
+    "type": "formula",
+    "content": "=IFERROR(M28*N28,\"\")"
+  },
+  {
+    "cell": "P28",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I36"
+  },
+  {
+    "cell": "Q28",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J36"
+  },
+  {
+    "cell": "R28",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K36"
+  },
+  {
+    "cell": "S28",
+    "type": "formula",
+    "content": "=IF(Q28=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T28",
+    "type": "formula",
+    "content": "=IFERROR(R28*S28,\"\")"
+  },
+  {
+    "cell": "A29",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A31"
+  },
+  {
+    "cell": "B29",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B31"
+  },
+  {
+    "cell": "C29",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C31"
+  },
+  {
+    "cell": "D29",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E29",
+    "type": "formula",
+    "content": "=IFERROR(C29*D29,\"\")"
+  },
+  {
+    "cell": "I29",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J29",
+    "type": "formula",
+    "content": "=IFERROR(H29*I29,\"\")"
+  },
+  {
+    "cell": "K29",
+    "type": "formula",
+    "content": "=IF(L29=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "L29",
+    "type": "formula",
+    "content": "=External_Reinforcing!B30"
+  },
+  {
+    "cell": "M29",
+    "type": "formula",
+    "content": "=External_Reinforcing!C30"
+  },
+  {
+    "cell": "N29",
+    "type": "formula",
+    "content": "=IF(L29=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O29",
+    "type": "formula",
+    "content": "=IFERROR(M29*N29,\"\")"
+  },
+  {
+    "cell": "P29",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I37"
+  },
+  {
+    "cell": "Q29",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J37"
+  },
+  {
+    "cell": "R29",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K37"
+  },
+  {
+    "cell": "S29",
+    "type": "formula",
+    "content": "=IF(Q29=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T29",
+    "type": "formula",
+    "content": "=IFERROR(R29*S29,\"\")"
+  },
+  {
+    "cell": "A30",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A32"
+  },
+  {
+    "cell": "B30",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B32"
+  },
+  {
+    "cell": "C30",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C32"
+  },
+  {
+    "cell": "D30",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E30",
+    "type": "formula",
+    "content": "=IFERROR(C30*D30,\"\")"
+  },
+  {
+    "cell": "F30",
+    "type": "formula",
+    "content": "=IF(G30=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G30",
+    "type": "formula",
+    "content": "=Steel_Skid!B23"
+  },
+  {
+    "cell": "H30",
+    "type": "formula",
+    "content": "=Steel_Skid!C23"
+  },
+  {
+    "cell": "I30",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J30",
+    "type": "formula",
+    "content": "=IFERROR(H30*I30,\"\")"
+  },
+  {
+    "cell": "K30",
+    "type": "formula",
+    "content": "=IF(L30=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "L30",
+    "type": "formula",
+    "content": "=External_Reinforcing!B31"
+  },
+  {
+    "cell": "M30",
+    "type": "formula",
+    "content": "=External_Reinforcing!C31"
+  },
+  {
+    "cell": "N30",
+    "type": "formula",
+    "content": "=IF(L30=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O30",
+    "type": "formula",
+    "content": "=IFERROR(M30*N30,\"\")"
+  },
+  {
+    "cell": "P30",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I38"
+  },
+  {
+    "cell": "Q30",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J38"
+  },
+  {
+    "cell": "R30",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K38"
+  },
+  {
+    "cell": "S30",
+    "type": "formula",
+    "content": "=IF(Q30=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T30",
+    "type": "formula",
+    "content": "=IFERROR(R30*S30,\"\")"
+  },
+  {
+    "cell": "A31",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A33"
+  },
+  {
+    "cell": "B31",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B33"
+  },
+  {
+    "cell": "C31",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C33"
+  },
+  {
+    "cell": "D31",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E31",
+    "type": "formula",
+    "content": "=IFERROR(C31*D31,\"\")"
+  },
+  {
+    "cell": "F31",
+    "type": "formula",
+    "content": "=IF(G31=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G31",
+    "type": "formula",
+    "content": "=Steel_Skid!B24"
+  },
+  {
+    "cell": "H31",
+    "type": "formula",
+    "content": "=Steel_Skid!C24"
+  },
+  {
+    "cell": "I31",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J31",
+    "type": "formula",
+    "content": "=IFERROR(H31*I31,\"\")"
+  },
+  {
+    "cell": "K31",
+    "type": "formula",
+    "content": "=IF(L31=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "L31",
+    "type": "formula",
+    "content": "=External_Reinforcing!B32"
+  },
+  {
+    "cell": "M31",
+    "type": "formula",
+    "content": "=External_Reinforcing!C32"
+  },
+  {
+    "cell": "N31",
+    "type": "formula",
+    "content": "=IF(L31=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O31",
+    "type": "formula",
+    "content": "=IFERROR(M31*N31,\"\")"
+  },
+  {
+    "cell": "P31",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I39"
+  },
+  {
+    "cell": "Q31",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J39"
+  },
+  {
+    "cell": "R31",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K39"
+  },
+  {
+    "cell": "S31",
+    "type": "formula",
+    "content": "=IF(Q31=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T31",
+    "type": "formula",
+    "content": "=IFERROR(R31*S31,\"\")"
+  },
+  {
+    "cell": "A32",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A34"
+  },
+  {
+    "cell": "B32",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B34"
+  },
+  {
+    "cell": "C32",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C34"
+  },
+  {
+    "cell": "D32",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E32",
+    "type": "formula",
+    "content": "=IFERROR(C32*D32,\"\")"
+  },
+  {
+    "cell": "F32",
+    "type": "formula",
+    "content": "=IF(G32=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G32",
+    "type": "formula",
+    "content": "=Steel_Skid!B25"
+  },
+  {
+    "cell": "H32",
+    "type": "formula",
+    "content": "=Steel_Skid!C25"
+  },
+  {
+    "cell": "I32",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J32",
+    "type": "formula",
+    "content": "=IFERROR(H32*I32,\"\")"
+  },
+  {
+    "cell": "O32",
+    "type": "formula",
+    "content": "=SUM(O13:O31)"
+  },
+  {
+    "cell": "P32",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I40"
+  },
+  {
+    "cell": "Q32",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J40"
+  },
+  {
+    "cell": "R32",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K40"
+  },
+  {
+    "cell": "S32",
+    "type": "formula",
+    "content": "=IF(Q32=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T32",
+    "type": "formula",
+    "content": "=IFERROR(R32*S32,\"\")"
+  },
+  {
+    "cell": "A33",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A35"
+  },
+  {
+    "cell": "B33",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B35"
+  },
+  {
+    "cell": "C33",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C35"
+  },
+  {
+    "cell": "D33",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E33",
+    "type": "formula",
+    "content": "=IFERROR(C33*D33,\"\")"
+  },
+  {
+    "cell": "F33",
+    "type": "formula",
+    "content": "=IF(G33=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G33",
+    "type": "formula",
+    "content": "=Steel_Skid!B26"
+  },
+  {
+    "cell": "H33",
+    "type": "formula",
+    "content": "=Steel_Skid!C26"
+  },
+  {
+    "cell": "I33",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J33",
+    "type": "formula",
+    "content": "=IFERROR(H33*I33,\"\")"
+  },
+  {
+    "cell": "K33",
+    "type": "value",
+    "content": "Internal Reinforcing Items"
+  },
+  {
+    "cell": "P33",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I42"
+  },
+  {
+    "cell": "Q33",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J42"
+  },
+  {
+    "cell": "R33",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K42"
+  },
+  {
+    "cell": "S33",
+    "type": "formula",
+    "content": "=IF(Q33=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T33",
+    "type": "formula",
+    "content": "=IFERROR(R33*S33,\"\")"
+  },
+  {
+    "cell": "A34",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A36"
+  },
+  {
+    "cell": "B34",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B36"
+  },
+  {
+    "cell": "C34",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C36"
+  },
+  {
+    "cell": "D34",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E34",
+    "type": "formula",
+    "content": "=IFERROR(C34*D34,\"\")"
+  },
+  {
+    "cell": "G34",
+    "type": "value",
+    "content": " "
+  },
+  {
+    "cell": "J34",
+    "type": "formula",
+    "content": "=SUM(J13:J33)"
+  },
+  {
+    "cell": "K34",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "L34",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "M34",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "N34",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "O34",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "P34",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I43"
+  },
+  {
+    "cell": "Q34",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J43"
+  },
+  {
+    "cell": "R34",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K43"
+  },
+  {
+    "cell": "S34",
+    "type": "formula",
+    "content": "=IF(Q34=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T34",
+    "type": "formula",
+    "content": "=IFERROR(R34*S34,\"\")"
+  },
+  {
+    "cell": "A35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A37"
+  },
+  {
+    "cell": "B35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B37"
+  },
+  {
+    "cell": "C35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C37"
+  },
+  {
+    "cell": "D35",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E35",
+    "type": "formula",
+    "content": "=IFERROR(C35*D35,\"\")"
+  },
+  {
+    "cell": "F35",
+    "type": "value",
+    "content": "Bolts and Nuts"
+  },
+  {
+    "cell": "K35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E60"
+  },
+  {
+    "cell": "L35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F60"
+  },
+  {
+    "cell": "M35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G60"
+  },
+  {
+    "cell": "N35",
+    "type": "formula",
+    "content": "=IF(L35=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O35",
+    "type": "formula",
+    "content": "=IFERROR(M35*N35,\"\")"
+  },
+  {
+    "cell": "P35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$I$41"
+  },
+  {
+    "cell": "Q35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$J$41"
+  },
+  {
+    "cell": "R35",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$K$41"
+  },
+  {
+    "cell": "S35",
+    "type": "formula",
+    "content": "=IF(Q35=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T35",
+    "type": "formula",
+    "content": "=IFERROR(R35*S35,\"\")"
+  },
+  {
+    "cell": "A36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A38"
+  },
+  {
+    "cell": "B36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B38"
+  },
+  {
+    "cell": "C36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C38"
+  },
+  {
+    "cell": "D36",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E36",
+    "type": "formula",
+    "content": "=IFERROR(C36*D36,\"\")"
+  },
+  {
+    "cell": "F36",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "G36",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "H36",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "I36",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "J36",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "K36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E61"
+  },
+  {
+    "cell": "L36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F61"
+  },
+  {
+    "cell": "M36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G61"
+  },
+  {
+    "cell": "N36",
+    "type": "formula",
+    "content": "=IF(L36=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O36",
+    "type": "formula",
+    "content": "=IFERROR(M36*N36,\"\")"
+  },
+  {
+    "cell": "P36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I45"
+  },
+  {
+    "cell": "Q36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J45"
+  },
+  {
+    "cell": "R36",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K45"
+  },
+  {
+    "cell": "S36",
+    "type": "formula",
+    "content": "=IF(Q36=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T36",
+    "type": "formula",
+    "content": "=IFERROR(R36*S36,\"\")"
+  },
+  {
+    "cell": "A37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A39"
+  },
+  {
+    "cell": "B37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B39"
+  },
+  {
+    "cell": "C37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C39"
+  },
+  {
+    "cell": "D37",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E37",
+    "type": "formula",
+    "content": "=IFERROR(C37*D37,\"\")"
+  },
+  {
+    "cell": "F37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E32"
+  },
+  {
+    "cell": "G37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F32"
+  },
+  {
+    "cell": "H37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G32"
+  },
+  {
+    "cell": "I37",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J37",
+    "type": "formula",
+    "content": "=IFERROR(H37*I37,\"\")"
+  },
+  {
+    "cell": "K37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E62"
+  },
+  {
+    "cell": "L37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F62"
+  },
+  {
+    "cell": "M37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G62"
+  },
+  {
+    "cell": "N37",
+    "type": "formula",
+    "content": "=IF(L37=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O37",
+    "type": "formula",
+    "content": "=IFERROR(M37*N37,\"\")"
+  },
+  {
+    "cell": "P37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I46"
+  },
+  {
+    "cell": "Q37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J46"
+  },
+  {
+    "cell": "R37",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K46"
+  },
+  {
+    "cell": "S37",
+    "type": "formula",
+    "content": "=IF(Q37=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T37",
+    "type": "formula",
+    "content": "=IFERROR(R37*S37,\"\")"
+  },
+  {
+    "cell": "A38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A40"
+  },
+  {
+    "cell": "B38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B40"
+  },
+  {
+    "cell": "C38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C40"
+  },
+  {
+    "cell": "D38",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E38",
+    "type": "formula",
+    "content": "=IFERROR(C38*D38,\"\")"
+  },
+  {
+    "cell": "F38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E33"
+  },
+  {
+    "cell": "G38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F33"
+  },
+  {
+    "cell": "H38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G33"
+  },
+  {
+    "cell": "I38",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J38",
+    "type": "formula",
+    "content": "=IFERROR(H38*I38,\"\")"
+  },
+  {
+    "cell": "K38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E63"
+  },
+  {
+    "cell": "L38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F63"
+  },
+  {
+    "cell": "M38",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G63"
+  },
+  {
+    "cell": "N38",
+    "type": "formula",
+    "content": "=IF(L38=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O38",
+    "type": "formula",
+    "content": "=IFERROR(M38*N38,\"\")"
+  },
+  {
+    "cell": "P38",
+    "type": "formula",
+    "content": "=IF(Q38=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "Q38",
+    "type": "formula",
+    "content": "=ETC!B11"
+  },
+  {
+    "cell": "R38",
+    "type": "formula",
+    "content": "=ETC!C11"
+  },
+  {
+    "cell": "S38",
+    "type": "formula",
+    "content": "=IF(Q38=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "T38",
+    "type": "formula",
+    "content": "=IFERROR(R38*S38,\"\")"
+  },
+  {
+    "cell": "A39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A42"
+  },
+  {
+    "cell": "B39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B42"
+  },
+  {
+    "cell": "C39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C42"
+  },
+  {
+    "cell": "D39",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E39",
+    "type": "formula",
+    "content": "=IFERROR(C39*D39,\"\")"
+  },
+  {
+    "cell": "F39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E34"
+  },
+  {
+    "cell": "G39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F34"
+  },
+  {
+    "cell": "H39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G34"
+  },
+  {
+    "cell": "I39",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J39",
+    "type": "formula",
+    "content": "=IFERROR(H39*I39,\"\")"
+  },
+  {
+    "cell": "K39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E64"
+  },
+  {
+    "cell": "L39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F64"
+  },
+  {
+    "cell": "M39",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G64"
+  },
+  {
+    "cell": "N39",
+    "type": "formula",
+    "content": "=IF(L39=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O39",
+    "type": "formula",
+    "content": "=IFERROR(M39*N39,\"\")"
+  },
+  {
+    "cell": "T39",
+    "type": "formula",
+    "content": "=SUM(T28:T38)"
+  },
+  {
+    "cell": "A40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A43"
+  },
+  {
+    "cell": "B40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B43"
+  },
+  {
+    "cell": "C40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C43"
+  },
+  {
+    "cell": "D40",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E40",
+    "type": "formula",
+    "content": "=IFERROR(C40*D40,\"\")"
+  },
+  {
+    "cell": "F40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E35"
+  },
+  {
+    "cell": "G40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F35"
+  },
+  {
+    "cell": "H40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G35"
+  },
+  {
+    "cell": "I40",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J40",
+    "type": "formula",
+    "content": "=IFERROR(H40*I40,\"\")"
+  },
+  {
+    "cell": "K40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E65"
+  },
+  {
+    "cell": "L40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F65"
+  },
+  {
+    "cell": "M40",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G65"
+  },
+  {
+    "cell": "N40",
+    "type": "formula",
+    "content": "=IF(L40=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O40",
+    "type": "formula",
+    "content": "=IFERROR(M40*N40,\"\")"
+  },
+  {
+    "cell": "A41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A44"
+  },
+  {
+    "cell": "B41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B44"
+  },
+  {
+    "cell": "C41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C44"
+  },
+  {
+    "cell": "D41",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E41",
+    "type": "formula",
+    "content": "=IFERROR(C41*D41,\"\")"
+  },
+  {
+    "cell": "F41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E36"
+  },
+  {
+    "cell": "G41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F36"
+  },
+  {
+    "cell": "H41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G36"
+  },
+  {
+    "cell": "I41",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J41",
+    "type": "formula",
+    "content": "=IFERROR(H41*I41,\"\")"
+  },
+  {
+    "cell": "K41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E66"
+  },
+  {
+    "cell": "L41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F66"
+  },
+  {
+    "cell": "M41",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G66"
+  },
+  {
+    "cell": "N41",
+    "type": "formula",
+    "content": "=IF(L41=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O41",
+    "type": "formula",
+    "content": "=IFERROR(M41*N41,\"\")"
+  },
+  {
+    "cell": "P41",
+    "type": "value",
+    "content": "Fittings"
+  },
+  {
+    "cell": "A42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A45"
+  },
+  {
+    "cell": "B42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B45"
+  },
+  {
+    "cell": "C42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C45"
+  },
+  {
+    "cell": "D42",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E42",
+    "type": "formula",
+    "content": "=IFERROR(C42*D42,\"\")"
+  },
+  {
+    "cell": "F42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E37"
+  },
+  {
+    "cell": "G42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F37"
+  },
+  {
+    "cell": "H42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G37"
+  },
+  {
+    "cell": "I42",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J42",
+    "type": "formula",
+    "content": "=IFERROR(H42*I42,\"\")"
+  },
+  {
+    "cell": "K42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E67"
+  },
+  {
+    "cell": "L42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F67"
+  },
+  {
+    "cell": "M42",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G67"
+  },
+  {
+    "cell": "N42",
+    "type": "formula",
+    "content": "=IF(L42=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O42",
+    "type": "formula",
+    "content": "=IFERROR(M42*N42,\"\")"
+  },
+  {
+    "cell": "P42",
+    "type": "value",
+    "content": "Part Name"
+  },
+  {
+    "cell": "Q42",
+    "type": "value",
+    "content": "Part No."
+  },
+  {
+    "cell": "R42",
+    "type": "value",
+    "content": "Q'ty"
+  },
+  {
+    "cell": "S42",
+    "type": "value",
+    "content": "U/Price"
+  },
+  {
+    "cell": "T42",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "A43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A46"
+  },
+  {
+    "cell": "B43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B46"
+  },
+  {
+    "cell": "C43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C46"
+  },
+  {
+    "cell": "D43",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E43",
+    "type": "formula",
+    "content": "=IFERROR(C43*D43,\"\")"
+  },
+  {
+    "cell": "F43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E38"
+  },
+  {
+    "cell": "G43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F38"
+  },
+  {
+    "cell": "H43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G38"
+  },
+  {
+    "cell": "I43",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J43",
+    "type": "formula",
+    "content": "=IFERROR(H43*I43,\"\")"
+  },
+  {
+    "cell": "K43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E68"
+  },
+  {
+    "cell": "L43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F68"
+  },
+  {
+    "cell": "M43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G68"
+  },
+  {
+    "cell": "N43",
+    "type": "formula",
+    "content": "=IF(L43=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O43",
+    "type": "formula",
+    "content": "=IFERROR(M43*N43,\"\")"
+  },
+  {
+    "cell": "P43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I60"
+  },
+  {
+    "cell": "Q43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J60"
+  },
+  {
+    "cell": "R43",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K60"
+  },
+  {
+    "cell": "S43",
+    "type": "formula",
+    "content": "=IF(Q43=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T43",
+    "type": "formula",
+    "content": "=IFERROR(R43*S43,\"\")"
+  },
+  {
+    "cell": "A44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A47"
+  },
+  {
+    "cell": "B44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B47"
+  },
+  {
+    "cell": "C44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C47"
+  },
+  {
+    "cell": "D44",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E44",
+    "type": "formula",
+    "content": "=IFERROR(C44*D44,\"\")"
+  },
+  {
+    "cell": "F44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E39"
+  },
+  {
+    "cell": "G44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F39"
+  },
+  {
+    "cell": "H44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G39"
+  },
+  {
+    "cell": "I44",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J44",
+    "type": "formula",
+    "content": "=IFERROR(H44*I44,\"\")"
+  },
+  {
+    "cell": "K44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E69"
+  },
+  {
+    "cell": "L44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F69"
+  },
+  {
+    "cell": "M44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G69"
+  },
+  {
+    "cell": "N44",
+    "type": "formula",
+    "content": "=IF(L44=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O44",
+    "type": "formula",
+    "content": "=IFERROR(M44*N44,\"\")"
+  },
+  {
+    "cell": "P44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I61"
+  },
+  {
+    "cell": "Q44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J61"
+  },
+  {
+    "cell": "R44",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K61"
+  },
+  {
+    "cell": "S44",
+    "type": "formula",
+    "content": "=IF(Q44=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T44",
+    "type": "formula",
+    "content": "=IFERROR(R44*S44,\"\")"
+  },
+  {
+    "cell": "A45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A48"
+  },
+  {
+    "cell": "B45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B48"
+  },
+  {
+    "cell": "C45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C48"
+  },
+  {
+    "cell": "D45",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E45",
+    "type": "formula",
+    "content": "=IFERROR(C45*D45,\"\")"
+  },
+  {
+    "cell": "F45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E40"
+  },
+  {
+    "cell": "G45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F40"
+  },
+  {
+    "cell": "H45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G40"
+  },
+  {
+    "cell": "I45",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J45",
+    "type": "formula",
+    "content": "=IFERROR(H45*I45,\"\")"
+  },
+  {
+    "cell": "K45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E70"
+  },
+  {
+    "cell": "L45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$F$70"
+  },
+  {
+    "cell": "M45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$G$70"
+  },
+  {
+    "cell": "N45",
+    "type": "formula",
+    "content": "=IF(L45=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O45",
+    "type": "formula",
+    "content": "=IFERROR(M45*N45,\"\")"
+  },
+  {
+    "cell": "P45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I62"
+  },
+  {
+    "cell": "Q45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J62"
+  },
+  {
+    "cell": "R45",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K62"
+  },
+  {
+    "cell": "S45",
+    "type": "formula",
+    "content": "=IF(Q45=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T45",
+    "type": "formula",
+    "content": "=IFERROR(R45*S45,\"\")"
+  },
+  {
+    "cell": "A46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A49"
+  },
+  {
+    "cell": "B46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B49"
+  },
+  {
+    "cell": "C46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C49"
+  },
+  {
+    "cell": "D46",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E46",
+    "type": "formula",
+    "content": "=IFERROR(C46*D46,\"\")"
+  },
+  {
+    "cell": "F46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E42"
+  },
+  {
+    "cell": "G46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!F42"
+  },
+  {
+    "cell": "H46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G42"
+  },
+  {
+    "cell": "I46",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J46",
+    "type": "formula",
+    "content": "=IFERROR(H46*I46,\"\")"
+  },
+  {
+    "cell": "K46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E71"
+  },
+  {
+    "cell": "L46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$F$71"
+  },
+  {
+    "cell": "M46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$G$71"
+  },
+  {
+    "cell": "N46",
+    "type": "formula",
+    "content": "=IF(L46=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O46",
+    "type": "formula",
+    "content": "=IFERROR(M46*N46,\"\")"
+  },
+  {
+    "cell": "P46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I63"
+  },
+  {
+    "cell": "Q46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J63"
+  },
+  {
+    "cell": "R46",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K63"
+  },
+  {
+    "cell": "S46",
+    "type": "formula",
+    "content": "=IF(Q46=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T46",
+    "type": "formula",
+    "content": "=IFERROR(R46*S46,\"\")"
+  },
+  {
+    "cell": "A47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A50"
+  },
+  {
+    "cell": "B47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B50"
+  },
+  {
+    "cell": "C47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C50"
+  },
+  {
+    "cell": "D47",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E47",
+    "type": "formula",
+    "content": "=IFERROR(C47*D47,\"\")"
+  },
+  {
+    "cell": "G47",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B15,\"\")"
+  },
+  {
+    "cell": "H47",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C15,\"\")"
+  },
+  {
+    "cell": "I47",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "K47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E72"
+  },
+  {
+    "cell": "L47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$F$72"
+  },
+  {
+    "cell": "M47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G72"
+  },
+  {
+    "cell": "N47",
+    "type": "formula",
+    "content": "=IF(L47=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O47",
+    "type": "formula",
+    "content": "=IFERROR(M47*N47,\"\")"
+  },
+  {
+    "cell": "P47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I64"
+  },
+  {
+    "cell": "Q47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J64"
+  },
+  {
+    "cell": "R47",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K64"
+  },
+  {
+    "cell": "S47",
+    "type": "formula",
+    "content": "=IF(Q47=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T47",
+    "type": "formula",
+    "content": "=IFERROR(R47*S47,\"\")"
+  },
+  {
+    "cell": "A48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A51"
+  },
+  {
+    "cell": "B48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B51"
+  },
+  {
+    "cell": "C48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C51"
+  },
+  {
+    "cell": "D48",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E48",
+    "type": "formula",
+    "content": "=IFERROR(C48*D48,\"\")"
+  },
+  {
+    "cell": "G48",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B16,\"\")"
+  },
+  {
+    "cell": "H48",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C16,\"\")"
+  },
+  {
+    "cell": "I48",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "K48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!E73"
+  },
+  {
+    "cell": "L48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!$F$73"
+  },
+  {
+    "cell": "M48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!G73"
+  },
+  {
+    "cell": "N48",
+    "type": "formula",
+    "content": "=IF(L48=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O48",
+    "type": "formula",
+    "content": "=IFERROR(M48*N48,\"\")"
+  },
+  {
+    "cell": "P48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I65"
+  },
+  {
+    "cell": "Q48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J65"
+  },
+  {
+    "cell": "R48",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K65"
+  },
+  {
+    "cell": "S48",
+    "type": "formula",
+    "content": "=IF(Q48=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T48",
+    "type": "formula",
+    "content": "=IFERROR(R48*S48,\"\")"
+  },
+  {
+    "cell": "A49",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A52"
+  },
+  {
+    "cell": "B49",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B52"
+  },
+  {
+    "cell": "C49",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C52"
+  },
+  {
+    "cell": "D49",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E49",
+    "type": "formula",
+    "content": "=IFERROR(C49*D49,\"\")"
+  },
+  {
+    "cell": "F49",
+    "type": "formula",
+    "content": "=IF(G49=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G49",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B17,\"\")"
+  },
+  {
+    "cell": "H49",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C17,\"\")"
+  },
+  {
+    "cell": "I49",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "N49",
+    "type": "formula",
+    "content": "=IF(L49=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "P49",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I66"
+  },
+  {
+    "cell": "Q49",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J66"
+  },
+  {
+    "cell": "R49",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K66"
+  },
+  {
+    "cell": "S49",
+    "type": "formula",
+    "content": "=IF(Q49=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T49",
+    "type": "formula",
+    "content": "=IFERROR(R49*S49,\"\")"
+  },
+  {
+    "cell": "A50",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A53"
+  },
+  {
+    "cell": "B50",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B53"
+  },
+  {
+    "cell": "C50",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C53"
+  },
+  {
+    "cell": "D50",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E50",
+    "type": "formula",
+    "content": "=IFERROR(C50*D50,\"\")"
+  },
+  {
+    "cell": "F50",
+    "type": "formula",
+    "content": "=IF(G50=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G50",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B18,\"\")"
+  },
+  {
+    "cell": "H50",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C18,\"\")"
+  },
+  {
+    "cell": "I50",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "N50",
+    "type": "formula",
+    "content": "=IF(L50=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "P50",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I67"
+  },
+  {
+    "cell": "Q50",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J67"
+  },
+  {
+    "cell": "R50",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K67"
+  },
+  {
+    "cell": "S50",
+    "type": "formula",
+    "content": "=IF(Q50=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T50",
+    "type": "formula",
+    "content": "=IFERROR(R50*S50,\"\")"
+  },
+  {
+    "cell": "A51",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A54"
+  },
+  {
+    "cell": "B51",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B54"
+  },
+  {
+    "cell": "C51",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C54"
+  },
+  {
+    "cell": "D51",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E51",
+    "type": "formula",
+    "content": "=IFERROR(C51*D51,\"\")"
+  },
+  {
+    "cell": "F51",
+    "type": "formula",
+    "content": "=IF(G51=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G51",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B19,\"\")"
+  },
+  {
+    "cell": "H51",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C19,\"\")"
+  },
+  {
+    "cell": "I51",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "N51",
+    "type": "formula",
+    "content": "=IF(L51=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "P51",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I68"
+  },
+  {
+    "cell": "Q51",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J68"
+  },
+  {
+    "cell": "R51",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K68"
+  },
+  {
+    "cell": "S51",
+    "type": "formula",
+    "content": "=IF(Q51=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T51",
+    "type": "formula",
+    "content": "=IFERROR(R51*S51,\"\")"
+  },
+  {
+    "cell": "A52",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A55"
+  },
+  {
+    "cell": "B52",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B55"
+  },
+  {
+    "cell": "C52",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C55"
+  },
+  {
+    "cell": "D52",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E52",
+    "type": "formula",
+    "content": "=IFERROR(C52*D52,\"\")"
+  },
+  {
+    "cell": "F52",
+    "type": "formula",
+    "content": "=IF(G52=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G52",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B20,\"\")"
+  },
+  {
+    "cell": "H52",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C20,\"\")"
+  },
+  {
+    "cell": "I52",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "N52",
+    "type": "formula",
+    "content": "=IF(L52=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "P52",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!I74"
+  },
+  {
+    "cell": "Q52",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!J74"
+  },
+  {
+    "cell": "R52",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!K74"
+  },
+  {
+    "cell": "S52",
+    "type": "formula",
+    "content": "=IF(Q52=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T52",
+    "type": "formula",
+    "content": "=IFERROR(R52*S52,\"\")"
+  },
+  {
+    "cell": "A53",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A58"
+  },
+  {
+    "cell": "B53",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B58"
+  },
+  {
+    "cell": "C53",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C58"
+  },
+  {
+    "cell": "D53",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E53",
+    "type": "formula",
+    "content": "=IFERROR(C53*D53,\"\")"
+  },
+  {
+    "cell": "F53",
+    "type": "formula",
+    "content": "=IF(G53=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G53",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B21,\"\")"
+  },
+  {
+    "cell": "H53",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C21,\"\")"
+  },
+  {
+    "cell": "I53",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J53",
+    "type": "formula",
+    "content": "=IFERROR(H53*I53,\"\")"
+  },
+  {
+    "cell": "K53",
+    "type": "formula",
+    "content": "=Internal_Reinforcing!A20"
+  },
+  {
+    "cell": "M53",
+    "type": "formula",
+    "content": "=Internal_Reinforcing!C20"
+  },
+  {
+    "cell": "N53",
+    "type": "formula",
+    "content": "=IF(L53=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O53",
+    "type": "formula",
+    "content": "=IFERROR(M53*N53,\"\")"
+  },
+  {
+    "cell": "P53",
+    "type": "formula",
+    "content": "=IF(Q53=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$B,2,FALSE)))"
+  },
+  {
+    "cell": "Q53",
+    "type": "formula",
+    "content": "=Fittings!B11"
+  },
+  {
+    "cell": "R53",
+    "type": "formula",
+    "content": "=Fittings!C11"
+  },
+  {
+    "cell": "S53",
+    "type": "formula",
+    "content": "=IF(Q53=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T53",
+    "type": "formula",
+    "content": "=IFERROR(R53*S53,\"\")"
+  },
+  {
+    "cell": "A54",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!A59"
+  },
+  {
+    "cell": "B54",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!B59"
+  },
+  {
+    "cell": "C54",
+    "type": "formula",
+    "content": "='PRINTOUT(BOM)'!C59"
+  },
+  {
+    "cell": "D54",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(B:B,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "E54",
+    "type": "formula",
+    "content": "=IFERROR(C54*D54,\"\")"
+  },
+  {
+    "cell": "F54",
+    "type": "formula",
+    "content": "=IF(G54=\"\",\"\",(VLOOKUP(G:G,'0.39'!$B:$F,5,FALSE)))"
+  },
+  {
+    "cell": "G54",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!B22,\"\")"
+  },
+  {
+    "cell": "H54",
+    "type": "formula",
+    "content": "=IFERROR(BoltnNuts!C22,\"\")"
+  },
+  {
+    "cell": "I54",
+    "type": "formula",
+    "content": "=IFERROR((VLOOKUP(G:G,'0.39'!$B:$D,3,FALSE)),\"\")"
+  },
+  {
+    "cell": "J54",
+    "type": "formula",
+    "content": "=IFERROR(H54*I54,\"\")"
+  },
+  {
+    "cell": "K54",
+    "type": "formula",
+    "content": "=Internal_Reinforcing!A21"
+  },
+  {
+    "cell": "M54",
+    "type": "formula",
+    "content": "=Internal_Reinforcing!C21"
+  },
+  {
+    "cell": "N54",
+    "type": "formula",
+    "content": "=IF(L54=\"\",\"\",(VLOOKUP(L:L,'0.39'!$B:$D,3,FALSE)))"
+  },
+  {
+    "cell": "O54",
+    "type": "formula",
+    "content": "=IFERROR(M54*N54,\"\")"
+  },
+  {
+    "cell": "P54",
+    "type": "formula",
+    "content": "=IF(Q54=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$B,2,FALSE)))"
+  },
+  {
+    "cell": "Q54",
+    "type": "formula",
+    "content": "=Fittings!B12"
+  },
+  {
+    "cell": "R54",
+    "type": "formula",
+    "content": "=Fittings!C12"
+  },
+  {
+    "cell": "S54",
+    "type": "formula",
+    "content": "=IF(Q54=\"\",\"\",(VLOOKUP(Q:Q,'0.39'!$B:$C,3,FALSE)))"
+  },
+  {
+    "cell": "T54",
+    "type": "formula",
+    "content": "=IFERROR(R54*S54,\"\")"
+  },
+  {
+    "cell": "C55",
+    "type": "formula",
+    "content": "=SUM(C13:C54)"
+  },
+  {
+    "cell": "E55",
+    "type": "formula",
+    "content": "=SUM(E13:E54)"
+  },
+  {
+    "cell": "J55",
+    "type": "formula",
+    "content": "=SUM(J37:J54)"
+  },
+  {
+    "cell": "O55",
+    "type": "formula",
+    "content": "=SUM(O35:O54)"
+  },
+  {
+    "cell": "T55",
+    "type": "formula",
+    "content": "=SUM(T43:T54)"
+  },
+  {
+    "cell": "F57",
+    "type": "value",
+    "content": "Roundup"
+  },
+  {
+    "cell": "A58",
+    "type": "value",
+    "content": "Panels"
+  },
+  {
+    "cell": "B58",
+    "type": "formula",
+    "content": "=E55"
+  },
+  {
+    "cell": "C58",
+    "type": "formula",
+    "content": "=B58/B66"
+  },
+  {
+    "cell": "F58",
+    "type": "value",
+    "content": "Panels"
+  },
+  {
+    "cell": "G58",
+    "type": "formula",
+    "content": "=ROUNDUP(B58,-2)"
+  },
+  {
+    "cell": "I58",
+    "type": "value",
+    "content": "PRICE/M2"
+  },
+  {
+    "cell": "J58",
+    "type": "value",
+    "content": "Panel"
+  },
+  {
+    "cell": "K58",
+    "type": "formula",
+    "content": "=G58/BASIC_TOOL!J11"
+  },
+  {
+    "cell": "A59",
+    "type": "value",
+    "content": "Steel Skid"
+  },
+  {
+    "cell": "B59",
+    "type": "formula",
+    "content": "=J34"
+  },
+  {
+    "cell": "C59",
+    "type": "formula",
+    "content": "=B59/B66"
+  },
+  {
+    "cell": "F59",
+    "type": "value",
+    "content": "Steel Skid"
+  },
+  {
+    "cell": "G59",
+    "type": "formula",
+    "content": "=ROUNDUP(B59,-2)"
+  },
+  {
+    "cell": "J59",
+    "type": "value",
+    "content": "Steel Acc."
+  },
+  {
+    "cell": "K59",
+    "type": "formula",
+    "content": "=SUM(G59:G65)/BASIC_TOOL!J11"
+  },
+  {
+    "cell": "A60",
+    "type": "value",
+    "content": "Bolt & Nuts"
+  },
+  {
+    "cell": "B60",
+    "type": "formula",
+    "content": "=J55"
+  },
+  {
+    "cell": "C60",
+    "type": "formula",
+    "content": "=B60/B66"
+  },
+  {
+    "cell": "F60",
+    "type": "value",
+    "content": "Bolt & Nuts"
+  },
+  {
+    "cell": "G60",
+    "type": "formula",
+    "content": "=ROUNDUP(B60,-2)"
+  },
+  {
+    "cell": "J60",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "K60",
+    "type": "formula",
+    "content": "=ROUNDUP(SUM(K58:K59),-3)"
+  },
+  {
+    "cell": "A61",
+    "type": "value",
+    "content": "External Reinforcing"
+  },
+  {
+    "cell": "B61",
+    "type": "formula",
+    "content": "=O32"
+  },
+  {
+    "cell": "C61",
+    "type": "formula",
+    "content": "=B61/B66"
+  },
+  {
+    "cell": "F61",
+    "type": "value",
+    "content": "External Reinforcing"
+  },
+  {
+    "cell": "G61",
+    "type": "formula",
+    "content": "=ROUNDUP(B61,-2)"
+  },
+  {
+    "cell": "A62",
+    "type": "value",
+    "content": "Internal Reinforcing"
+  },
+  {
+    "cell": "B62",
+    "type": "formula",
+    "content": "=O55"
+  },
+  {
+    "cell": "C62",
+    "type": "formula",
+    "content": "=B62/B66"
+  },
+  {
+    "cell": "F62",
+    "type": "value",
+    "content": "Internal Reinforcing"
+  },
+  {
+    "cell": "G62",
+    "type": "formula",
+    "content": "=ROUNDUP(B62,-2)"
+  },
+  {
+    "cell": "I62",
+    "type": "value",
+    "content": "PRICE/TON"
+  },
+  {
+    "cell": "J62",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "K62",
+    "type": "formula",
+    "content": "=B66/BASIC_TOOL!H11"
+  },
+  {
+    "cell": "A63",
+    "type": "value",
+    "content": "Interal Tie-rod"
+  },
+  {
+    "cell": "B63",
+    "type": "formula",
+    "content": "=T23"
+  },
+  {
+    "cell": "C63",
+    "type": "formula",
+    "content": "=B63/B66"
+  },
+  {
+    "cell": "F63",
+    "type": "value",
+    "content": "Interal Tie-rod"
+  },
+  {
+    "cell": "G63",
+    "type": "formula",
+    "content": "=ROUNDUP(B63,-2)"
+  },
+  {
+    "cell": "A64",
+    "type": "value",
+    "content": "Etc"
+  },
+  {
+    "cell": "B64",
+    "type": "formula",
+    "content": "=T39"
+  },
+  {
+    "cell": "C64",
+    "type": "formula",
+    "content": "=B64/B66"
+  },
+  {
+    "cell": "F64",
+    "type": "value",
+    "content": "Etc"
+  },
+  {
+    "cell": "G64",
+    "type": "formula",
+    "content": "=ROUNDUP(B64,-2)"
+  },
+  {
+    "cell": "A65",
+    "type": "value",
+    "content": "Fittings"
+  },
+  {
+    "cell": "B65",
+    "type": "formula",
+    "content": "=T55"
+  },
+  {
+    "cell": "C65",
+    "type": "formula",
+    "content": "=B65/B66"
+  },
+  {
+    "cell": "F65",
+    "type": "value",
+    "content": "Fittings"
+  },
+  {
+    "cell": "G65",
+    "type": "formula",
+    "content": "=ROUNDUP(B65,-2)"
+  },
+  {
+    "cell": "A66",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "B66",
+    "type": "formula",
+    "content": "=B58+B59+B60+B61+B62+B63+B64+B65"
+  },
+  {
+    "cell": "C66",
+    "type": "formula",
+    "content": "=SUM(C58:D65)"
+  },
+  {
+    "cell": "F66",
+    "type": "value",
+    "content": "Total"
+  },
+  {
+    "cell": "G66",
+    "type": "formula",
+    "content": "=SUM(G58:G65)"
+  },
+  {
+    "cell": "J66",
+    "type": "value",
+    "content": "`"
+  }
+]

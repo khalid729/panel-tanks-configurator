@@ -1,0 +1,234 @@
+{
+  "BASIC_TOOL": [
+    {
+      "type": "list",
+      "formula1": "$B$43:$B$47",
+      "formula2": null,
+      "ranges": "C14",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$E$43:$E$45",
+      "formula2": null,
+      "ranges": "B22",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$F$43:$F$44",
+      "formula2": null,
+      "ranges": "E22",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$C$43:$C$47",
+      "formula2": null,
+      "ranges": "D22",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$I$43:$I$46",
+      "formula2": null,
+      "ranges": "G22",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$J$43:$J$45",
+      "formula2": null,
+      "ranges": "G26",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$K$43:$K$45",
+      "formula2": null,
+      "ranges": "E26",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$H$43:$H$45",
+      "formula2": null,
+      "ranges": "B26",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$N$43:$N$44",
+      "formula2": null,
+      "ranges": "B33",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": "잘못 입력하셨습니다. 다시 입력해 주세요."
+    },
+    {
+      "type": "list",
+      "formula1": "$O$43:$O$50",
+      "formula2": null,
+      "ranges": "F22",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$G$43:$G$44",
+      "formula2": null,
+      "ranges": "E14 G14",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": "잘못 입력하셨습니다. 다시 입력해 주세요."
+    },
+    {
+      "type": "list",
+      "formula1": "$Q$43:$Q$44",
+      "formula2": null,
+      "ranges": "H22",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$A$50:$A$52",
+      "formula2": null,
+      "ranges": "C22",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$C$50:$C$52",
+      "formula2": null,
+      "ranges": "F33 H33",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$D$48:$D$56",
+      "formula2": null,
+      "ranges": "F11",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$M$43:$M$58",
+      "formula2": null,
+      "ranges": "L30",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$R$43:$R$49",
+      "formula2": null,
+      "ranges": "H26",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$S$43:$S$46",
+      "formula2": null,
+      "ranges": "H27",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$S$43:$S$49",
+      "formula2": null,
+      "ranges": "F26",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$M$43:$M$61",
+      "formula2": null,
+      "ranges": "B30 D30 F30 H30 J30",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$D$43:$D$44",
+      "formula2": null,
+      "ranges": "B14",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$V$43:$V$256",
+      "formula2": null,
+      "ranges": "A11:E11",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": null
+    },
+    {
+      "type": "list",
+      "formula1": "$G$43:$G$44",
+      "formula2": null,
+      "ranges": "D14",
+      "allow_blank": true,
+      "show_dropdown": false,
+      "prompt": null,
+      "error": "잘못 입력하셨습니다. 다시 입력해 주세요."
+    }
+  ]
+}

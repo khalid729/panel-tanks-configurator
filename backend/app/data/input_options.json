@@ -1,0 +1,140 @@
+{
+  "product_type": [
+    "MNT",
+    "Not Included"
+  ],
+  "insulation": [
+    "Non-Insulated",
+    "Insulated",
+    "Insulated Roof Only",
+    "Insulated(Roof,Side)",
+    "Non-insulated(Roof Only)"
+  ],
+  "use_side_panel_1x1": [
+    "YES",
+    "NO"
+  ],
+  "use_partition_1x1": [
+    "YES",
+    "NO"
+  ],
+  "reinforcing_type": [
+    "Internal",
+    "External"
+  ],
+  "reinforcing_method": [
+    "MNT"
+  ],
+  "steel_skid": [
+    "Default",
+    "Angle 75",
+    "Channel 125",
+    "Channel 150",
+    "Except SKB"
+  ],
+  "internal_item_material": [
+    "SS316",
+    "SS304"
+  ],
+  "bolts_nuts": [
+    "EXT:HDG+INT:SS304+ROOF:HDG",
+    "EXT:HDG+INT:SS304",
+    "EXT:SS304+INT:SS316",
+    "EXT:HDG+INT:SS316",
+    "INT/EXT:SS304",
+    "INT/EXT:SS316",
+    "Except BNW",
+    "Except Panel BNW"
+  ],
+  "internal_tie_rod_material": [
+    "SS316",
+    "SS304",
+    "SS304+PET coated",
+    "SS316+PE Coated"
+  ],
+  "tie_rod_spec": [
+    "3mH_Tie_Rod(1+1)",
+    "3mH_Tie_Rod(2+1)"
+  ],
+  "level_indicator": [
+    "General",
+    "Special",
+    "No needed"
+  ],
+  "internal_ladder_material": [
+    "GRP",
+    "SS304",
+    "SS316L"
+  ],
+  "internal_ladder_qty": [
+    "Default",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "external_ladder_material": [
+    "HDG",
+    "SS304",
+    "SS316"
+  ],
+  "external_ladder_qty": [
+    "Default",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "installation_fee": [
+    "Included",
+    "Excluded"
+  ],
+  "container_types": [
+    "20ft",
+    "40ft"
+  ],
+  "fitting_types": [
+    "WSD-015A",
+    "WSD-020A",
+    "WSD-025A",
+    "WSD-032A",
+    "WSD-040A",
+    "WSD-050A",
+    "WFL-065A",
+    "WFL-080A",
+    "WFL-100A",
+    "WFL-125A",
+    "WFL-150A",
+    "WFL-200A",
+    "WFL-250A",
+    "WSF-065A",
+    "WSF-080A",
+    "WSF-100A",
+    "WSF-125A",
+    "WSF-150A"
+  ],
+  "available_heights": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5
+  ]
+}
