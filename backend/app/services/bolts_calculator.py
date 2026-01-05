@@ -1,57 +1,32 @@
 """
 Bolts & Nuts Calculator - Exact calculations from Excel formulas
+Based on BoltnNuts sheet (sheet13)
 """
+import math
 from typing import Dict, List
 
 
 class BoltsCalculator:
     """Calculate Bolts & Nuts requirements based on exact Excel formulas"""
 
-    # Bolt options (BASIC_TOOL!E22)
-    # Note: Excel uses SA4 (SS304) part numbers even when SS316 is selected
-    # This matches the actual Excel behavior
+    # Bolt options (BASIC_TOOL!F23)
     BOLT_OPTIONS = {
-        1: {"name": "EXT:HDG/INT:SS304+R/F:HDG", "external": "HDG", "internal": "SS304", "reinforcing": "HDG"},
-        2: {"name": "EXT:HDG/INT:SS304+R/F:SS304", "external": "HDG", "internal": "SS304", "reinforcing": "SS304"},
-        3: {"name": "EXT:SS304/INT:SS316", "external": "SS304", "internal": "SS304", "reinforcing": "SS304"},  # Uses SA4
-        4: {"name": "EXT:HDG/INT:SS316", "external": "HDG", "internal": "SS304", "reinforcing": "HDG"},  # Uses SA4
-        5: {"name": "EXT:SS304/INT:SS304", "external": "SS304", "internal": "SS304", "reinforcing": "SS304"},
-        6: {"name": "EXT:SS316/INT:SS316", "external": "SS304", "internal": "SS304", "reinforcing": "SS304"},  # Uses SA4
+        1: {"name": "EXT:HDG/INT:SS304+R/F:HDG", "external": "Z", "internal": "SA4", "reinforcing": "Z"},
+        2: {"name": "EXT:HDG/INT:SS304+R/F:SS304", "external": "Z", "internal": "SA4", "reinforcing": "SA4"},
+        3: {"name": "EXT:SS304/INT:SS316", "external": "SA4", "internal": "SA2", "reinforcing": "SA4"},
+        4: {"name": "EXT:HDG/INT:SS316", "external": "Z", "internal": "SA2", "reinforcing": "Z"},
+        5: {"name": "EXT:SS304/INT:SS304", "external": "SA4", "internal": "SA4", "reinforcing": "SA4"},
+        6: {"name": "EXT:SS316/INT:SS316", "external": "SA2", "internal": "SA2", "reinforcing": "SA2"},
         7: {"name": "Except All Bolts", "external": None, "internal": None, "reinforcing": None},
-        8: {"name": "Except Panel Assemble Bolts", "external": None, "internal": None, "reinforcing": "HDG"},
-    }
-
-    # Part number patterns based on material
-    # Excel uses M10, M12, M14 bolts (NOT M8)
-    # Format: WBT-{size}{length}{material}
-    # size: 10, 12, 14
-    # length: 35, 40, 50, 120
-    # material: Z (HDG), SA4 (SS304), SA2 (SS316)
-    BOLT_PARTS = {
-        "HDG": {
-            "bolt_10x35": "WBT-1035Z",
-            "bolt_10x50": "WBT-1050Z",
-            "bolt_12x40": "WBT-1240Z",
-            "bolt_14x40": "WBT-1440Z",
-            "bolt_14x120_rubber": "WBT-14120RD",
-        },
-        "SS304": {
-            "bolt_10x35": "WBT-1035SA4",
-            "bolt_10x50": "WBT-1050SA4",
-            "bolt_12x40": "WBT-1240SA4",
-            "bolt_14x40": "WBT-1440SA4",
-        },
-        "SS316": {
-            "bolt_10x35": "WBT-1035SA2",
-            "bolt_10x50": "WBT-1050SA2",
-            "bolt_12x40": "WBT-1240SA2",
-            "bolt_14x40": "WBT-1440SA2",
-        },
+        8: {"name": "Except Panel Assemble Bolts", "external": None, "internal": None, "reinforcing": "Z"},
     }
 
     def __init__(self, width: float, length1: float, length2: float, length3: float,
                  length4: float, height: float, bolt_option: int = 1,
-                 use_side_1x1: bool = False):
+                 skid_type: int = 1, insulation_type: int = 0,
+                 steel_skid_m9: int = 0, steel_skid_m36: int = 0,
+                 ext_reinforcing_l22: int = 0, ext_reinforcing_l23: int = 0, ext_reinforcing_l24: int = 0,
+                 int_reinforcing_p18: int = 0, int_reinforcing_p19: int = 0):
         self.width = width
         self.length1 = length1
         self.length2 = length2
@@ -59,21 +34,36 @@ class BoltsCalculator:
         self.length4 = length4
         self.height = height
         self.bolt_option = bolt_option
-        self.use_side_1x1 = use_side_1x1
+        self.skid_type = skid_type  # BASIC_TOOL!D17
+        self.insulation_type = insulation_type  # BASIC_TOOL!D15
 
-        # Calculate integer and fractional parts
+        # Values from other sheets
+        self.steel_skid_m9 = steel_skid_m9  # Steel_Skid!M9
+        self.steel_skid_m36 = steel_skid_m36  # Steel_Skid!M36
+        self.ext_reinforcing_l22 = ext_reinforcing_l22
+        self.ext_reinforcing_l23 = ext_reinforcing_l23
+        self.ext_reinforcing_l24 = ext_reinforcing_l24
+        self.int_reinforcing_p18 = int_reinforcing_p18
+        self.int_reinforcing_p19 = int_reinforcing_p19
+
+        # Calculate integer and fractional parts (matching Excel)
+        self.W_O = width
         self.W_C = int(width)
         self.W_F = width - self.W_C
 
+        self.L1_O = length1
         self.L1_C = int(length1)
         self.L1_F = length1 - self.L1_C
 
+        self.L2_O = length2 or 0
         self.L2_C = int(length2) if length2 else 0
         self.L2_F = (length2 - self.L2_C) if length2 else 0
 
+        self.L3_O = length3 or 0
         self.L3_C = int(length3) if length3 else 0
         self.L3_F = (length3 - self.L3_C) if length3 else 0
 
+        self.L4_O = length4 or 0
         self.L4_C = int(length4) if length4 else 0
         self.L4_F = (length4 - self.L4_C) if length4 else 0
 
@@ -81,7 +71,7 @@ class BoltsCalculator:
         self.L_O = length1 + (length2 or 0) + (length3 or 0) + (length4 or 0)
         self.L_O_C = self.L1_C + self.L2_C + self.L3_C + self.L4_C
         self.L_O_F = self.L1_F + self.L2_F + self.L3_F + self.L4_F
-        self.W_O = self.W_C + self.W_F
+
         self.H_O = height
         self.H_C = int(height)
         self.H_F = height - self.H_C
@@ -96,314 +86,405 @@ class BoltsCalculator:
         # Get bolt materials
         self.bolt_config = self.BOLT_OPTIONS.get(bolt_option, self.BOLT_OPTIONS[1])
 
+        # Pre-calculate common sums
+        self.sum_L_C = self.L1_C + self.L2_C + self.L3_C + self.L4_C
+        self.sum_L_F = self.L1_F + self.L2_F + self.L3_F + self.L4_F
+        self.sum_L_total = self.sum_L_C + self.sum_L_F
+
     def calculate_all_parts(self) -> List[Dict]:
-        """Calculate all bolt and nut requirements"""
+        """Calculate all bolt and nut requirements using exact Excel formulas"""
         parts = []
 
         # Check if bolts are excluded
         if self.bolt_option == 7:  # Except All Bolts
             return []
 
-        # Calculate external (panel assembly) bolts if not excluded
-        if self.bolt_option != 8:  # Not "Except Panel Assemble Bolts"
-            external_parts = self._calc_external_bolts()
-            parts.extend(external_parts)
-
-        # Calculate internal bolts (for reinforcing)
-        internal_parts = self._calc_internal_bolts()
-        parts.extend(internal_parts)
-
-        return [p for p in parts if p['quantity'] > 0]
-
-    def _calc_external_bolts(self) -> List[Dict]:
-        """
-        Calculate external panel assembly bolts.
-        Based on exact Excel formulas from Bolts_Nuts sheet.
-
-        Excel values:
-        - 5x5x2m: WBT-1440Z=90, WBT-1035Z=128, WBT-1050Z=736, WBT-1240Z=40, WBT-14120RD=32
-        - 5x5x3m: WBT-1440Z=122, WBT-1035Z=196, WBT-1050Z=1024, WBT-1240Z=40, WBT-14120RD=112
-        - 10x8x3m: WBT-1440Z=292, WBT-1035Z=196, WBT-1050Z=2480
-        """
-        parts = []
         ext_material = self.bolt_config["external"]
-        if not ext_material:
-            return []
+        int_material = self.bolt_config["internal"]
 
-        bolt_parts = self.BOLT_PARTS.get(ext_material, self.BOLT_PARTS["HDG"])
-        perimeter = 2 * (self.W_C + self.L_O_C)  # 20 for 5x5
-        internal_joints_count = max(0, self.W_C - 1) + max(0, self.L_O_C - 1)  # 8 for 5x5
+        # ========================================
+        # WBT-1035 (M10x35mm) - Roof & Corner bolts
+        # Rows 9,10 (corners) use external material
+        # Rows 5,6 (roof) use internal material
+        # ========================================
+        if self.bolt_option != 8:  # Not "Except Panel Assemble Bolts"
+            # External bolts (corners) - use HDG/Z
+            wbt_1035_ext = self._calc_wbt_1035_external()
+            if wbt_1035_ext > 0 and ext_material:
+                parts.append({
+                    "part_no": f"WBT-1035{ext_material}",
+                    "quantity": wbt_1035_ext,
+                    "category": "Bolts & Nuts",
+                    "description": f"M10x35mm Bolt ({ext_material})"
+                })
 
-        # M14x40 HDG Bolt Set - for corners and special joints
-        # H=2: 90, H=3: 122, H=4: 132
-        # For partitioned tanks: double the count (292 = 146 × 2 for 10x8x3)
-        # For 10x15x4: 478 = 354 + 124 (extra for long tall tanks)
-        base_14x40 = self.W_C + self.L_O_C + 2 * internal_joints_count  # 26 for 5x5
-        if self.H_C >= 4:
-            bolt_14x40_qty = int(base_14x40 + 32 * 3 + 10 * (self.H_C - 3))
-        else:
-            bolt_14x40_qty = int(base_14x40 + 32 * self.H_C)
-        # Double for partitioned tanks
-        if self.N_PA > 0:
-            bolt_14x40_qty *= 2
-            # Extra for tall long partitioned tanks
-            if self.H_O >= 4 and self.L_O > 10:
-                bolt_14x40_qty += int(self.N_PA * (self.L_O - 10) * 12.4)  # ~124 for L=15
-        if bolt_14x40_qty > 0:
-            parts.append({
-                "part_no": bolt_parts.get("bolt_14x40", "WBT-1440Z"),
-                "quantity": bolt_14x40_qty,
-                "category": "Bolts & Nuts",
-                "description": "HDG Bolt and Nuts Set M14x40"
-            })
+            # Internal bolts (roof) - use SS304/SA4
+            wbt_1035_int = self._calc_wbt_1035_internal()
+            if wbt_1035_int > 0 and int_material:
+                parts.append({
+                    "part_no": f"WBT-1035{int_material}",
+                    "quantity": wbt_1035_int,
+                    "category": "Bolts & Nuts",
+                    "description": f"M10x35mm Roof Bolt ({int_material})"
+                })
 
-        # M10x35 HDG - for internal roof/bottom panel joints
-        # For simple tanks: 8 × ((W_C-1) + (L_O_C-1)) × 2 + additional for height
-        # For partitioned tanks: 10 × (W_C + L_O_C) + 16 = 196 for 10x8x3
-        if self.N_PA > 0:
-            # Partitioned tank formula: 10 × (W_C + L_O_C) + 14 for long tanks, +16 for short
-            base_addition = 14 if self.L_O > 10 else 16
-            bolt_10x35_qty = int(10 * (self.W_C + self.L_O_C) + base_addition)
-        else:
-            # Simple tank formula
-            base_10x35 = 8 * internal_joints_count * 2  # 128 for 5x5
-            bolt_10x35_qty = base_10x35
-            if self.H_C > 2:
-                additional_per_meter = 8 * (self.W_C + self.L_O_C - 2) + 4  # 68 for 5x5
-                bolt_10x35_qty += additional_per_meter * (self.H_C - 2)
-        if bolt_10x35_qty > 0:
-            parts.append({
-                "part_no": bolt_parts.get("bolt_10x35", "WBT-1035Z"),
-                "quantity": int(bolt_10x35_qty),
-                "category": "Bolts & Nuts",
-                "description": "M10x35mm Bolt"
-            })
+        # ========================================
+        # WBT-1050 (M10x50mm) - Panel assembly bolts
+        # Rows 12-16 (Bottom, Side joints) use external material
+        # Row 11 (Roof+Side) uses internal material
+        # ========================================
+        if self.bolt_option != 8:
+            # External bolts (bottom, side joints)
+            wbt_1050_ext = self._calc_wbt_1050_external()
+            if wbt_1050_ext > 0 and ext_material:
+                parts.append({
+                    "part_no": f"WBT-1050{ext_material}",
+                    "quantity": wbt_1050_ext,
+                    "category": "Bolts & Nuts",
+                    "description": f"M10x50mm Bolt ({ext_material})"
+                })
 
-        # M10x50 HDG - main panel assembly bolts
-        # Formula: 8 × perimeter + 8 × (perimeter + 2×internal_joints) × H_C
-        # For partitioned tanks: add 28 × N_PA × W_C
-        # 5x5x2: 160 + 576 = 736 ✓, 5x5x3: 160 + 864 = 1024 ✓
-        # 10x8x3: 1920 + 560 = 2480 ✓
-        # 10x15x4: 4872 = 4032 + 840 (extra for tall partitioned tanks)
-        side_factor = perimeter + 2 * internal_joints_count  # 36 for 5x5
-        bolt_10x50_qty = int(8 * perimeter + 8 * side_factor * self.H_C)
-        # Add partition contribution
-        if self.N_PA > 0:
-            bolt_10x50_qty += int(28 * self.N_PA * self.W_C)
-            # For H >= 4, add extra: N_PA × W_C × 21 × (H_C - 2)
-            if self.H_O >= 4:
-                bolt_10x50_qty += int(self.N_PA * self.W_C * 21 * (self.H_C - 2))
-        if bolt_10x50_qty > 0:
-            parts.append({
-                "part_no": bolt_parts.get("bolt_10x50", "WBT-1050Z"),
-                "quantity": bolt_10x50_qty,
-                "category": "Bolts & Nuts",
-                "description": "M10x50mm Bolt"
-            })
+            # Internal bolts (roof+side, partitions)
+            wbt_1050_int = self._calc_wbt_1050_internal()
+            if wbt_1050_int > 0 and int_material:
+                parts.append({
+                    "part_no": f"WBT-1050{int_material}",
+                    "quantity": wbt_1050_int,
+                    "category": "Bolts & Nuts",
+                    "description": f"M10x50mm Roof/Partition Bolt ({int_material})"
+                })
 
-        # M12x40 HDG - for steel skid connections
-        # Formula: 4 × (W_C + L_O_C) = 40 for 5x5 (constant)
-        bolt_12x40_qty = int(4 * (self.W_C + self.L_O_C))
-        if bolt_12x40_qty > 0:
-            parts.append({
-                "part_no": bolt_parts.get("bolt_12x40", "WBT-1240Z"),
-                "quantity": bolt_12x40_qty,
-                "category": "Bolts & Nuts",
-                "description": "M12x40mm Bolt"
-            })
+        # ========================================
+        # WBT-1240 (M12x40mm) - Steel Skid bolts
+        # ========================================
+        if self.bolt_option != 8:
+            wbt_1240_qty = self._calc_wbt_1240()
+            if wbt_1240_qty > 0 and ext_material:
+                parts.append({
+                    "part_no": f"WBT-1240{ext_material}",
+                    "quantity": wbt_1240_qty,
+                    "category": "Bolts & Nuts",
+                    "description": f"M12x40mm Bolt ({ext_material})"
+                })
 
-        # M14x120 Rubber HDG - for rubber mounted connections
-        # H=2: 32, H=3: 112, H=4: 256
-        # 10x8x3: 192 = 176 + N_PA×8
-        # Formula: 32 + 8×(W+L)×(H_C-2) + 8×(W+L-2)×max(0,H_C-3) + N_PA×8
-        # 5x5x2: 32, 5x5x3: 32+80=112, 5x5x4: 32+160+64=256 ✓
-        bolt_14x120_qty = 8 * 4  # Base: 4 corners = 32
-        if self.H_C > 2:
-            bolt_14x120_qty += 8 * (self.W_C + self.L_O_C) * (self.H_C - 2)
-            if self.H_C > 3:
-                bolt_14x120_qty += 8 * (self.W_C + self.L_O_C - 2) * (self.H_C - 3)
-        # Add partition contribution
-        if self.N_PA > 0:
-            bolt_14x120_qty += self.N_PA * 8
-            # Extra for tall long partitioned tanks
-            if self.H_O >= 4 and self.L_O > 10:
-                bolt_14x120_qty += self.N_PA * 2
-        if bolt_14x120_qty > 0:
+        # ========================================
+        # WBT-1440 (M14x40mm) - Structural bolts
+        # ========================================
+        if self.bolt_option != 8:
+            wbt_1440_qty = self._calc_wbt_1440()
+            if wbt_1440_qty > 0 and ext_material:
+                parts.append({
+                    "part_no": f"WBT-1440{ext_material}",
+                    "quantity": wbt_1440_qty,
+                    "category": "Bolts & Nuts",
+                    "description": f"M14x40mm Bolt ({ext_material})"
+                })
+
+        # ========================================
+        # WBT-1058R (M10x58mm Rubber) - Partition bolts
+        # ========================================
+        if self.N_PA > 0 and int_material:
+            wbt_1058r_qty = self._calc_wbt_1058r()
+            if wbt_1058r_qty > 0:
+                parts.append({
+                    "part_no": f"WBT-1058R{int_material}",
+                    "quantity": wbt_1058r_qty,
+                    "category": "Bolts & Nuts",
+                    "description": f"M10x58mm Rubber Bolt ({int_material})"
+                })
+
+        # ========================================
+        # WBT-14120R (M14x120mm Rubber) - Reinforcing bolts
+        # ========================================
+        wbt_14120r_qty = self._calc_wbt_14120r()
+        if wbt_14120r_qty > 0:
+            # External reinforcing uses RD (HDG with rubber)
             parts.append({
                 "part_no": "WBT-14120RD",
-                "quantity": int(bolt_14x120_qty),
+                "quantity": wbt_14120r_qty,
                 "category": "Bolts & Nuts",
                 "description": "M14x120mm Rubber HDG Bolt"
             })
 
-        return parts
+        # Internal reinforcing (if partitions)
+        if self.N_PA > 0 and int_material:
+            wbt_14120r_int = self._calc_wbt_14120r_internal()
+            if wbt_14120r_int > 0:
+                parts.append({
+                    "part_no": f"WBT-14120R{int_material}",
+                    "quantity": wbt_14120r_int,
+                    "category": "Bolts & Nuts",
+                    "description": f"M14x120mm Rubber Internal Bolt ({int_material})"
+                })
 
-    def _calc_internal_bolts(self) -> List[Dict]:
+        return [p for p in parts if p['quantity'] > 0]
+
+    def _calc_wbt_1035_external(self) -> int:
         """
-        Calculate internal bolts for reinforcing components.
-        Based on exact Excel values:
-        - 5x5x2m: WBT-1035SA4=160, WBT-1050SA4=80
-        - 5x5x3m: WBT-1035SA4=160, WBT-1050SA4=80 (same!)
-        - 10x8x3m (partitioned): WBT-1035SA4=488, WBT-1050SA4=1136, WBT-1058RSA4=256, WBT-14120RSA4=216
+        Calculate WBT-1035 (M10x35mm) EXTERNAL bolt quantity.
+        Only corner and side bolts use external material (HDG/Z).
+
+        Excel formulas (external):
+        Row 9: IF(H_O=2.5,1*4,0)+IF(H_O=3,1*4,0)+IF(H_O=3.5,2*4,0)+IF(H_O=4,2*4,0)+IF(H_O=4.5,3*4,0)+IF(H_O=5,3*4,0) - Corner Frames
+        Row 10: H_O*8*2*4 - Corner Angle Frame+Side PNLs
         """
-        parts = []
-        int_material = self.bolt_config["internal"]
-        if not int_material:
-            return []
+        qty = 0
 
-        bolt_parts = self.BOLT_PARTS.get(int_material, self.BOLT_PARTS["SS304"])
-        perimeter = 2 * (self.W_C + self.L_O_C)  # 20 for 5x5
+        # Row 9: Connecting between Corner Frames
+        # Excel: IF(H_O=2.5,1*4,0)+IF(H_O=3,1*4,0)+IF(H_O=3.5,2*4,0)+IF(H_O=4,2*4,0)+IF(H_O=4.5,3*4,0)+IF(H_O=5,3*4,0)
+        row9 = 0
+        if self.H_O == 2.5:
+            row9 += 4
+        if self.H_O == 3:
+            row9 += 4
+        if self.H_O == 3.5:
+            row9 += 8
+        if self.H_O == 4:
+            row9 += 8
+        if self.H_O == 4.5:
+            row9 += 12
+        if self.H_O == 5:
+            row9 += 12
+        qty += row9
 
-        # For partitioned tanks, use different formulas
+        # Row 10: Corner Angle Frame+Side PNLs
+        # Excel: H_O*8*2*4
+        row10 = int(self.H_O * 8 * 2 * 4)
+        qty += row10
+
+        return qty
+
+    def _calc_wbt_1035_internal(self) -> int:
+        """
+        Calculate internal WBT-1035 for roof panels (SA4/SA2).
+        Roof bolts use internal material (SS304/SA4).
+
+        Excel formulas (internal):
+        Row 5: (4*W_C+2*W_F)*(L1_C+L2_C+L3_C+L4_C+L1_F+L2_F+L3_F+L4_F-N_PA-1) - Roof+Roof (Vertical)
+        Row 6: (4*(L1_C+L2_C+L3_C+L4_C)+2*(L1_F+L2_F+L3_F+L4_F))*CEILING(W_O-1,1) - Roof+Roof (Horizontal)
+        """
+        qty = 0
+
+        # Row 5: Roof+Roof (Vertical) - uses SA4
+        # Excel: (4*W_C+2*W_F)*(L1_C+L2_C+L3_C+L4_C+L1_F+L2_F+L3_F+L4_F-N_PA-1)
+        row5 = (4 * self.W_C + 2 * self.W_F) * (self.sum_L_total - self.N_PA - 1)
+        qty += max(0, int(row5))
+
+        # Row 6: Roof+Roof (Horizontal) - uses SA4
+        # Excel: (4*(L1_C+L2_C+L3_C+L4_C)+2*(L1_F+L2_F+L3_F+L4_F))*CEILING(W_O-1,1)
+        row6 = (4 * self.sum_L_C + 2 * self.sum_L_F) * math.ceil(self.W_O - 1)
+        qty += max(0, int(row6))
+
+        return qty
+
+    def _calc_wbt_1050_external(self) -> int:
+        """
+        Calculate WBT-1050 (M10x50mm) EXTERNAL bolt quantity.
+        Rows 12-16 use external material (HDG/Z).
+
+        Excel formulas (external):
+        Row 12: (8*W_C+4*W_F)*(L1_C+L2_C+L3_C+L4_C+L1_F+L2_F+L3_F+L4_F-1) - Bottom+Bottom (Vertical)
+        Row 13: (8*(L1_C+L2_C+L3_C+L4_C)+4*(L1_F+L2_F+L3_F+L4_F))*CEILING(W_O-1,1) - Bottom+Bottom (Horizontal)
+        Row 14: H_O*((W_C+W_F-1)+(L_O_C+L_O_F-1))*2*8 - Side+Side (Vertical)
+        Row 15: IF(H_O>2,8*(W_C+L1_C+...)*2*(H_C+H_F-2)+4*(H_O-1)*(W_F+L1_F+...)*(...),0)+... - Side+Side (Horizontal)
+        Row 16: ((L1_C+L2_C+L3_C+L4_C+W_C)*8+(L1_F+L2_F+L3_F+L4_F+W_F)*4)*2 - Bottom+Side
+        """
+        qty = 0
+
+        # Row 12: Bottom+Bottom (Vertical)
+        # Excel: (8*W_C+4*W_F)*(L1_C+L2_C+L3_C+L4_C+L1_F+L2_F+L3_F+L4_F-1)
+        row12 = (8 * self.W_C + 4 * self.W_F) * (self.sum_L_total - 1)
+        qty += max(0, int(row12))
+
+        # Row 13: Bottom+Bottom (Horizontal)
+        # Excel: (8*(L1_C+L2_C+L3_C+L4_C)+4*(L1_F+L2_F+L3_F+L4_F))*CEILING(W_O-1,1)
+        row13 = (8 * self.sum_L_C + 4 * self.sum_L_F) * math.ceil(self.W_O - 1)
+        qty += max(0, int(row13))
+
+        # Row 14: Side+Side (Vertical)
+        # Excel: H_O*((W_C+W_F-1)+(L_O_C+L_O_F-1))*2*8
+        row14 = self.H_O * ((self.W_C + self.W_F - 1) + (self.L_O_C + self.L_O_F - 1)) * 2 * 8
+        qty += int(row14)
+
+        # Row 15: Side+Side (Horizontal)
+        # Excel: IF(H_O>2,8*(W_C+L1_C+L2_C+L3_C+L4_C)*2*(H_C+H_F-2)+4*(H_O-1)*(W_F+L1_F+L2_F+L3_F+L4_F)*(H_C+H_F-2),0)
+        #        +IF(BASIC_TOOL!D15>0,8*(W_C+L1_C+L2_C+L3_C+L4_C)*2+4*(W_F+L1_F+L2_F+L3_F+L4_F),0)
+        row15 = 0
+        if self.H_O > 2:
+            h_factor = self.H_C + self.H_F - 2
+            row15 += 8 * (self.W_C + self.sum_L_C) * 2 * h_factor
+            row15 += 4 * (self.H_O - 1) * (self.W_F + self.sum_L_F) * h_factor
+        if self.insulation_type > 0:
+            row15 += 8 * (self.W_C + self.sum_L_C) * 2
+            row15 += 4 * (self.W_F + self.sum_L_F)
+        qty += int(row15)
+
+        # Row 16: Bottom+Side
+        # Excel: ((L1_C+L2_C+L3_C+L4_C+W_C)*8+(L1_F+L2_F+L3_F+L4_F+W_F)*4)*2
+        row16 = ((self.sum_L_C + self.W_C) * 8 + (self.sum_L_F + self.W_F) * 4) * 2
+        qty += int(row16)
+
+        return qty
+
+    def _calc_wbt_1050_internal(self) -> int:
+        """
+        Calculate internal WBT-1050 (SA4/SA2).
+        Row 11 (Roof+Side) uses internal material.
+        Partition bolts (Rows 19, 36, 37) also use internal material.
+
+        Excel formulas (internal):
+        Row 11: (L1_C+L2_C+L3_C+L4_C+W_C)*4*2+(L1_F+L2_F+L3_F+L4_F+W_F)*2*2 - Roof+Side PNLs
+        Row 19: 4*(W_C+W_F)*N_PA - Partition Top+Roof
+        Row 36: IF(...)*(W_O)*8*(H_C+H_F-2)*N_PA - Partition+Partition (Horizontal)
+        Row 37: ((W_C+W_F-1)*(H_O))*8*N_PA - Partition+Partition (Vertical)
+        """
+        qty = 0
+
+        # Row 11: Roof+Side PNLs - uses SA4
+        row11 = (self.sum_L_C + self.W_C) * 4 * 2 + (self.sum_L_F + self.W_F) * 2 * 2
+        qty += int(row11)
+
         if self.N_PA > 0:
-            # M10x35 SS - for internal reinforcing
-            # 10x8x3: 488 = 8 × 36 + 2 × 10 × 10 = 288 + 200 = 488
-            # 10x15x4: 1020 = 400 + 200 + 420 (extra for H >= 4)
-            bolt_10x35_int_qty = int(8 * perimeter + self.N_PA * self.W_C * 10)
-            # For H >= 4, add extra: N_PA × (W_C + L_O_C) × (H_C - 2) × 4.2
-            if self.H_O >= 4:
-                bolt_10x35_int_qty += int(self.N_PA * (self.W_C + self.L_O_C) * (self.H_C - 2) * 4.2)
-            if bolt_10x35_int_qty > 0:
-                parts.append({
-                    "part_no": bolt_parts.get("bolt_10x35", "WBT-1035SA4"),
-                    "quantity": bolt_10x35_int_qty,
-                    "category": "Bolts & Nuts",
-                    "description": "M10x35mm Internal Bolt"
-                })
+            # Row 19: Partition Top+Roof
+            # Excel: 4*(W_C+W_F)*N_PA
+            row19 = 4 * (self.W_C + self.W_F) * self.N_PA
+            qty += int(row19)
 
-            # M10x50 SS - for tie rod brackets (major component for partitions)
-            # 10x8x3: 1136 = 8 × 18 + 2 × 10 × 3 × 16 + 2 × 16 = 144 + 960 + 32 = 1136
-            # 10x15x4: 1656 (needs additional for tall tanks)
-            bolt_10x50_int_qty = int(8 * (self.W_C + self.L_O_C) +
-                                     self.N_PA * self.W_C * self.H_C * 16 +
-                                     self.N_PA * 16)
-            # For H >= 4, add extra for tall partitioned tanks
-            # Use factor 3.6 for long tanks (L > 10), factor 0 otherwise
-            if self.H_O >= 4 and self.L_O > 10:
-                bolt_10x50_int_qty += int(self.N_PA * self.W_C * 3.6 * (self.H_C - 2))
-            if bolt_10x50_int_qty > 0:
-                parts.append({
-                    "part_no": bolt_parts.get("bolt_10x50", "WBT-1050SA4"),
-                    "quantity": bolt_10x50_int_qty,
-                    "category": "Bolts & Nuts",
-                    "description": "M10x50mm Internal Bolt"
-                })
+            # Row 36: Partition+Partition (Horizontal)
+            # Excel: IF(BASIC_TOOL!E15=2,((W_O)*8*(H_C+H_F-2))*N_PA,IF(H_O=1.5,W_F*4,((W_O)*8*(H_C+H_F-2))*N_PA)+IF(OR(H_O=2,H_O=3,H_O=4,H_O=5),(W_O)*8))*N_PA
+            row36 = 0
+            if self.insulation_type == 2:
+                row36 = (self.W_O * 8 * (self.H_C + self.H_F - 2)) * self.N_PA
+            else:
+                if self.H_O == 1.5:
+                    row36 = self.W_F * 4
+                else:
+                    row36 = (self.W_O * 8 * (self.H_C + self.H_F - 2)) * self.N_PA
+                if self.H_O in [2, 3, 4, 5]:
+                    row36 += self.W_O * 8
+                row36 *= self.N_PA
+            qty += max(0, int(row36))
 
-            # M10x58 Rubber SS (WBT-1058RSA4) - for partition rubber connections
-            # 10x8x3: 256 ≈ N_PA × W_C × 12.8
-            # 10x15x4: 288 ≈ N_PA × W_C × 14.4 for H >= 4
-            factor_1058 = 14.4 if self.H_O >= 4 else 12.8
-            bolt_1058_qty = int(self.N_PA * self.W_C * factor_1058)
-            if bolt_1058_qty > 0:
-                parts.append({
-                    "part_no": "WBT-1058RSA4",
-                    "quantity": bolt_1058_qty,
-                    "category": "Bolts & Nuts",
-                    "description": "M10x58mm Rubber Internal Bolt"
-                })
+            # Row 37: Partition+Partition (Vertical)
+            # Excel: ((W_C+W_F-1)*(H_O))*8*N_PA
+            row37 = ((self.W_C + self.W_F - 1) * self.H_O) * 8 * self.N_PA
+            qty += max(0, int(row37))
 
-            # M14x120 Rubber SS (WBT-14120RSA4) - for partition rubber connections
-            # 10x8x3: 216 ≈ N_PA × W_C × 10.8
-            # 10x15x4: 360 ≈ N_PA × W_C × 18 for H >= 4
-            factor_14120r = 18 if self.H_O >= 4 else 10.8
-            bolt_14120r_qty = int(self.N_PA * self.W_C * factor_14120r)
-            if bolt_14120r_qty > 0:
-                parts.append({
-                    "part_no": "WBT-14120RSA4",
-                    "quantity": bolt_14120r_qty,
-                    "category": "Bolts & Nuts",
-                    "description": "M14x120mm Rubber Internal Bolt"
-                })
-        else:
-            # For simple tanks (non-partitioned)
-            # M10x35 SS - for side panel internal reinforcing
-            # Formula: 8 × perimeter = 160 for 5x5 (constant regardless of height)
-            bolt_10x35_int_qty = int(8 * perimeter)
-            if bolt_10x35_int_qty > 0:
-                parts.append({
-                    "part_no": bolt_parts.get("bolt_10x35", "WBT-1035SA4"),
-                    "quantity": bolt_10x35_int_qty,
-                    "category": "Bolts & Nuts",
-                    "description": "M10x35mm Internal Bolt"
-                })
+        return qty
 
-            # M10x50 SS - for tie rod brackets
-            # Formula: 8 × (W_C + L_O_C) = 80 for 5x5 (constant regardless of height)
-            bolt_10x50_int_qty = int(8 * (self.W_C + self.L_O_C))
-            if bolt_10x50_int_qty > 0:
-                parts.append({
-                    "part_no": bolt_parts.get("bolt_10x50", "WBT-1050SA4"),
-                    "quantity": bolt_10x50_int_qty,
-                    "category": "Bolts & Nuts",
-                    "description": "M10x50mm Internal Bolt"
-                })
+    def _calc_wbt_1240(self) -> int:
+        """
+        Calculate WBT-1240 (M12x40mm) bolt quantity for Steel Skid.
 
-        return parts
+        Excel formula:
+        Row 17: (W_C+W_F+L_O_C+L_O_F)*2*2 - Side PNLs+Steel Skid
+        """
+        # Row 17: Side PNLs+Steel Skid
+        # Excel: (W_C+W_F+L_O_C+L_O_F)*2*2
+        row17 = (self.W_C + self.W_F + self.L_O_C + self.L_O_F) * 2 * 2
+        return int(row17)
 
-    def _calc_tie_rod_equivalent(self) -> int:
-        """Calculate equivalent tie rod count for bolt calculation"""
-        if self.H_O < 2:
-            return 0
-        length_positions = max(0, self.L_O_C - 1)
-        height_tiers = self.H_C - 1
-        return length_positions * 2 * height_tiers
+    def _calc_wbt_1440(self) -> int:
+        """
+        Calculate WBT-1440 (M14x40mm) bolt quantity for structural connections.
 
-    def _calc_side_bottom_joint_bolts(self) -> int:
-        """Calculate bolts for Side + Bottom panel joints"""
-        # Perimeter length in panel units * bolts per joint
-        perimeter = 2 * (self.W_C + self.W_F + self.L_O_C + self.L_O_F)
-        # 8 bolts per 1m panel joint
-        return int(perimeter * 8)
+        Excel formulas:
+        Row 21: (W_C+W_F+1)*4+IF(OR(H_O>2,BASIC_TOOL!D17=3,BASIC_TOOL!D17=4),(W_C+W_F+1)*4,0) - Width Frame Brackets
+        Row 22: 2*(L1_C+L2_C+L3_C+L4_C+L1_F+L2_F+L3_F+L4_F-1)*(W_C+W_F+1) - Sub Beam+Main Beam
+        Row 23: Steel_Skid!M36 - Anchor bracket
+        Row 24: 2*Steel_Skid!$M$9+IF(OR(H_O>2.5,BASIC_TOOL!D17=2,BASIC_TOOL!D17=3),2*Steel_Skid!$M$9,0) - Other brackets
+        """
+        qty = 0
 
-    def _calc_side_side_horizontal_bolts(self) -> int:
-        """Calculate bolts for Side + Side horizontal joints"""
-        # Number of horizontal joints = perimeter * (height - 1)
-        perimeter = 2 * (self.W_C + self.W_F + self.L_O_C + self.L_O_F)
-        horizontal_joints = perimeter * (self.H_C - 1 + (1 if self.H_F > 0 else 0))
-        # 8 bolts per joint
-        return int(horizontal_joints * 8)
+        # Row 21: Width Frame Brackets
+        # Excel: (W_C+W_F+1)*4+IF(OR(H_O>2,BASIC_TOOL!D17=3,BASIC_TOOL!D17=4),(W_C+W_F+1)*4,0)
+        row21 = (self.W_C + self.W_F + 1) * 4
+        if self.H_O > 2 or self.skid_type in [3, 4]:
+            row21 += (self.W_C + self.W_F + 1) * 4
+        qty += int(row21)
 
-    def _calc_corner_bolts(self) -> int:
-        """Calculate bolts for corner (vertical) joints"""
-        # 4 corners + partition corners
-        corners = 4 + (self.N_PA * 2)
-        # Bolts per corner = height * bolts per tier
-        return int(corners * self.H_O * 8)
+        # Row 22: Sub Beam+Main Beam
+        # Excel: 2*(L1_C+L2_C+L3_C+L4_C+L1_F+L2_F+L3_F+L4_F-1)*(W_C+W_F+1)
+        row22 = 2 * (self.sum_L_total - 1) * (self.W_C + self.W_F + 1)
+        qty += max(0, int(row22))
 
-    def _calc_bottom_bottom_bolts(self) -> int:
-        """Calculate bolts for Bottom + Bottom panel joints"""
-        # Bottom area joints
-        # Width joints
-        width_joints = (self.W_C - 1 + self.W_F) * self.L_O_C
-        # Length joints
-        length_joints = self.W_C * (self.L_O_C - 1 + self.L_O_F)
-        # 8 bolts per joint
-        return int((width_joints + length_joints) * 8)
+        # Row 23: Anchor bracket
+        # Excel: Steel_Skid!M36
+        row23 = self.steel_skid_m36
+        qty += int(row23)
 
-    def _calc_side_side_vertical_bolts(self) -> int:
-        """Calculate bolts for Side + Side vertical joints"""
-        # Vertical joints on long sides
-        long_side_joints = 2 * (self.L_O_C - 1 + self.L_O_F) * self.H_C
-        # Vertical joints on short sides
-        short_side_joints = 2 * (self.W_C - 1 + self.W_F) * self.H_C
-        # 8 bolts per joint
-        return int((long_side_joints + short_side_joints) * 8)
+        # Row 24: Other brackets
+        # Excel: 2*Steel_Skid!$M$9+IF(OR(H_O>2.5,BASIC_TOOL!D17=2,BASIC_TOOL!D17=3),2*Steel_Skid!$M$9,0)
+        row24 = 2 * self.steel_skid_m9
+        if self.H_O > 2.5 or self.skid_type in [2, 3]:
+            row24 += 2 * self.steel_skid_m9
+        qty += int(row24)
 
-    def _calc_partition_bolts(self) -> int:
-        """Calculate bolts for partition panel joints"""
+        return qty
+
+    def _calc_wbt_1058r(self) -> int:
+        """
+        Calculate WBT-1058R (M10x58mm Rubber) bolt quantity for partitions.
+
+        Excel formulas:
+        Row 26: H_O*8*2*N_PA - Partition PNL+Side PNL
+        Row 27: W_O*8*N_PA - Partition PNL+Bottom PNL
+        """
         if self.N_PA == 0:
             return 0
 
-        # Each partition has:
-        # - Partition + Bottom joints
-        # - Partition + Side joints (2 sides)
-        # - Partition + Partition vertical joints
+        qty = 0
 
-        partition_bottom = self.W_C * self.N_PA * 8
-        partition_side = 2 * self.H_C * self.N_PA * 8
-        partition_vertical = (self.W_C - 1) * self.H_C * self.N_PA * 8
+        # Row 26: Partition PNL+Side PNL
+        # Excel: H_O*8*2*N_PA
+        row26 = self.H_O * 8 * 2 * self.N_PA
+        qty += int(row26)
 
-        return int(partition_bottom + partition_side + partition_vertical)
+        # Row 27: Partition PNL+Bottom PNL
+        # Excel: W_O*8*N_PA
+        row27 = self.W_O * 8 * self.N_PA
+        qty += int(row27)
+
+        return qty
+
+    def _calc_wbt_14120r(self) -> int:
+        """
+        Calculate WBT-14120RD (M14x120mm Rubber HDG) bolt quantity for external reinforcing.
+
+        Excel formulas:
+        Row 30: External_Reinforcing!L22*2+External_Reinforcing!L23*4+External_Reinforcing!L24*2 - External Brackets
+        Row 39: IF(H_O>3.3,((W_C+W_F-1)+L_O_C+L_O_F-N_PA-1)*2,0)*2 - For H>3.3
+        """
+        qty = 0
+
+        # Row 30: External Brackets
+        # Excel: External_Reinforcing!L22*2+External_Reinforcing!L23*4+External_Reinforcing!L24*2
+        row30 = self.ext_reinforcing_l22 * 2 + self.ext_reinforcing_l23 * 4 + self.ext_reinforcing_l24 * 2
+        qty += int(row30)
+
+        # Row 39: For H>3.3
+        # Excel: IF(H_O>3.3,((W_C+W_F-1)+L_O_C+L_O_F-N_PA-1)*2,0)*2
+        row39 = 0
+        if self.H_O > 3.3:
+            row39 = ((self.W_C + self.W_F - 1) + self.L_O_C + self.L_O_F - self.N_PA - 1) * 2 * 2
+        qty += max(0, int(row39))
+
+        return qty
+
+    def _calc_wbt_14120r_internal(self) -> int:
+        """
+        Calculate WBT-14120R internal (M14x120mm Rubber SA4/SA2) for partitions.
+
+        Excel formula:
+        Row 33: Internal_Reinforcing!P18*4*N_PA+Internal_Reinforcing!P19*2*N_PA - Internal brackets
+        """
+        if self.N_PA == 0:
+            return 0
+
+        # Row 33: Internal brackets
+        # Excel: Internal_Reinforcing!P18*4*N_PA+Internal_Reinforcing!P19*2*N_PA
+        row33 = self.int_reinforcing_p18 * 4 * self.N_PA + self.int_reinforcing_p19 * 2 * self.N_PA
+        return int(row33)
 
     def get_bolt_option_name(self) -> str:
         """Get the name of the current bolt option"""

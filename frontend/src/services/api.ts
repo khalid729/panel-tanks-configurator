@@ -1,6 +1,6 @@
 import { TankConfigRequest, TankConfigResponse, TankOptions } from '@/types/tank';
 
-const API_BASE = '/api';
+const API_BASE = '/api/v1/tank';
 
 export async function calculateTank(request: TankConfigRequest): Promise<TankConfigResponse> {
   const response = await fetch(`${API_BASE}/calculate`, {

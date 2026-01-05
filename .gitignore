@@ -77,3 +77,6 @@ frontend/out/
 *.pem
 *.key
 secrets/
+
+# Extracted Excel files
+grp_extracted/

@@ -1,21 +1,38 @@
 """
 Fittings Calculator - Drain, Overflow, Inlet/Outlet fittings
-Based on exact Excel formulas from Fittings sheet
+Based on exact Excel data from Fittings sheet (sheet18)
+
+Fitting Types from Excel:
+- WSF (Slant Flange): 065A, 080A, 100A, 125A, 150A
+- WFL (Flat Flange): 065A, 080A, 100A, 125A, 150A, 200A
+- WSD (Suction/Drain): Various sizes
+- Socket (Brass): 20A, 25A, 40A, 50A
 """
 from typing import Dict, List, Tuple
 
 
 class FittingsCalculator:
-    """Calculate Fittings requirements based on exact Excel formulas"""
+    """Calculate Fittings requirements based on exact Excel data"""
 
-    # Standard fitting sizes (mm)
-    FITTING_SIZES = [15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150, 200]
+    # Standard fitting sizes (mm) - from Excel
+    FITTING_SIZES = [20, 25, 32, 40, 50, 65, 80, 100, 125, 150, 200]
 
-    # Fitting types
+    # Fitting types - matching Excel structure
     FITTING_TYPES = {
-        "SD": {"prefix": "WSD", "description": "Suction/Drain"},
-        "FL": {"prefix": "WFL", "description": "Flange"},
-        "SF": {"prefix": "WSF", "description": "Overflow/Side Fitting"},
+        # Slant Flange (WSF) - from Excel
+        "SF": {"prefix": "WSF", "description": "Slant Flange", "sizes": [65, 80, 100, 125, 150]},
+        # Flat Flange (WFL) - from Excel
+        "FL": {"prefix": "WFL", "description": "Flat Flange", "sizes": [65, 80, 100, 125, 150, 200]},
+        # Suction/Drain (WSD)
+        "SD": {"prefix": "WSD", "description": "Suction/Drain", "sizes": [50, 65, 80, 100, 125, 150]},
+        # Overflow
+        "OF": {"prefix": "WOF", "description": "Overflow", "sizes": [50, 65, 80, 100, 125, 150]},
+        # Socket Brass
+        "SB": {"prefix": "WSB", "description": "Socket Brass", "sizes": [20, 25, 40, 50]},
+        # Inlet
+        "IN": {"prefix": "WIN", "description": "Inlet", "sizes": [50, 65, 80, 100, 125, 150]},
+        # Outlet
+        "OUT": {"prefix": "WOT", "description": "Outlet", "sizes": [50, 65, 80, 100, 125, 150]},
     }
 
     def __init__(self, fittings_config: List[Dict] = None):
@@ -82,11 +99,13 @@ class FittingsCalculator:
 
     @classmethod
     def get_available_fittings(cls) -> List[Dict]:
-        """Get list of all available fitting options"""
+        """Get list of all available fitting options (matching Excel)"""
         fittings = []
 
         for fitting_type, type_info in cls.FITTING_TYPES.items():
-            for size in cls.FITTING_SIZES:
+            # Use type-specific sizes if available, otherwise use default
+            sizes = type_info.get("sizes", cls.FITTING_SIZES)
+            for size in sizes:
                 fittings.append({
                     "type": fitting_type,
                     "size": size,

@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { calculateTank } from '@/services/api';
+import { exportToPDF } from '@/services/pdfExport';
 
 import DimensionsSection from './configurator/DimensionsSection';
 import PanelOptionsSection from './configurator/PanelOptionsSection';
@@ -140,10 +141,49 @@ const TankConfigurator = () => {
 
     toast({
       title: language === 'en' ? 'Reset Complete' : 'تم إعادة التعيين',
-      description: language === 'en' 
-        ? 'All values have been reset to defaults' 
+      description: language === 'en'
+        ? 'All values have been reset to defaults'
         : 'تم إعادة تعيين جميع القيم إلى الافتراضية',
     });
+  };
+
+  // Handle PDF Export
+  const handleExport = () => {
+    if (!capacity || !costSummary || !weightSummary || bomItems.length === 0) {
+      toast({
+        title: language === 'en' ? 'No Data' : 'لا توجد بيانات',
+        description: language === 'en'
+          ? 'Please calculate first before exporting'
+          : 'يرجى إجراء الحساب أولاً قبل التصدير',
+        variant: 'destructive',
+      });
+      return;
+    }
+
+    try {
+      exportToPDF({
+        dimensions,
+        capacity,
+        bomItems,
+        costSummary,
+        weightSummary,
+      });
+
+      toast({
+        title: language === 'en' ? 'Export Complete' : 'تم التصدير',
+        description: language === 'en'
+          ? 'PDF has been downloaded'
+          : 'تم تحميل ملف PDF',
+      });
+    } catch (error) {
+      toast({
+        title: language === 'en' ? 'Export Error' : 'خطأ في التصدير',
+        description: language === 'en'
+          ? 'Failed to generate PDF'
+          : 'فشل في إنشاء ملف PDF',
+        variant: 'destructive',
+      });
+    }
   };
 
   return (
@@ -211,7 +251,7 @@ const TankConfigurator = () => {
               {t('results', language)}
             </h2>
             {bomItems.length > 0 && (
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleExport}>
                 <FileDown className="h-4 w-4 mr-2" />
                 {t('export', language)}
               </Button>

@@ -29,6 +29,9 @@ class CalculationEngine:
         self.data_loader = get_data_loader()
         self.bom_items: List[BOMItem] = []
 
+        # Store reinforcing quantities for cross-calculator dependencies
+        self.reinforcing_quantities = {}
+
         # Extract dimensions
         self.width = request.dimensions.width
         self.length1 = request.dimensions.length1
@@ -56,10 +59,12 @@ class CalculationEngine:
         capacity = self._calculate_capacity()
 
         # Use specialized calculators
+        # Note: Order matters! Reinforcing must be calculated before Bolts
+        # because Bolts needs reinforcing quantities for WBT-14120RD
         self._calculate_panels()
         self._calculate_steel_skid()
-        self._calculate_bolts_nuts()
-        self._calculate_reinforcing()
+        self._calculate_reinforcing()  # Must be before bolts
+        self._calculate_bolts_nuts()   # Uses reinforcing quantities
         self._calculate_tie_rods()
         self._calculate_etc()
         self._calculate_fittings()
@@ -187,6 +192,13 @@ class CalculationEngine:
         }
         bolt_option = bolt_option_map.get(bolts_option_str, 1)
 
+        # Get reinforcing quantities for WBT-14120RD calculation
+        ext_l22 = self.reinforcing_quantities.get("ext_l22", 0)
+        ext_l23 = self.reinforcing_quantities.get("ext_l23", 0)
+        ext_l24 = self.reinforcing_quantities.get("ext_l24", 0)
+        int_p18 = self.reinforcing_quantities.get("int_p18", 0)
+        int_p19 = self.reinforcing_quantities.get("int_p19", 0)
+
         calculator = BoltsCalculator(
             width=self.width,
             length1=self.length1,
@@ -195,7 +207,11 @@ class CalculationEngine:
             length4=self.length4,
             height=self.height,
             bolt_option=bolt_option,
-            use_side_1x1=self.request.panel_options.use_side_panel_1x1
+            ext_reinforcing_l22=ext_l22,
+            ext_reinforcing_l23=ext_l23,
+            ext_reinforcing_l24=ext_l24,
+            int_reinforcing_p18=int_p18,
+            int_reinforcing_p19=int_p19
         )
 
         parts = calculator.calculate_all_parts()
@@ -221,6 +237,23 @@ class CalculationEngine:
         parts = calculator.calculate_all_parts()
         self._add_parts_from_calculator(parts)
 
+        # Store quantities for BoltsCalculator (WBT-14120RD calculation)
+        for part in parts:
+            part_no = part.get("part_no", "")
+            qty = part.get("quantity", 0)
+            # External reinforcing parts (for WBT-14120RD)
+            if "WCP-1780Z" in part_no:
+                self.reinforcing_quantities["ext_l22"] = qty  # Cross plate 2-hole
+            elif "WCP-1616Z" in part_no:
+                self.reinforcing_quantities["ext_l23"] = qty  # Cross plate 4-hole
+            elif "WCP-17120Z" in part_no:
+                self.reinforcing_quantities["ext_l24"] = qty  # Cross plate (if any)
+            # Internal reinforcing parts
+            elif "WCP-1616SA" in part_no:
+                self.reinforcing_quantities["int_p18"] = qty
+            elif "WCP-1780SA" in part_no:
+                self.reinforcing_quantities["int_p19"] = qty
+
     def _calculate_tie_rods(self):
         """Calculate tie rods using TieRodCalculator"""
         # Only calculate if height >= 2m typically
@@ -231,10 +264,6 @@ class CalculationEngine:
         material_str = self.request.steel_options.tie_rod_material
         tie_rod_material = 2 if "SS316" in material_str else 4
 
-        # Determine tie rod spec
-        spec_str = self.request.steel_options.tie_rod_spec
-        tie_rod_spec = 2 if "M16" in spec_str else 1  # 1=M12, 2=M16
-
         calculator = TieRodCalculator(
             width=self.width,
             length1=self.length1,
@@ -242,8 +271,7 @@ class CalculationEngine:
             length3=self.length3,
             length4=self.length4,
             height=self.height,
-            tie_rod_material=tie_rod_material,
-            tie_rod_spec=tie_rod_spec
+            tie_rod_material=tie_rod_material
         )
 
         parts = calculator.calculate_all_parts()

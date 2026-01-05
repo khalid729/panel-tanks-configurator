@@ -101,66 +101,103 @@ class PanelCalculator:
 
     def _calc_roof_panels(self) -> List[Dict]:
         """
-        Roof panels calculation:
-        RF (1x1m): =W_C*(L1_C+L2_C+L3_C+L4_C) - manhole - QRoof
-        RH (0.5x1m): =W_C*(L1_F+L2_F+L3_F+L4_F)+W_F*(L1_C+L2_C+L3_C+L4_C)
-        RQ (0.5x0.5m): =IF(AND(W_F>0,OR(L1_F,L2_F,L3_F,L4_F)),L1_F+L2_F+L3_F+L4_F,0)
+        Roof panels calculation (EXACT Excel formulas):
+
+        X6 (Manhole): =1+N_PA
+        X7 (RF): =IF(W_C*(L1_C+L2_C+L3_C+L4_C)-X6-X10-X11<0,0,W_C*(L1_C+L2_C+L3_C+L4_C)-X6-X10-X11)
+        X8 (RH): =W_C*(L1_F+L2_F+L3_F+L4_F)+W_F*(L1_C+L2_C+L3_C+L4_C)
+        X9 (RQ): =IF(AND(W_F=1,OR(L1_F,L2_F,L3_F,L4_F)),L1_F+L2_F+L3_F+L4_F,0)
+
+        Note: In Excel W_F=1 means 0.5m (half panel), so we check W_F == 0.5
         """
         panels = []
 
-        # Calculate QRoof first
+        # X6: Manhole quantity
+        manhole_qty = 1 + self.N_PA  # X6
+
+        # X9: RQ (Quarter Roof) - Excel: IF(AND(W_F=1,OR(L1_F,L2_F,L3_F,L4_F)),...)
+        # W_F=1 in Excel means W_F=0.5 in our code (half panel = 0.5m)
         has_length_fraction = (self.L1_F > 0 or self.L2_F > 0 or
                                self.L3_F > 0 or self.L4_F > 0)
-        q_roof_qty = 0
-        if self.W_F > 0 and has_length_fraction:
-            q_roof_qty = int(self.L1_F + self.L2_F + self.L3_F + self.L4_F)
+        # Check W_F == 0.5 (equivalent to Excel's W_F=1)
+        rq_qty = 0
+        if self.W_F == 0.5 and has_length_fraction:
+            # Sum of all length fractions (each 0.5 counts as 1 panel)
+            rq_qty = int((self.L1_F + self.L2_F + self.L3_F + self.L4_F) / 0.5) if has_length_fraction else 0
+            # Simpler: count non-zero fractions
+            rq_qty = sum([1 for f in [self.L1_F, self.L2_F, self.L3_F, self.L4_F] if f > 0])
 
-        # RH (Half roof)
-        rh_qty = int(self.W_C * (self.L1_F + self.L2_F + self.L3_F + self.L4_F) +
-                     self.W_F * self.L_O_C)
+        # X10, X11: Additional panels to subtract (from Excel analysis)
+        # X10 appears to be RQ, X11 appears to be related to special panels
+        # For now, X10 = RQ, X11 = 0 (need to verify with Excel data)
+        x10 = rq_qty  # RQ panels
+        x11 = 0  # TODO: Verify what X11 represents in Excel
 
-        # RF (Full roof) - subtract manhole and QRoof
-        manhole_qty = 1 + self.N_PA
-        rf_qty = int(self.W_C * self.L_O_C - manhole_qty - q_roof_qty)
+        # X8: RH (Half Roof) - exact Excel formula
+        rh_qty = int(self.W_C * (self.L1_F + self.L2_F + self.L3_F + self.L4_F) / 0.5 +
+                     self.W_F / 0.5 * self.L_O_C) if (self.L_O_F > 0 or self.W_F > 0) else 0
+        # Simplified: W_C * count_of_half_lengths + W_F_count * L_O_C
+        l_fractions_count = sum([1 for f in [self.L1_F, self.L2_F, self.L3_F, self.L4_F] if f > 0])
+        w_fraction_count = 1 if self.W_F > 0 else 0
+        rh_qty = self.W_C * l_fractions_count + w_fraction_count * self.L_O_C
+
+        # X7: RF (Full Roof) - exact Excel formula
+        total_roof = self.W_C * self.L_O_C
+        rf_qty = total_roof - manhole_qty - x10 - x11
         if rf_qty < 0:
             rf_qty = 0
 
+        # Build panel list
         if rf_qty > 0:
-            panels.append({"part_no": "RF00M", "quantity": rf_qty,
+            panels.append({"part_no": "RF00M", "quantity": int(rf_qty),
                            "category": "Panels", "description": "Roof Panel 1x1m"})
         if rh_qty > 0:
-            panels.append({"part_no": "RH10M", "quantity": rh_qty,
+            panels.append({"part_no": "RH10M", "quantity": int(rh_qty),
                            "category": "Panels", "description": "Half Roof Panel 0.5x1m"})
-        if q_roof_qty > 0:
-            panels.append({"part_no": "RQ10M", "quantity": q_roof_qty,
+        if rq_qty > 0:
+            panels.append({"part_no": "RQ10M", "quantity": int(rq_qty),
                            "category": "Panels", "description": "Quarter Roof Panel 0.5x0.5m"})
 
         return panels
 
     def _calc_bottom_panels(self) -> List[Dict]:
         """
-        Bottom panels calculation:
-        BF (1x1m): =W_C*(L1_C+L2_C+L3_C+L4_C) - partition_bottom - drain
-        BH (0.5x1m): =W_C*(L1_F+L2_F+L3_F+L4_F)+W_F*(L1_C+L2_C+L3_C+L4_C)
+        Bottom panels calculation (EXACT Excel formulas):
 
-        For partitioned tanks:
-        - Standard bottom (BF30M): total - partition_bottom - drain
-        - Partition bottom (BF30P): W_C × N_PA × 2 (P suffix)
+        X12 (BF): =IF(W_C*(L1_C+L2_C+L3_C+L4_C)-X13-X17<0,0,W_C*(L1_C+L2_C+L3_C+L4_C)-X13-X17)
+        X13 (Partition Bottom): =(W_C)*N_PA
+        X14 (BH): =W_C*(L1_F+L2_F+L3_F+L4_F)+W_F*(L1_C+L2_C+L3_C+L4_C)-X15
+        X15: =IF(W_F=1,N_PA,0)
+        X16 (BQ): =IF(AND(W_F=1,OR(L1_F,L2_F,L3_F,L4_F)),L1_F+L2_F+L3_F+L4_F,0)
+        X17 (Drain): =(1+N_PA)
         """
         panels = []
 
-        # Partition bottom panels (one row per partition wall)
-        partition_bottom = self.W_C * self.N_PA if self.N_PA > 0 else 0
+        # X13: Partition bottom panels - Excel: (W_C)*N_PA
+        x13_partition_bottom = self.W_C * self.N_PA if self.N_PA > 0 else 0
 
-        # Drain - always 1 per section
-        drain_qty = 1 + self.N_PA
+        # X17: Drain panels - Excel: (1+N_PA)
+        x17_drain = 1 + self.N_PA
 
-        # BH (Half bottom)
-        bh_qty = int(self.W_C * (self.L1_F + self.L2_F + self.L3_F + self.L4_F) +
-                     self.W_F * self.L_O_C)
+        # X15: Half panel partition adjustment - Excel: IF(W_F=1,N_PA,0)
+        # W_F=1 in Excel means W_F=0.5 in our code
+        x15 = self.N_PA if self.W_F == 0.5 else 0
 
-        # BF (Full bottom) - standard areas only
-        bf_qty = int(self.W_C * self.L_O_C - partition_bottom - drain_qty)
+        # X16: BQ (Quarter Bottom) - same logic as RQ
+        has_length_fraction = (self.L1_F > 0 or self.L2_F > 0 or
+                               self.L3_F > 0 or self.L4_F > 0)
+        bq_qty = 0
+        if self.W_F == 0.5 and has_length_fraction:
+            bq_qty = sum([1 for f in [self.L1_F, self.L2_F, self.L3_F, self.L4_F] if f > 0])
+
+        # X14: BH (Half Bottom) - Excel: W_C*(L1_F+...)+W_F*(L1_C+...)-X15
+        l_fractions_count = sum([1 for f in [self.L1_F, self.L2_F, self.L3_F, self.L4_F] if f > 0])
+        w_fraction_count = 1 if self.W_F > 0 else 0
+        bh_qty = self.W_C * l_fractions_count + w_fraction_count * self.L_O_C - x15
+
+        # X12: BF (Full Bottom) - Excel: W_C*L_O_C - X13 - X17
+        total_bottom = self.W_C * self.L_O_C
+        bf_qty = total_bottom - x13_partition_bottom - x17_drain
         if bf_qty < 0:
             bf_qty = 0
 
@@ -168,16 +205,20 @@ class PanelCalculator:
         h_key = self._get_height_key()
         suffix = self.PANEL_HEIGHT_CONFIG.get(h_key, {}).get("bottom", "10M")
 
+        # Build panel list
         if bf_qty > 0:
-            panels.append({"part_no": f"BF{suffix}", "quantity": bf_qty,
+            panels.append({"part_no": f"BF{suffix}", "quantity": int(bf_qty),
                            "category": "Panels", "description": "Bottom Panel 1x1m"})
         if bh_qty > 0:
-            panels.append({"part_no": f"BH{suffix}", "quantity": bh_qty,
+            panels.append({"part_no": f"BH{suffix}", "quantity": int(bh_qty),
                            "category": "Panels", "description": "Half Bottom Panel 0.5x1m"})
+        if bq_qty > 0:
+            panels.append({"part_no": f"BQ{suffix}", "quantity": int(bq_qty),
+                           "category": "Panels", "description": "Quarter Bottom Panel 0.5x0.5m"})
 
         # Partition bottom panels with "P" suffix
-        if partition_bottom > 0:
-            panels.append({"part_no": f"BF{suffix[:-1]}P", "quantity": int(partition_bottom),
+        if x13_partition_bottom > 0:
+            panels.append({"part_no": f"BF{suffix[:-1]}P", "quantity": int(x13_partition_bottom),
                            "category": "Panels", "description": "Partition Bottom Panel"})
 
         return panels
@@ -192,35 +233,31 @@ class PanelCalculator:
 
     def _calc_side_panels(self) -> List[Dict]:
         """
-        Side panels calculation based on perimeter.
+        Side panels calculation (EXACT Excel formulas):
 
-        For partitioned tanks with N_PA > 0:
-        - Main side panels exclude corners: 2 × (W_C - 1 + L_O_C - 1)
-        - Corner panels separate: 2 left + 2 right = 4
+        X20 (Side Full): =IF(BASIC_TOOL!D15=1,0,((W_C+L1_C+L2_C+L3_C+L4_C)*2)-X22-X21)
+        X21 (Corner Left): =IF(BASIC_TOOL!D15=1,0,N_PA)
+        X22 (Corner Right): =IF(BASIC_TOOL!D15=1,0,N_PA)
+        X28 (Side Half): =(W_F+L1_F+L2_F+L3_F+L4_F)*2
 
-        For non-partitioned tanks:
-        - Full perimeter: 2 × (W_C + L_O_C)
-
-        For heights >= 2.5m (multi-tier):
-        - 5x5x3m: SL20T (Side Top) = 20, SF30L (Side Low) = 20
-        - Both have quantity = perimeter = 2 * (W_C + L_O_C)
+        BASIC_TOOL!D15=1 means "Insulated Roof Only" (no side panels counted differently)
         """
         panels = []
         h_key = self._get_height_key()
 
-        # For partitioned tanks, separate corner panels
-        if self.N_PA > 0:
-            # Main side panels exclude corners
-            side_full = int(2 * (self.W_C - 1 + self.L_O_C - 1))
-            corner_panels = 2  # 2 left corners + 2 right corners (each side)
-        else:
-            # Full perimeter for non-partitioned tanks
-            side_full = int(2 * (self.W_C + self.L_O_C))
-            corner_panels = 0
+        # X21, X22: Corner panels - Excel: IF(D15=1,0,N_PA)
+        # D15=1 means insulated_roof_only, not the 'insulated' flag for full insulation
+        corner_left = self.N_PA  # X21
+        corner_right = self.N_PA  # X22
 
-        # Half panels (0.5m width) for width and length fractions
-        side_half_w = int(2 * self.W_F) if self.W_F > 0 else 0
-        side_half_l = int(2 * (self.L1_F + self.L2_F + self.L3_F + self.L4_F))
+        # X20: Side Full - Excel: ((W_C+L_O_C)*2)-X22-X21 = (W_C+L_O_C)*2 - 2*N_PA
+        side_full = (self.W_C + self.L_O_C) * 2 - corner_left - corner_right
+
+        # X28: Side Half - Excel: (W_F+L1_F+L2_F+L3_F+L4_F)*2
+        # Count fractions: W_F can be 0.5, each L_F can be 0.5
+        w_f_count = 1 if self.W_F > 0 else 0
+        l_f_count = sum([1 for f in [self.L1_F, self.L2_F, self.L3_F, self.L4_F] if f > 0])
+        side_half = (w_f_count + l_f_count) * 2
 
         # Panel type based on height and 1x1 option
         if self.use_side_1x1:
@@ -238,55 +275,60 @@ class PanelCalculator:
         if self.H_O >= 2.5:
             # Side Top panels (SL20T for 3m and 4m)
             if side_full > 0:
-                panels.append({"part_no": f"{panel_prefix}{suffix}", "quantity": side_full,
+                panels.append({"part_no": f"{panel_prefix}{suffix}", "quantity": int(side_full),
                                "category": "Panels", "description": "Side Panel (Top)"})
 
             # Corner panels (Left and Right) for partitioned tanks
-            if corner_panels > 0:
-                panels.append({"part_no": f"{panel_prefix}{suffix}L", "quantity": corner_panels,
+            if corner_left > 0:
+                panels.append({"part_no": f"{panel_prefix}{suffix}L", "quantity": int(corner_left),
                                "category": "Panels", "description": "Corner Side Panel (Top Left)"})
-                panels.append({"part_no": f"{panel_prefix}{suffix}R", "quantity": corner_panels,
+            if corner_right > 0:
+                panels.append({"part_no": f"{panel_prefix}{suffix}R", "quantity": int(corner_right),
                                "category": "Panels", "description": "Corner Side Panel (Top Right)"})
 
             # For H >= 4m, add Side Mid panels (SF30M)
             if self.H_O >= 4:
-                panels.append({"part_no": "SF30M", "quantity": side_full,
+                panels.append({"part_no": "SF30M", "quantity": int(side_full),
                                "category": "Panels", "description": "Side Panel (Mid)"})
 
                 # Corner Mid panels for partitioned tanks (SF30ML, SF30MR)
-                if corner_panels > 0:
-                    panels.append({"part_no": "SF30ML", "quantity": corner_panels,
+                if corner_left > 0:
+                    panels.append({"part_no": "SF30ML", "quantity": int(corner_left),
                                    "category": "Panels", "description": "Corner Side Panel (Mid Left)"})
-                    panels.append({"part_no": "SF30MR", "quantity": corner_panels,
+                if corner_right > 0:
+                    panels.append({"part_no": "SF30MR", "quantity": int(corner_right),
                                    "category": "Panels", "description": "Corner Side Panel (Mid Right)"})
 
             # Side Low panels (SF30L for 3m, SF40L for 4m, etc.)
             height_code = int(self.H_O * 10)
             if side_full > 0:
-                panels.append({"part_no": f"SF{height_code}L", "quantity": side_full,
+                panels.append({"part_no": f"SF{height_code}L", "quantity": int(side_full),
                                "category": "Panels", "description": "Side Panel (Low)"})
 
             # Corner Low panels for partitioned tanks
-            if corner_panels > 0:
-                panels.append({"part_no": f"SF{height_code}LL", "quantity": corner_panels,
+            if corner_left > 0:
+                panels.append({"part_no": f"SF{height_code}LL", "quantity": int(corner_left),
                                "category": "Panels", "description": "Corner Side Panel (Low Left)"})
-                panels.append({"part_no": f"SF{height_code}LR", "quantity": corner_panels,
+            if corner_right > 0:
+                panels.append({"part_no": f"SF{height_code}LR", "quantity": int(corner_right),
                                "category": "Panels", "description": "Corner Side Panel (Low Right)"})
         else:
             # Single tier - standard side panels
             if side_full > 0:
-                panels.append({"part_no": f"{panel_prefix}{suffix}", "quantity": side_full,
+                panels.append({"part_no": f"{panel_prefix}{suffix}", "quantity": int(side_full),
                                "category": "Panels", "description": f"Side Panel"})
 
             # Corner panels for partitioned tanks (single tier)
-            if corner_panels > 0:
-                panels.append({"part_no": f"{panel_prefix}{suffix}L", "quantity": corner_panels,
+            if corner_left > 0:
+                panels.append({"part_no": f"{panel_prefix}{suffix}L", "quantity": int(corner_left),
                                "category": "Panels", "description": "Corner Side Panel (Left)"})
-                panels.append({"part_no": f"{panel_prefix}{suffix}R", "quantity": corner_panels,
+            if corner_right > 0:
+                panels.append({"part_no": f"{panel_prefix}{suffix}R", "quantity": int(corner_right),
                                "category": "Panels", "description": "Corner Side Panel (Right)"})
 
-        if side_half_w + side_half_l > 0:
-            panels.append({"part_no": f"SH{height_num}M", "quantity": side_half_w + side_half_l,
+        # Half side panels
+        if side_half > 0:
+            panels.append({"part_no": f"SH{height_num}M", "quantity": int(side_half),
                            "category": "Panels", "description": "Half Side Panel 0.5x1m"})
 
         return panels

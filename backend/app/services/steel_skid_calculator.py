@@ -32,15 +32,19 @@ class SteelSkidCalculator:
 
         self.L1_C = int(length1)
         self.L1_F = length1 - self.L1_C
+        self.L1_O = length1
 
         self.L2_C = int(length2) if length2 else 0
         self.L2_F = (length2 - self.L2_C) if length2 else 0
+        self.L2_O = length2 or 0
 
         self.L3_C = int(length3) if length3 else 0
         self.L3_F = (length3 - self.L3_C) if length3 else 0
+        self.L3_O = length3 or 0
 
         self.L4_C = int(length4) if length4 else 0
         self.L4_F = (length4 - self.L4_C) if length4 else 0
+        self.L4_O = length4 or 0
 
         # Total values
         self.L_O = length1 + (length2 or 0) + (length3 or 0) + (length4 or 0)
@@ -125,7 +129,7 @@ class SteelSkidCalculator:
         short_suffix = self._get_short_suffix()
 
         # ===== Steel Skid Connector (Main Beam) =====
-        # Excel: (W_C + W_F + 1) * 2 = (5 + 0 + 1) * 2 = 12
+        # Excel: (W_C+W_F+1)*2*IF(BASIC_TOOL!D23=5,0,1)
         main_beam_qty = int((self.W_C + self.W_F + 1) * 2)
         parts.append({
             "part_no": main_connector,
@@ -134,23 +138,12 @@ class SteelSkidCalculator:
             "description": "Steel Skid Connector"
         })
 
-        # ===== Steel Skid Connector (Cross Beam) =====
-        # Excel: 4 for 5x5 tank, 8 for 10x8 tank
-        # Formula: 4 for small tanks, 8 for larger tanks (W or L > 5)
-        if self.W_O > 5 or self.L_O > 5:
-            cross_beam_qty = 8
-        else:
-            cross_beam_qty = 4
-        parts.append({
-            "part_no": cross_connector,
-            "quantity": cross_beam_qty,
-            "category": "Steel Skid",
-            "description": "Steel Skid Connector"
-        })
-
         # ===== Steel Skid Main-L (Long frames along length) =====
-        # WFF-1990ALZ: Excel 5x5x2 = 12 = QUOTIENT(L_O, 2) * (W_C + 1) = 2 * 6 = 12
-        frame_1990_qty = int((self.L_O // 2) * (self.W_C + 1))
+        # Excel WFF-1990: ((IF(L_O_F>0,QUOTIENT(L_O-1.5,2),L_O_C/2)))*(W_C+W_F+1)
+        if self.L_O_F > 0:
+            frame_1990_qty = int((self.L_O - 1.5) // 2) * int(self.W_C + self.W_F + 1)
+        else:
+            frame_1990_qty = int(self.L_O_C / 2) * int(self.W_C + self.W_F + 1)
         if frame_1990_qty > 0:
             parts.append({
                 "part_no": f"WFF-1990{type_suffix}Z",
@@ -159,8 +152,8 @@ class SteelSkidCalculator:
                 "description": "Steel Skid(Main-L)"
             })
 
-        # WFF-0990ALZ: Excel 5x5x2 = 6 = MOD(L_O, 2) * (W_C + 1) = 1 * 6 = 6
-        frame_990_qty = int((self.L_O % 2) * (self.W_C + 1))
+        # Excel WFF-0990: ((IF(L1_F>0,MOD(L1_O-1.5,2),MOD(L1_C,2))+...))*(W_C+W_F+1)
+        frame_990_qty = self._calc_frame_990_qty()
         if frame_990_qty > 0:
             parts.append({
                 "part_no": f"WFF-0990{type_suffix}Z",
@@ -170,19 +163,29 @@ class SteelSkidCalculator:
             })
 
         # ===== Steel Skid Main-W (Width frames) =====
-        # These depend on width configuration
-        # For W=5m: WFF-2000ASZ (2), WFF-1570ASZR (2), WFF-1570ASZL (2)
+        # These depend on width configuration using ISEVEN/ISODD
         width_frames = self._calc_width_frames(short_suffix)
         parts.extend(width_frames)
 
         # ===== Steel Skid Sub (Sub frames) =====
-        # WFF-0957AMZ: 8, WFF-1063AMZ: 4, WFF-0994AMZ: 8
         sub_frames = self._calc_sub_frames()
         parts.extend(sub_frames)
 
+        # ===== Cross Beam Connector =====
+        # Excel: ((SUM(M14:M27)/2)-1)*2 where M14:M27 are sub-frame quantities
+        # Sum of sub-frames divided by 2, minus 1, times 2
+        sub_frame_total = sum(p.get('quantity', 0) for p in sub_frames)
+        cross_beam_qty = int(((sub_frame_total / 2) - 1) * 2)
+        if cross_beam_qty > 0:
+            parts.append({
+                "part_no": cross_connector,
+                "quantity": cross_beam_qty,
+                "category": "Steel Skid",
+                "description": "Steel Skid Connector"
+            })
+
         # ===== Liner =====
-        # Excel 5x5x2: 166 = floor area in some unit
-        # Formula: (W_O * L_O + perimeter * 0.3) * 6.64 approximately
+        # Excel: (ROUNDUP((W_C+W_F+1)*(CEILING(L1_O,1)+CEILING(L2_O,1)+CEILING(L3_O,1)+CEILING(L4_O,1)+1)*4.6,0))
         liner_qty = self._calc_liner_qty()
         if liner_qty > 0:
             parts.append({
@@ -193,80 +196,193 @@ class SteelSkidCalculator:
             })
 
         # ===== Anchor Bracket =====
-        # Excel: 5x5x2=10, 5x5x3=10, 5x5x4=20
-        # Base = W_O + L_O, doubles for H >= 4
-        anchor_qty = int(self.W_O + self.L_O)
-        if self.H_O >= 4:
-            anchor_qty *= 2
-        parts.append({
-            "part_no": "WBR-5010Z",
-            "quantity": anchor_qty,
-            "category": "Steel Skid",
-            "description": "Anchor Bracket with bolt and nut set"
-        })
+        # Excel: (IF(H_O>3,4+(W_C+W_F-1)*2+(L_O-1)*2,4+(W_C+W_F-2)+(L_O-2)))
+        if self.H_O > 3:
+            anchor_qty = int(4 + (self.W_C + self.W_F - 1) * 2 + (self.L_O - 1) * 2)
+        else:
+            anchor_qty = int(4 + (self.W_C + self.W_F - 2) + (self.L_O - 2))
+        if anchor_qty > 0:
+            parts.append({
+                "part_no": "WBR-5010Z",
+                "quantity": anchor_qty,
+                "category": "Steel Skid",
+                "description": "Anchor Bracket with bolt and nut set"
+            })
 
         return [p for p in parts if p.get('quantity', 0) > 0]
 
+    def _calc_frame_990_qty(self) -> int:
+        """
+        Calculate WFF-0990 quantity (1m Main-L frames).
+        Excel: ((IF(L1_F>0,MOD(L1_O-1.5,2),MOD(L1_C,2))+
+                 IF(L2_F>0,MOD(L2_O-1.5,2),MOD(L2_C,2))+
+                 IF(L3_F>0,MOD(L3_O-1.5,2),MOD(L3_C,2))+
+                 IF(L4_F>0,MOD(L4_O-1.5,2),MOD(L4_C,2)))*(W_C+W_F+1))
+        """
+        mod_sum = 0
+
+        # Section 1
+        if self.L1_F > 0:
+            mod_sum += (self.L1_O - 1.5) % 2
+        else:
+            mod_sum += self.L1_C % 2
+
+        # Section 2
+        if self.L2_F > 0:
+            mod_sum += (self.L2_O - 1.5) % 2
+        elif self.L2_C > 0:
+            mod_sum += self.L2_C % 2
+
+        # Section 3
+        if self.L3_F > 0:
+            mod_sum += (self.L3_O - 1.5) % 2
+        elif self.L3_C > 0:
+            mod_sum += self.L3_C % 2
+
+        # Section 4
+        if self.L4_F > 0:
+            mod_sum += (self.L4_O - 1.5) % 2
+        elif self.L4_C > 0:
+            mod_sum += self.L4_C % 2
+
+        return int(mod_sum * (self.W_C + self.W_F + 1))
+
     def _calc_width_frames(self, short_suffix: str) -> List[Dict]:
         """
-        Calculate width frame parts (Main-W).
-        Excel examples:
-        - 5x5x2m (75 Angle): WFF-2000ASZ=2, WFF-1570ASZR=2, WFF-1570ASZL=2
-        - 5x5x3m (125 Channel): WFF-2000CSZ=2, WFF-1560CSZR=2, WFF-1560CSZL=2
-        - 10x8x3m: WFF-2000CSZ=6, WFF-2060CSZR=2, WFF-2060CSZL=2
+        Calculate width frame parts (Main-W) using exact Excel ISEVEN/ISODD formulas.
 
-        Width frame dimensions vary by skid type and tank width.
+        Excel formulas:
+        ISEVEN: (IF(OR(W_O=3.5),1,0)+IF(W_O>3.5,IF(W_F=0,IF(ISEVEN(W_O),2,0),0))+IF(W_O>3.5,IF(W_F=1,IF(ISEVEN(W_O-1.5),2,0),0)))
+        ISODD: (IF(W_O=3,2,IF(W_O=3.5,1,0))+IF(W_F=0,IF(W_O>3.5,IF(ISODD(W_O),2,0),0),0)+IF(W_F=1,IF(W_O>3.5,IF(ISODD(W_O-1.5),2,0),0),0))
+        Center: (IF(W_F=0,IF(W_O>3.5,IF(ISEVEN(W_O),(W_O-4)/2*2,(W_O-3)/2*2),0),0)+IF(W_F=1,IF(W_O>4,IF(ISEVEN(W_O-1.5),(W_O-1.5-4)/2*2,(W_O-1.5-3)/2*2),0),0))
+        Half frame: IF(W_O>3.5,IF(W_F=1,2,0),0)
         """
         parts = []
 
-        # Width frame dimension varies by skid type and tank width
-        # For W <= 5m: 1560/1570mm
-        # For W > 5m: 2060mm (extra 500mm for wider tanks)
-        if self.W_O > 5:
-            side_width = 2060
-        elif self.actual_skid_type == "75_angle":
-            side_width = 1570
-        else:  # 125_channel or 150_channel
-            side_width = 1560
+        # Helper: check W_F == 0.5 (Excel uses W_F=1 for half meter)
+        w_f_is_half = (self.W_F == 0.5)
 
-        # Center frame quantity depends on width
-        # W=5: 2, W=10: 6
-        # Formula: 2 + (W_O - 5) × factor for wide tanks
-        if self.W_O > 5:
-            center_qty = int(2 + (self.W_O - 5) * 0.8)  # ~6 for W=10
-        else:
-            center_qty = 2
+        # ===== Width Frame with ISEVEN =====
+        # (IF(OR(W_O=3.5),1,0)+IF(W_O>3.5,IF(W_F=0,IF(ISEVEN(W_O),2,0),0))+IF(W_O>3.5,IF(W_F=1,IF(ISEVEN(W_O-1.5),2,0),0)))
+        iseven_qty = 0
+        if self.W_O == 3.5:
+            iseven_qty = 1
+        if self.W_O > 3.5:
+            if not w_f_is_half:  # W_F = 0
+                if int(self.W_O) % 2 == 0:  # ISEVEN(W_O)
+                    iseven_qty += 2
+            else:  # W_F = 0.5 (Excel W_F=1)
+                if int(self.W_O - 0.5) % 2 == 0:  # ISEVEN(W_O-1.5) -> W_O-0.5 in our terms
+                    iseven_qty += 2
 
-        # For width >= 3m, we have center frame + right/left frames
+        # ===== Width Frame with ISODD =====
+        # (IF(W_O=3,2,IF(W_O=3.5,1,0))+IF(W_F=0,IF(W_O>3.5,IF(ISODD(W_O),2,0),0),0)+IF(W_F=1,IF(W_O>3.5,IF(ISODD(W_O-1.5),2,0),0),0))
+        isodd_qty = 0
+        if self.W_O == 3:
+            isodd_qty = 2
+        elif self.W_O == 3.5:
+            isodd_qty = 1
+        if self.W_O > 3.5:
+            if not w_f_is_half:  # W_F = 0
+                if int(self.W_O) % 2 == 1:  # ISODD(W_O)
+                    isodd_qty += 2
+            else:  # W_F = 0.5
+                if int(self.W_O - 0.5) % 2 == 1:  # ISODD(W_O-1.5)
+                    isodd_qty += 2
+
+        # ===== Center Channel Bars =====
+        # (IF(W_F=0,IF(W_O>3.5,IF(ISEVEN(W_O),(W_O-4)/2*2,(W_O-3)/2*2),0),0)+
+        #  IF(W_F=1,IF(W_O>4,IF(ISEVEN(W_O-1.5),(W_O-1.5-4)/2*2,(W_O-1.5-3)/2*2),0),0))
+        center_qty = 0
+        if not w_f_is_half:  # W_F = 0
+            if self.W_O > 3.5:
+                if int(self.W_O) % 2 == 0:  # ISEVEN
+                    center_qty = int((self.W_O - 4) / 2 * 2)
+                else:
+                    center_qty = int((self.W_O - 3) / 2 * 2)
+        else:  # W_F = 0.5 (Excel W_F=1)
+            if self.W_O > 4:
+                w_adj = self.W_O - 0.5  # W_O - 1.5 in Excel terms
+                if int(w_adj) % 2 == 0:  # ISEVEN
+                    center_qty = int((w_adj - 4) / 2 * 2)
+                else:
+                    center_qty = int((w_adj - 3) / 2 * 2)
+
+        # ===== Half Width Frame =====
+        # IF(W_O>3.5,IF(W_F=1,2,0),0)
+        half_qty = 0
+        if self.W_O > 3.5 and w_f_is_half:
+            half_qty = 2
+
+        # ===== Small Width Frames (W <= 3.5) =====
+        # IF(W_O=1,2,0), IF(W_O=1.5,2,0), IF(W_O=2,2,0), IF(W_O=2.5,2,0)
+        small_width_qty = 0
+        if self.W_O == 1:
+            small_width_qty = 2
+        elif self.W_O == 1.5:
+            small_width_qty = 2
+        elif self.W_O == 2:
+            small_width_qty = 2
+        elif self.W_O == 2.5:
+            small_width_qty = 2
+
+        # Build parts list based on quantities
+        # Frame types: ISEVEN goes to one part, ISODD to another, center to main
+
+        # For W >= 3, add the main width frames
         if self.W_O >= 3:
-            # Center frame: WFF-2000xSZ
+            # Main center frame (2000mm)
+            if isodd_qty > 0:
+                parts.append({
+                    "part_no": f"WFF-2000{short_suffix}Z",
+                    "quantity": isodd_qty,
+                    "category": "Steel Skid",
+                    "description": "Steel Skid(Main-W)"
+                })
+
+            # Side frames (Right/Left) based on ISEVEN
+            if iseven_qty > 0:
+                # Determine side width based on skid type
+                if self.actual_skid_type == "75_angle":
+                    side_width = 1570
+                else:
+                    side_width = 1560
+
+                parts.append({
+                    "part_no": f"WFF-{side_width}{short_suffix}ZR",
+                    "quantity": iseven_qty,
+                    "category": "Steel Skid",
+                    "description": "Steel Skid(Main-W)"
+                })
+                parts.append({
+                    "part_no": f"WFF-{side_width}{short_suffix}ZL",
+                    "quantity": iseven_qty,
+                    "category": "Steel Skid",
+                    "description": "Steel Skid(Main-W)"
+                })
+
+            # Center channel bars
+            if center_qty > 0:
+                parts.append({
+                    "part_no": f"WFF-2000{short_suffix}Z",
+                    "quantity": center_qty,
+                    "category": "Steel Skid",
+                    "description": "Steel Skid(Main-W) Center"
+                })
+
+            # Half width frame
+            if half_qty > 0:
+                parts.append({
+                    "part_no": f"WFF-0500{short_suffix}Z",
+                    "quantity": half_qty,
+                    "category": "Steel Skid",
+                    "description": "Steel Skid(Main-W) Half"
+                })
+        elif small_width_qty > 0:
+            # Small tanks (W < 3)
             parts.append({
                 "part_no": f"WFF-2000{short_suffix}Z",
-                "quantity": center_qty,
-                "category": "Steel Skid",
-                "description": "Steel Skid(Main-W)"
-            })
-
-            # Right frame
-            parts.append({
-                "part_no": f"WFF-{side_width}{short_suffix}ZR",
-                "quantity": 2,
-                "category": "Steel Skid",
-                "description": "Steel Skid(Main-W)"
-            })
-
-            # Left frame
-            parts.append({
-                "part_no": f"WFF-{side_width}{short_suffix}ZL",
-                "quantity": 2,
-                "category": "Steel Skid",
-                "description": "Steel Skid(Main-W)"
-            })
-
-        elif self.W_O >= 2:
-            parts.append({
-                "part_no": f"WFF-2000{short_suffix}Z",
-                "quantity": center_qty,
+                "quantity": small_width_qty,
                 "category": "Steel Skid",
                 "description": "Steel Skid(Main-W)"
             })
@@ -275,17 +391,53 @@ class SteelSkidCalculator:
 
     def _calc_sub_frames(self) -> List[Dict]:
         """
-        Calculate sub frame parts.
-        Excel examples:
-        - 5x5x2m (75 Angle): WFF-0957AMZ=8, WFF-1063AMZ=4, WFF-0994AMZ=8
-        - 5x5x3m (125 Channel): WFF-0962AMZ=8, WFF-1053AMZ=4, WFF-0994AMZ=8
-        - 10x8x3m: WFF-0962AMZ=14, WFF-1053AMZ=7, WFF-0994AMZ=49
-        - 10x15x4m: WFF-0962AMZ=28, WFF-1053AMZ=14, WFF-0994AMZ=98
+        Calculate sub frame parts using exact Excel formulas.
 
-        Sub-frame part numbers vary by skid type.
-        For larger tanks, quantities scale differently.
+        Excel formulas (sheet12):
+        - Sub-frame based on width (W>=3.5):
+          (IF(W_O>=3.5,(ROUND(W_O,0)-3),0)*(CEILING(L1_O,1)+CEILING(L2_O,1)+CEILING(L3_O,1)+CEILING(L4_O,1)-1))
+        - Side sub-frame (W>=2.5):
+          (IF(W_O=1.5,1,IF(W_O=2,1,IF(W_O>=2.5,2,0)))*(CEILING(L1_O,1)+...)-1))
+        - Corner sub-frame (W>=3, integer):
+          (IF(W_O>=3,IF(INT(W_O)=W_O,1,0),0)*(CEILING(L1_O,1)+...)-1))
         """
         parts = []
+
+        # Calculate total ceiling length (used in all sub-frame formulas)
+        total_ceiling_length = (math.ceil(self.L1_O) + math.ceil(self.L2_O) +
+                                math.ceil(self.L3_O) + math.ceil(self.L4_O))
+        length_factor = total_ceiling_length - 1
+
+        # Helper: check if W_O is integer
+        w_is_integer = (int(self.W_O) == self.W_O)
+
+        # ===== Main Sub-frame (W >= 3.5) =====
+        # (IF(W_O>=3.5,(ROUND(W_O,0)-3),0)*(CEILING(L1_O,1)+...)-1))
+        main_sub_qty = 0
+        if self.W_O >= 3.5:
+            main_sub_qty = int((round(self.W_O) - 3) * length_factor)
+
+        # ===== Side Sub-frame (based on width) =====
+        # (IF(W_O=1.5,1,IF(W_O=2,1,IF(W_O>=2.5,2,0)))*(CEILING(L1_O,1)+...)-1))
+        side_sub_qty = 0
+        if self.W_O == 1.5:
+            side_sub_qty = 1 * length_factor
+        elif self.W_O == 2:
+            side_sub_qty = 1 * length_factor
+        elif self.W_O >= 2.5:
+            side_sub_qty = 2 * length_factor
+
+        # ===== Corner Sub-frame (W >= 3, integer width) =====
+        # (IF(W_O>=3,IF(INT(W_O)=W_O,1,0),0)*(CEILING(L1_O,1)+...)-1))
+        corner_sub_qty = 0
+        if self.W_O >= 3 and w_is_integer:
+            corner_sub_qty = 1 * length_factor
+
+        # ===== Half-width Sub-frame (non-integer W >= 2.5) =====
+        # (IF(INT(W_O)=W_O,0,IF(W_O>=2.5,1,0))*(CEILING(L1_O,1)+...)-1))
+        half_sub_qty = 0
+        if not w_is_integer and self.W_O >= 2.5:
+            half_sub_qty = 1 * length_factor
 
         # Sub-frame part numbers vary by skid type
         if self.actual_skid_type == "75_angle":
@@ -295,95 +447,53 @@ class SteelSkidCalculator:
             side_part = "WFF-0962AMZ"
             corner_part = "WFF-1053AMZ"
 
-        # Side sub-frames
-        # For 5x5: (W_C - 1) × 2 = 8
-        # For 10x8: 14 = (W_C - 3) × 2 for larger tanks
-        # For 10x15: 28 = (W_C - 3) × 2 × L_factor
-        if self.W_O > 5:
-            base_side = int((self.W_C - 3) * 2)
-            # Scale by length for very long tanks
-            if self.L_O > 10:
-                sub_side_qty = base_side * 2  # Double for L > 10
-            else:
-                sub_side_qty = base_side
-        else:
-            sub_side_qty = int((self.W_C - 1) * 2)
-
-        if sub_side_qty > 0:
+        # Add parts to list
+        if main_sub_qty > 0:
             parts.append({
-                "part_no": side_part,
-                "quantity": sub_side_qty,
+                "part_no": "WFF-0994AMZ",
+                "quantity": main_sub_qty,
                 "category": "Steel Skid",
                 "description": "Steel Skid(Sub)"
             })
 
-        # Corner sub-frames
-        # For 5x5: 4 (fixed)
-        # For 10x8: 7 = 4 + ceiling(L_O / 3)
-        # For 10x15: 14 = 4 + ceiling(L_O / 1.5) for very long tanks
-        if self.L_O > 10:
-            corner_qty = int(4 + math.ceil(self.L_O / 1.5))
-        elif self.L_O > 5:
-            corner_qty = int(4 + math.ceil(self.L_O / 3))
-        else:
-            corner_qty = 4
-
-        parts.append({
-            "part_no": corner_part,
-            "quantity": corner_qty,
-            "category": "Steel Skid",
-            "description": "Steel Skid(Sub)"
-        })
-
-        # Center sub-frames
-        # For 5x5: (W_C - 1) × 2 = 8
-        # For 10x8: 49 = round((W_C - 1) × L_O × 0.68) = round(48.96) = 49
-        # For 10x15: 98 = round((W_C - 1) × L_O × 0.726) = round(98) = 98
-        # Formula: (W_C - 1) × 2 for small tanks, round((W_C - 1) × L_O × factor) for large
-        if self.W_O > 5 or self.L_O > 5:
-            # Adjust factor based on tank size
-            if self.L_O > 10:
-                factor = 0.726
-            else:
-                factor = 0.68
-            sub_center_qty = round((self.W_C - 1) * self.L_O * factor)
-        else:
-            sub_center_qty = int((self.W_C - 1) * 2)
-
-        if sub_center_qty > 0:
+        if side_sub_qty > 0:
             parts.append({
-                "part_no": "WFF-0994AMZ",
-                "quantity": sub_center_qty,
+                "part_no": side_part,
+                "quantity": int(side_sub_qty),
                 "category": "Steel Skid",
                 "description": "Steel Skid(Sub)"
+            })
+
+        if corner_sub_qty > 0:
+            parts.append({
+                "part_no": corner_part,
+                "quantity": int(corner_sub_qty),
+                "category": "Steel Skid",
+                "description": "Steel Skid(Sub)"
+            })
+
+        if half_sub_qty > 0:
+            parts.append({
+                "part_no": "WFF-0500AMZ",
+                "quantity": int(half_sub_qty),
+                "category": "Steel Skid",
+                "description": "Steel Skid(Sub) Half"
             })
 
         return parts
 
     def _calc_liner_qty(self) -> int:
         """
-        Calculate liner quantity.
-        Excel 5x5x2: 166
-        Excel 5x5x3: 166 (same! liner doesn't depend on height)
-        Excel 10x8x3: 456
-        Excel 10x15x4: 810
+        Calculate liner quantity using exact Excel formula.
 
-        Formula based on floor area: W_O * L_O * factor
-        For 5x5: 5 * 5 = 25, factor ≈ 6.64 gives 166
-        For 10x8: 10 * 8 = 80, factor ≈ 5.7 gives 456
-        For 10x15: 10 * 15 = 150, factor ≈ 5.4 gives 810
+        Excel: (ROUNDUP((W_C+W_F+1)*(CEILING(L1_O,1)+CEILING(L2_O,1)+CEILING(L3_O,1)+CEILING(L4_O,1)+1)*4.6,0))
 
-        Factor decreases slightly for larger tanks.
+        Factor = 4.6 is constant!
         """
-        floor_area = self.W_O * self.L_O
+        # Calculate total ceiling length
+        total_ceiling_length = (math.ceil(self.L1_O) + math.ceil(self.L2_O) +
+                                math.ceil(self.L3_O) + math.ceil(self.L4_O))
 
-        # Adjust factor for larger tanks
-        if floor_area > 100:
-            factor = 5.4
-        elif floor_area > 50:
-            factor = 5.7
-        else:
-            factor = 6.64
-
-        liner_qty = int(floor_area * factor)
+        # Excel formula: (W_C+W_F+1) * (total_ceiling_length + 1) * 4.6
+        liner_qty = math.ceil((self.W_C + self.W_F + 1) * (total_ceiling_length + 1) * 4.6)
         return liner_qty
